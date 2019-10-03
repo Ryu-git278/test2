@@ -41,11 +41,33 @@
         padding-top: 1em;
         }
 
+
+/*ナビ ボタン化 遊びここから*/
+
+	.btn1 {
+		background: transparent;
+		color: #3169d1 !important;
+		-webkit-transition: all 0.7s ease-out;
+		transition: all 0.7s ease-out;
+		background: -webkit-linear-gradient(180deg, rgba(49,105,209,0.8), rgba(132, 179, 252, 0.8), rgba(205, 200, 252, 0), rgba(205, 200, 252, 0));
+		background: -webkit-linear-gradient(right, rgba(49,105,209,0.8), rgba(132, 179, 252, 0.8), rgba(205, 200, 252, 0), rgba(205, 200, 252, 0));
+		background: linear-gradient(270deg, rgba(49,105,209,0.8), rgba(132, 179, 252, 0.8), rgba(205, 200, 252, 0), rgba(205, 200, 252, 0));
+		background-position: 1% 50%;
+		background-size: 300% 300%;
+		border: none;
+		border: 1px solid #3169d1;
+		}
+
+	.btn1:hover {
+		background-position: 99% 50%;
+		color: #fff !important;
+		border: 1px solid rgba(205, 200, 252, 0);
+		}
+
+
 /*■■■■ナビゲーションここから■■■■*/
 
     nav{
-       background-image: url("") ;
-        background-repeat: repeat-x;
         height: 65px;
         }
 
@@ -58,18 +80,18 @@
         }
 
     nav li{
-        width: 192px;
+        width: 152px;
         height: 50px;
-        padding-top: 20px;
+        padding-top: 8px;
         float: left;
-        margin-right: 10px;
+        margin-right: 40px;
         text-align: center;
-        background-color: aqua;
         }
 
     nav li.last{
         margin-right: 0;
         }
+
 
 /* ■■■■メイン（主にTOP画像と共通画像）ここから*/
 
@@ -255,6 +277,40 @@
         text-align: right;
         padding-top: 60px;
         }
+
+/* ■■■■遊びナビ　ここから*/
+/*https://copypet.jp/671/*/
+
+	*, *:before, *:after {
+		-webkit-box-sizing: border-box;
+				box-sizing: border-box;
+		}
+	.cp_navi {
+		position: relative;
+		overflow: hidden;
+		width: 360px;
+		height:150px;
+		}
+	.cp_navi #cp_sidenav a {
+		font-size: 20px;
+		position: absolute;
+		left: -140px;
+		width: 160px;
+		height: 54px;
+		padding: 12px 15px;
+		transition: 0.3s;
+		text-decoration: none;
+		color: #ffffff;
+		border-radius: 0 5px 5px 0;
+		}
+	.cp_navi #cp_sidenav a:hover {
+		left: -10px;
+		}
+	.cp_navi #home {
+		top: 20px;
+		background-color: #21EEEB;
+		}
+
 
 /* ■■■■footer　ここから*/
 
