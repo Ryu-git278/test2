@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>使えそうなテクニックまとめ</title>
+	
+<meta name="viewport" content="width=device-width">
+<meta name="robots" content="noindex,nofollow">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu+Condensed">
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<input type="checkbox" id="navTgl">
+<label for="navTgl" class="open"><span></span></label>
+<label for="navTgl" class="close"></label>
+
+<!-- メニューバーここから -->
+<nav class="menu">
+	<h2>menu</h2>
+	<ul>
+		<li><a href="#article1">contentsA</a></li>
+		<li><a href="#article2">contentsB</a></li>
+		<li><a href="#article3">contentsC</a></li>
+		<li><a href="#article4">contentsD</a></li>
+		<li><a href="#article5">contentsE</a></li>
+	</ul>
+</nav>
+
+<div class="contents">
+	<header>
+		<h1 class="logo"><img src="img/#" alt=""/></h1>
+		<nav>
+			<ul>
+				<li><a href="#navTgl">home</a></li>
+				<li><a href="#article1">contentsA</a></li>
+				<li><a href="#article2">contentsB</a></li>
+				<li><a href="#article3">contentsC</a></li>
+				<li><a href="#article4">contentsD</a></li>
+				<li><a href="#article5">contentsE</a></li>
+			</ul>
+		</nav>
+	</header>
+	
+	
+	<article>
+	  <p><h1><img src="#"></h1></p>
+	
+<!-- ディテール・contents photoとする。ここから -->
+	<ul class="details">
+		<li class="type1">
+			<img src="../../img/image.png">
+			<dl>
+				<dt>Text title</dt>
+				<dd>あああああああああああああああ</dd>
+				<dd><a href="#" target="_blank">topへ戻る</a></dd>
+			</dl>
+		</li>
+		<li class="type2">
+			<img src="../../img/image.png">
+			<dl>
+				<dt>Text title</dt>
+				<dd>あああああああああああああああ</dd>
+				<dd><a href="#" target="_blank">topへ戻る</a></dd>
+			</dl>
+		</li>
+		<li class="type3">
+			<img src="../../img/image.png">
+			<dl>
+				<dt>Text title</dt>
+				<dd>あああああああああああああああ</dd>
+				<dd><a href="#" target="_blank">topへ戻る</a></dd>
+			</dl>
+		</li>
+	</ul>
+    
+<!-- アコーディオンtest ここから -->
+<!-- TODO :下の"ディテール・contents photo"合体予定。-->
+<!-- 絶対位置か？場所の関係がおかしいので、IDcheckboxをっく人。要微調整。-->
+    
+<!-- https://zarigani-design-office.com/technology/more_detail_button/ -->
+    <div class="accordion-box">
+      <input id="ac00" type="checkbox">
+      <label for="ac00"></label>
+      <div class="accordion-container">
+        <h3>タイトル</h3>
+        <p>あああ</p>
+        <p>あああ</p>
+        <p>あああ</p>
+        <p>あああ</p>
+      </div><!-- accordion-container -->
+    </div><!-- accordion-box -->
+    
+    <!-- 閉じるボタンは要らないときは「.accordion-box input:checked + label」のdisplay:noneを有効に->
+    
+<!-- ディテール・contents photoとする。ここまで -->
+	
+		<section id="article1">
+			<h2>contentsA</h2>
+			<figure>
+				<img src="#">
+				<figcaption>ああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ<a href="#" class="btn">topへ戻る</a></figcaption>
+			</figure>
+		</section>
+		
+		<section id="article2">
+			<h2>contentsB</h2>
+			<figure>
+				<img src="#">
+				<figcaption>ああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ。<a href="#" class="btn">topへ戻る</a></figcaption>
+			</figure>
+		</section>
+		
+		<section id="article3">
+			<h2>contentsC</h2>
+			<figure>
+				<img src="#">
+				<figcaption>ああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ<a href="#" class="btn">topへ戻る</a></figcaption>
+			</figure>
+		</section>
+		
+		<section id="article4">
+			<h2>contentsD</h2>
+			<figure>
+				<img src="#">
+				<figcaption>ああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ<a href="#" class="btn">topへ戻る</a></figcaption>
+			</figure>
+		</section>
+		
+		<section id="article5">
+			<h2>contentsE</h2>
+			<figure>
+				<img src="#">
+				<figcaption>ああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ<a href="#" class="btn">この記事を読む</a></figcaption>
+			</figure>
+		</section>
+	</article> 
+	
+	<footer>
+		<p class="copyright"><small></small></p>
+	</footer>
+</div>	
+
+</body>
+</html>
