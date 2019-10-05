@@ -87,7 +87,7 @@ main{
 /*セクション　ニュースここから*/
 
 section.news{
-	padding-top: 20px;
+	padding: 20px;
 	margin: 0 auto;
 	}
 
@@ -96,7 +96,7 @@ section.news{
     width: 900px;
 }
 
-.box h2 , p{
+.box h2 , ul{
     margin: 0;
     padding: 0;
 }
@@ -105,23 +105,23 @@ section.news{
 
 .box h2{
     background: url("img/news01.jpg")no-repeat;
-    padding: 125px 50px 10px;
-    width: 900px;
+    padding: 10px 50px 10px;
+    width: 800px;
 }
 /* ショートハンド ↑→↓←の順。今回は50は左右。    */
 
-.box p{
-    padding: 0px 50px 10px;
-    text-align:left;
+.box ul{
+	text-align: left;
+	padding: 10px 15px 5px;
+	list-style-type: none;
 }
 /*.box p のスペース（余白）については、位置のみの指定のため（背景等がない。）marginでも使用可能。*/
 
-.box p.more{
+section.news .box:after{
     background: url("img/news03.jpg")no-repeat;
-    text-align:right;
-    background-position:bottom;
-    padding-bottom: 100px;
-}
+     display: block;
+	font-size: 0;
+   }
 /*セクション　ピックアップここから*/
 
 section.pickup{
