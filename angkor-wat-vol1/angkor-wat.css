@@ -1,0 +1,279 @@
+@charset "utf-8";
+
+/*■■■■リセットCSSここから■■■■*/
+
+/*memo "*"は 全要素。テーブルがずれる倍は"p,h1,h2,h3,ul,body"に変更、*/
+    *{
+        margin: 0;
+        padding: 0;
+        }
+
+    img{
+        vertical-align: bottom;
+        border:none;
+        }
+
+/*memo "font-size: 94%;"*/
+/*とは、デフォルト16px→今回のデザインカンプ15pxなので、16：15＝100：X→15÷16＝0.9375より。*/
+/*フォントサイズは、ユーザーによってブラウザ表示の％が異なる為、（表示サイズ標準、大、小等）pxで指定すると、変動できない。初期値は％やem（X文字分）で求めた方がよい。*/
+
+    #all{
+        font-size: 94%;
+        line-height: 1.5;
+        width:100%;
+        }
+
+    /*■■■■ヘッダーここから■■■■*/
+
+    header .inner {
+        width: 995px;
+        margin: 0 auto;
+        padding: 10px 0 10px 5px;
+        overflow: hidden;
+        }
+
+    header h1{
+        float: left;
+        }
+
+    header .inner .text {    
+        float: left;
+        padding-top: 1em;
+        }
+
+/*■■■■ナビゲーションここから■■■■*/
+
+    nav{
+       background-image: url("") ;
+        background-repeat: repeat-x;
+        height: 65px;
+        }
+
+    nav ul{
+        width: 1000px;
+        margin: 0 auto;
+        padding-top: 5px;
+        list-style-type: none;
+        overflow: hidden;
+        }
+
+    nav li{
+        width: 192px;
+        height: 50px;
+        padding-top: 20px;
+        float: left;
+        margin-right: 10px;
+        text-align: center;
+        background-color: aqua;
+        }
+
+    nav li.last{
+        margin-right: 0;
+        }
+
+/* ■■■■メイン（主にTOP画像と共通画像）ここから*/
+
+    main{
+        display: block;
+        width: 1000px;
+        margin: 0 auto;
+        padding-top: 20px;
+        }
+/*memo*/
+/*"display: block;"*/
+/*上記の""内をコメントアウト後、IEブラウザで確認すると、中央ぞろえのCSSが効いていない状態となる。*/
+/*IEは　mainなどHTMLのブロック要素をインライン要素ととらえる特殊な構造のため、""を別途記述しブロック要素へ変更する。*/
+
+    main h2{
+        padding-top: 30px;
+        clear:both;
+        }
+/*memo*/
+/*"margin-left: -9px;"*/
+/*ネガティブマージン ↑と←については、押し出す効果があるが、→と↓については、【要素を引き上げる】効果がある。試しに上記を"margin-bottom:-50px;"にすると面白い。*/
+
+/*"cler:both;"*/
+/*回り込み回避のテクニック*/
+/*main div boxのお米のメニューを複製すると良さがでる！！*/
+
+    main section{
+        clear:both;
+        }
+
+/*ここでメインフォトあそび*/
+
+    .photo {
+        margin: 0 auto;
+        width: 900px; /* img */
+        position: relative;
+        padding: 8px;
+        padding-bottom: 40px;
+        border: 1px solid #ccc;
+        -webkit-box-shadow: 3px 3px 3px #ccc;
+           -moz-box-shadow: 3px 3px 3px #ccc;
+                box-shadow: 3px 3px 3px #ccc;
+        /* IE */
+        -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(color=#cccccc,direction=135,strength=3,enabled=true)";
+        filter: progid:DXImageTransform.Microsoft.Shadow(color=#cccccc,direction=135,strength=3,enabled=true); /* IE5.5+ */
+        background: #fff;
+    }
+    .photo img {
+        width: 900px; /* .photo02 */
+    }
+    .photo p {
+        position: absolute;
+        height: 24px;
+        line-height: 24px;
+        bottom: 8px;
+        font-size: 14px;
+        color: #666;
+    }
+
+
+/*h2 共通CSS(トップ画像除く。)*/
+
+    .introductionHistory h2 {
+      color: #6cb4e4;
+      text-align: center;
+      padding: 0.25em;
+      border-top: solid 2px #6cb4e4;
+      border-bottom: solid 2px #6cb4e4;
+      background: -webkit-repeating-linear-gradient(-45deg, #f0f8ff, #f0f8ff 3px,#e9f4ff 3px, #e9f4ff 7px);
+      background: repeating-linear-gradient(-45deg, #f0f8ff, #f0f8ff 3px,#e9f4ff 3px, #e9f4ff 7px);
+      margin-top: 10px;
+    }
+
+    .about h2 {
+      color: #6cb4e4;
+      text-align: center;
+      padding: 0.25em;
+      border-top: solid 2px #6cb4e4;
+      border-bottom: solid 2px #6cb4e4;
+      background: -webkit-repeating-linear-gradient(-45deg, #f0f8ff, #f0f8ff 3px,#e9f4ff 3px, #e9f4ff 7px);
+      background: repeating-linear-gradient(-45deg, #f0f8ff, #f0f8ff 3px,#e9f4ff 3px, #e9f4ff 7px);
+    }
+
+    .access h2 {
+      color: #6cb4e4;
+      text-align: center;
+      padding: 0.25em;
+      border-top: solid 2px #6cb4e4;
+      border-bottom: solid 2px #6cb4e4;
+      background: -webkit-repeating-linear-gradient(-45deg, #f0f8ff, #f0f8ff 3px,#e9f4ff 3px, #e9f4ff 7px);
+      background: repeating-linear-gradient(-45deg, #f0f8ff, #f0f8ff 3px,#e9f4ff 3px, #e9f4ff 7px);
+    }
+
+/* ■■■■セクション ヒストリー.ボックス　ここから*/
+
+    .introductionHistory .box{
+ /*       background-color: rgba(255,127,80,0.50);*/
+        background-image: url("img/bg-waku02.jpg");
+        background-repeat: repeat-y;
+        text-align: center;
+        width: 300px;
+        margin: 5px 50px 12px 0;
+        float: left;
+        }
+/*memo*/
+/*"width: 300px; margin: 5px 50px 12px 0; float: left;"*/
+/* （300px+50pc)×3＝1050pxのため、幅1000pxを飛び出してしまう。そこで、3つめのmargin 50pxを無効化する。*/
+
+    .introductionHistory .box:nth-of-type(3n){
+        margin-right: 0;
+        }
+/*memo*/
+/* "3n"の"n" */
+/*3の"倍数"という指定ができる*/
+
+    .introductionHistory .box h3{
+        height: 48px;
+        padding: 30px 15px 0;
+        text-align:left;
+        }
+
+    .introductionHistory .box .text{
+        text-align: left;
+        padding: 10px;
+        }
+
+
+/* ■■■■セクション about　ここから*/
+
+    .about{
+        text-align: center
+    }
+
+    .about table{
+        width: 900px;
+        margin: 24px auto 14px;
+        border-collapse: collapse;
+        }
+/*memo*/
+/*border-collapse: collapse;*/
+/*テーブルに出来るわずかな隙間。collapse;でなくなる。*/
+
+    .about th, .about td{
+        color: #63906;
+        padding: 10px;
+        }
+
+    .about th{
+        border-right: 2px solid #3d0c0c;
+        font-weight: normal;
+        text-align: left;
+        white-space: nowrap;
+        }
+
+    .about tr:nth-child(odd){
+        background-color:#fff;
+        }
+
+    .about tr:nth-child(even){
+        background-color:aqua;
+        }
+/*用語memo：ゼブラテーブル（行ごとに色を変える。）*/
+
+
+/* ■■■■セクションなし。ページトップ　ここから*/
+
+
+    .access{
+        text-align: center;
+        margin: 0 auto;
+        }
+
+    .access .map{
+        padding-top: 20px;
+        }
+
+    .access p{
+        text-align: left;
+        padding-left: 50px;
+        }
+
+    .pagetop{
+        text-align: right;
+        padding-top: 60px;
+        }
+
+/* ■■■■footer　ここから*/
+
+    footer{
+        background-color: #d1c0a5;
+        text-align: center;
+        padding: 10px 0 60px;
+        }
+
+    footer .logo{
+        padding-bottom: 10px;
+        }
+
+    footer a{
+        color: #000;
+        text-decoration: none;
+    }
+
+    footer a:hover{
+        color: #844e45;
+        text-decoration: none;
+    }

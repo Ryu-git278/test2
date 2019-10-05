@@ -1,0 +1,170 @@
+@charset "utf-8";
+
+/*全体reset*/
+p,h1,h2,h3,ul,body{
+    margin: 0;
+	padding: 0;
+	}
+
+
+img{
+	vertical-align: bottom;
+	border: none;
+	}
+
+/*all設定*/
+
+#all{
+	font-size: 94%;
+	line-height: 1.5;
+	width: 100%;
+	}
+
+/*ヘッダーここから*/
+
+header{
+	background-color: #fff;
+	}
+
+header h1{
+	text-align: center;
+	}
+
+/*ヘッダーここまで*/
+/*ナビゲーションここから*/
+
+nav{
+	background-image: url("img/bg-nav.jpg.jpg");
+	background-repeat: repeat-x;
+	height: 52px;
+	}
+
+nav ul{
+	width: 920px;;
+	margin: 0 auto;
+	padding-top: 12px;
+	height: 38px;
+	list-style-type: none;
+	overflow:hidden;
+	}
+
+nav li{
+	text-align: center;
+    width: 153px;
+    height: 50px;
+    float: left;
+	}
+
+/*mainここから*/
+
+main{
+	display: block;
+	width: 920px;
+	margin: 0 auto;
+	padding-top: 5px;
+	}
+
+.bkc3{
+	background-color:#996633;
+	width: 100%;
+	margin: 0 auto;
+	padding-bottom: 20px;
+	}
+
+.bkc2{
+	background-color: #fde3df;
+	width: 100%;
+	margin: 0 auto;
+	}
+
+.bkc{
+	background-color: #ffffff;
+	width: 90%;
+	margin: 0 auto;
+	}
+
+
+/*セクション　ニュースここから*/
+
+section.news{
+	padding-top: 20px;
+	margin: 0 auto;
+	}
+
+.box{
+    background: url("img/news02.jpg")repeat-y;
+    width: 900px;
+}
+
+.box h2 , p{
+    margin: 0;
+    padding: 0;
+}
+/*ショートハンドの0px時は"px"は省略OK*/
+/* 何がスペースを空けるかを考える。今回最新のブラウザ上では、paddingは必要ない。但し古いブラウザ用に設定 */
+
+.box h2{
+    background: url("img/news01.jpg")no-repeat;
+    padding: 125px 50px 10px;
+    width: 900px;
+}
+/* ショートハンド ↑→↓←の順。今回は50は左右。    */
+
+.box p{
+    padding: 0px 50px 10px;
+    text-align:left;
+}
+/*.box p のスペース（余白）については、位置のみの指定のため（背景等がない。）marginでも使用可能。*/
+
+.box p.more{
+    background: url("img/news03.jpg")no-repeat;
+    text-align:right;
+    background-position:bottom;
+    padding-bottom: 100px;
+}
+/*セクション　ピックアップここから*/
+
+section.pickup{
+	padding-top: 20px;
+	margin: 0 auto;
+	width: 600px;
+	}
+
+.pickupbk{
+	background-image: url("img/tb-pickup.png")
+	}
+
+section.pickup td{
+    border:1px;
+    border-style: solid;
+    border-color: #cc6799;
+    }
+/*ページトップ*/
+
+.pagetop{
+	text-align: right;
+	padding-top: 50px;
+	margin-bottom: -10px;
+	}
+
+/*footerここから*/
+
+footer{
+	background-color:#663300;
+	text-align: center;
+	padding: 10px 0 20px;
+    color: #fff;
+	}
+
+footer.note{
+	padding-bottom: 10px;
+	}
+
+footer a{
+	color: #fff;
+	text-decoration: none;
+	}
+
+footer a:hover{
+	color: #844e45;
+	}
