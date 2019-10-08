@@ -1,0 +1,294 @@
+@charset "utf-8";
+
+*:after, *:before {
+  box-sizing: border-box; /*paddingとborderを幅と高さに含める*/
+}
+
+
+/*リセットCSSここから*/
+
+/*memo "*"は 全要素。テーブルがずれる倍は"p,h1,h2,h3,ul,body"に変更、*/
+    *{
+        margin: 0;
+        padding: 0;
+        }
+
+    img{
+        vertical-align: bottom;
+        border:none;
+        }
+
+/*memo "font-size: 94%;"*/
+/*とは、デフォルト16px→今回のデザインカンプ15pxなので、16：15＝100：X→15÷16＝0.9375より。*/
+/*フォントサイズは、ユーザーによってブラウザ表示の％が異なる為、（表示サイズ標準、大、小等）pxで指定すると、変動できない。初期値は％やem（X文字分）で求めた方がよい。*/
+    #all{
+        font-size: 94%;
+        line-height: 1.5;
+        width:100%;
+        }
+
+
+/*ナビゲーションここから*/
+
+    nav{
+        }
+
+    nav ul{
+        width: 1000px;
+        margin: 0 auto;
+        list-style-type: none;
+        overflow: hidden;
+        }
+
+    nav li{
+        float: left;
+        margin-right: 31px;
+        }
+
+/*memo*/
+/*今回 navの幅は1000pxと決まっている。また各ボタンの合計は、（50+180×5）950px。"nav ul"にて右側10px×6と入れたため、合計1010pxとオーバーしてしまったため、liタグの最後にクラスを振り分け、また、右側のmarginを打ち消すことでサイズ調整を図った。*/
+    nav li.last{
+        margin-right: 0;
+        }
+
+/* 共有事項*/
+
+body{
+  font-family: 'PT Sans', sans-serif;
+  display: table;
+  width: 100%;
+  background: #2E2EFE;
+}
+
+/*名前のところ*/
+h2 {
+    text-align: center;
+	color: ghostwhite;
+    font-family: cursive;
+    width: 100%;
+    margin: 0 auto;
+	padding: 30px;
+    }
+
+/*始まるよ！*/
+.container{
+  display: table-cell; /*絶対にカラム落ちしない floatみたいなもん*/
+  vertical-align: middle;
+  text-align: center;
+  height: 100vh;
+}
+
+button{
+  display: inline-block;
+  position: relative;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer; /*カーソルの形。指定できる。*/
+/*  margin: 20px 30px; こいつだ！Aタグ要素も広げてる！理由はわからんが…。*/
+  background: rgba(0,0,0,0.09);
+	}
+
+/*以下ノータッチ。（色とかは変えてるかも？）*/
+
+span{
+  display: block;
+  padding: 25px 60px;
+}
+
+button::before, button::after{
+  content:"";
+  width: 0;
+  height: 2px;
+  position: absolute;
+  transition: all 0.2s linear;
+  background: #fff;
+}
+
+span::before, span::after{
+  content:"";
+  width:2px;
+  height:0;
+  position: absolute;
+  transition: all 0.2s linear;
+  background: #fff;
+}
+button:hover::before, button:hover::after{
+  width: 100%;
+}
+button:hover span::before, button:hover span::after{
+  height: 100%;
+}
+/*----- button 1 -----*/
+.btn-1::before, .btn-1::after{
+  transition-delay: 0.2s;
+}
+.btn-1 span::before, .btn-1 span::after{
+  transition-delay: 0s;
+}
+.btn-1::before{
+  right: 0;
+  top: 0;
+}
+.btn-1::after{
+  left: 0;
+  bottom: 0;
+}
+.btn-1 span::before{
+  left: 0;
+  top: 0;
+}
+.btn-1 span::after{
+  right: 0;
+  bottom: 0;
+}
+.btn-1:hover::before, .btn-1:hover::after{
+  transition-delay: 0s;
+}
+.btn-1:hover span::before, .btn-1:hover span::after{
+  transition-delay: 0.2s;
+}
+
+/*--- Button 2 -------*/
+
+
+.btn-2::before, .btn-2::after{
+  transition-delay: 0s;
+}
+.btn-2 span::before, .btn-2 span::after{
+  transition-delay: 0.2s;
+}
+.btn-2::before{
+  right: 0;
+  top: 0;
+}
+.btn-2::after{
+  left: 0;
+  bottom: 0;
+}
+.btn-2 span::before{
+  left: 0;
+  top: 0;
+}
+.btn-2 span::after{
+  right: 0;
+  bottom: 0;
+}
+.btn-2:hover::before, .btn-2:hover::after{
+  transition-delay: 0.2s;
+}
+.btn-2:hover span::before, .btn-2:hover span::after{
+  transition-delay: 0s;
+}
+
+
+/*----- button 3 -----*/
+.btn-3::after{
+  left: 0;
+  bottom: 0;
+  transition-delay: 0.6s;
+}
+.btn-3 span::after{
+  transition-delay: 0.4s;
+  right: 0;
+  bottom: 0
+}
+.btn-3::before{
+  right: 0;
+  top: 0;
+  transition-delay: 0.2s;
+}
+.btn-3 span::before{
+  transition-delay: 0s;
+  left: 0;
+  top: 0;
+}
+
+.btn-3:hover::after{
+  transition-delay: 0s;
+}
+.btn-3:hover span::after{
+  transition-delay: 0.2s;
+}
+.btn-3:hover::before{
+  transition-delay: 0.4s;
+}
+.btn-3:hover span::before{
+  transition-delay: 0.6s;
+}
+
+/*----- button 4 -----*/
+.btn-4::after{
+  right:0;
+  bottom: 0;
+  transition-duration: 0.4s;
+}
+.btn-4 span::after{
+  right:0;
+  bottom: 0;
+  transition-duration: 0.4s;
+}
+.btn-4::before{
+  left: 0;
+  top: 0;
+  transition-duration: 0.4s;
+}
+.btn-4 span::before{
+  left: 0;
+  top: 0;
+  transition-duration: 0.4s;
+}
+
+/*----- button 5 -----*/
+.btn-5::after{
+  left:0;
+  bottom: 0;
+  transition-duration: 0.4s;
+}
+.btn-5 span::after{
+  right:0;
+  top: 0;
+  transition-duration: 0.4s;
+}
+.btn-5::before{
+  right: 0;
+  top: 0;
+  transition-duration: 0.4s;
+}
+.btn-5 span::before{
+  left: 0;
+  bottom: 0;
+  transition-duration: 0.4s;
+}
+
+/*----- button 6 -----*/
+.btn-6::before{
+  left: 50%;
+  top: 0;
+  transition-duration: 0.4s;
+}
+.btn-6::after{
+  left: 50%;
+  bottom: 0;
+  transition-duration: 0.4s;
+}
+.btn-6 span::before{
+  left: 0;
+  top: 50%;
+  transition-duration: 0.4s;
+}
+.btn-6 span::after{
+  right: 0;
+  top: 50%;
+  transition-duration: 0.4s;
+}
+.btn-6:hover::before, .btn-6:hover::after{
+  left: 0;
+}
+.btn-6:hover span::before, .btn-6:hover span::after{
+  top: 0;
+}
+
+
+
