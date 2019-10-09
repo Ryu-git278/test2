@@ -1,0 +1,347 @@
+@charset "utf-8";
+/*
+授業memo
+ディスクリプション　Descriptionの重要性と書き方
+
+メタディスクリプション(meta description)とは、ページコンテンツを100文字程度の文章で表した「概要」や「要約」のようなもので、HTMLの内に記述します。
+
+Googleのような検索エンジンの検索結果一覧ページで活用されています。例えば、「Instagram広告」と検索した際には、下記のように表示されます。
+
+DWでは、メタ【詳細】と【keyword】を設定する。
+*/
+
+/*基本設定と、リセットCSS ここから*/
+    p,h1,h2,h3,h4,ul,ol,dl,dd,body,form{
+        margin: 0px;
+        padding: 0px;
+        }
+
+    img{
+        vertical-align: bottom; /*imgに対する文字要素の打ち消し。隙間がなくなる*/
+        border: none;
+        }
+
+    ul,ol{
+        list-style-type: none;
+        }
+
+    main{    
+        display: block; /*
+    ブロックボックスを生成する*/
+        }
+
+        /*floatの解除にclearfix*/
+    .clearfix:after{
+        content: "";
+        display: block; /*
+    ブロックボックスを生成する*/
+        clear: both; /*左寄せ、または右寄せされた全ての要素に対する回り込みを解除します。*/
+        }
+
+    body,td,th{
+        font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", "sans-serif"; /*基本的には任意、デザインに合わせて設定。日本語サイトであれば、メイリオが入っていると望ましい*/ /*memo：WEBフォント（Googleフォント）が主流*/ /*font familyで出現した！*/
+        font-size: 0.9em; /*1em=1文字。初期値16px。90％の大きさ。フォントサイズは、％か、emで計算するのがベスト。（拡大の話。）*/
+        }
+
+/*リンクのカラー設定。順番重要！*/
+    a:link {
+        color: #515151;
+        }
+    a:visited {
+        color: #939393;
+        }
+    a:hover {
+        color: #2F2F2F;
+        }
+    a:active {
+        color: #CCCCCC;
+        }
+
+/*　ヘッターここから*/
+    header{
+        background-color: #ea68a2;
+        width: 250px;
+        position: fixed; /*絶対位置への配置となるのはabsoluteと同じですが、スクロールしても位置が固定されたままとなります。*/
+        top:0; /*配置位置は2カ所*/
+        left: 0;
+        height: 100%; /*高さいっぱいいっぱい！*/
+        }
+
+    header h1{
+        background-color: #f5f6e7;
+        text-align: center;
+        padding: 10px 0 12px; /*背景色がある場合、marginで隙間を取ると、余白に背景色が出現してしまう！！*/
+        }
+
+/*contentsここから*/
+    .content{
+        background-image: url("img/bg-dots.png");
+    /*    padding-bottom: 1000px;*/ /*お試し。ヘッダーがしっかり固定されていることを確認！*/
+        margin-left: 250px;
+        }
+
+/*sidenavここから*/
+    .sidenav{
+        background-color: #fff;
+        }
+
+    .sidenav ol{
+        background-color: #94deff;
+        width: 360px; /*.sidenavと.sidenav olの位置は同じ。幅を指定しないと、同じエリアに色がつく。*/
+        margin-left: auto;/*サイズを設けて左側にくっつける。ディスプレイサイズの変動にもついてこれる！*/
+        }
+
+    .sidenav ol li{
+        float: left; /*liをfloatさせると（浮かせるイメージ）ol要素は浮いてしまい、olでつけた背景色のエリアは、なくなってしまう！（イメージです）ここで、従来であれば、overflow: hidden;で要素を持たせるが、今回は、olに class="clearfix"をつけて、初期設定の行いを適用させる！↑参照！*/
+        }
+
+    .sidenav ol li a{ /*ナビでは、文字の周りにクリックできる要素を加えたい！だけど、aタグはインライン要素なので幅などの要素設定ができない。そこでブロック要素に変換する。*/
+        color: #fff;
+        text-decoration: none;
+        text-align: center; /*ぱっとみ、センター？的な疑問が出たが、幅などを指定していない、a要素、文字幅のみなので、なってる！どこが箱の範囲か意識しながら進めるべし！*/
+        display: block;
+        width: 78px;
+        padding: 10px;
+        margin: 10px 0; 
+        border-right: 1px solid #fff; /*paddingの範囲内で線を表示せている！*/
+        }
+
+
+/*footer　ここから*/
+
+    footer{
+        background-color: #fff;
+        padding: 15px;
+        text-align: center;
+        }
+
+    /*memo：navにてリンクのカラー設定を行ったため、footerリンクカラーを上書きするように、クラスを追加する。*/
+    .content footer a{
+        color: #000;
+        text-decoration: none;
+        }
+
+    .content footer a:hover{
+        color: #844e45;
+            }
+
+/*共有ページここまで*/
+
+/*TOP 1ページ目の記述始まる*/
+
+.top{
+    background-color: #fec07c; /*画像のサイズアウトに対応すべく、同じような背景色を設定。ブラウザで拡大小してみるとわかる！*/
+    background-image: url("img/bg-topimge.png");
+    background-repeat: no-repeat;
+    height: 575px; /*画像の大きさからきている*/
+    margin-bottom: 70px;
+    position: relative; /*"自分を基準に"相対位置への配置となります。positionプロパティでstaticを指定した場合に表示される位置が基準位置となります。お試し top:50px; left: 50px;*/
+    }
+
+.top .text{
+    position: absolute; /*今回は、".top"にあるposition: relative; が基準になってスタート。なくすと基準がずれて、今度はディスプレイになる！上へ上へ！*/
+    top:70px;
+    left:60px;
+    }
+
+    /*RGBA色:http://www.htmq.com/css3/rgba.shtml*/
+
+/*TOP 1ページ目の セクション newsここから*/
+    .top .news{
+        background-color: rgba(255,255,255,0.80);/*補足に"塗り"と"不透明度"の違いについて全体か、。*/
+        position: absolute; /*近くの指定を基準に絶対配置*/
+        left: 0px; 
+        bottom: 0px; 
+        width: 100%;/*要素内に合わせて*/
+        height: 45%;
+        }
+
+    .news h2, .news ul{
+        color: #5c1c1e;
+        padding: 0 50px 20px;
+        }
+
+    .news h2{
+        font-size: 1.3em;
+        font-weight: normal;
+        margin-top: 20px;
+        }
+
+    .news ul{
+        margin-left: 20px;
+        list-style-type: armenian; /*disc*/
+        }
+
+/*サブページ 共通項目ここから始まる*/
+
+    .subpage{
+            padding-bottom: 30px;
+            }
+
+    .subpage h2{
+        color: #ea68a2;
+        font-size: 1.8em;
+        background-color: #f2f0f5; /*不透明をかけた時に画像がつながって見えるよう、同じカラーを選択するのがポイント*/
+        background-image: url("img/bg-title.png");
+    /*    height: 120px; まず画像に合わせて高さを用意*/
+        background-position: right center; /*水平 垂直の順。今回は、X軸 右端ぞろえ、Y軸中央。*/
+        background-repeat: no-repeat;
+        padding-top: 40px; /*h2を画像に合わせてY軸中央に寄せたい！（お試し30px）*/
+        height: 80px; /*padding-Topが40px。120pxの残りは80px。（お試し90px）*/
+        padding-left: 30px;
+        }
+
+
+    .subpage .topic{
+        margin: 20px 30px;
+        }
+
+    .subpage .topic li{
+        display: inline; /*liはブロック要素なので、インライン要素に変更して、パンくずリストを横ならびにする*/ /*https://qiita.com/yukinaka/items/c4fcb7f0878702485f70*/
+        }
+
+    .subpage .topic li+li:before{
+        content: "  |  ";
+/*        background-color: aqua;*/
+        } /*memo：隣接セレクターってどこ？":before"を消して、背景色をつけてみよう！*/
+
+    .subpage h3{
+        color: #ff5b01;
+        font-size: 1.5em;
+        margin: 30px;
+        }
+
+/*サブページ 商品（items）ここから*/
+
+    .items{
+        margin: 0 0 30px 30px;
+        }
+
+    .items p{
+        margin: 0 20px 20px 0;
+        float: left; /*p-imgを要素内で左寄せにしていく。今回は共有コード"clearfix"も適用する↑参照*/
+        }
+
+/*サブページ キャンペーン（campaign）ここから*/
+
+    .campaign{
+        margin: 0 0 30px 30px;
+        }
+
+    .campaign .illust{
+        margin-right: 70px;
+        float: left;
+        }
+
+    .campaign .text{
+        margin-left: 30px; /*カラム落ちした時にもテキストがイラストと揃って、見やすいように振り分けている。*/
+        float: left;
+        }
+
+    .campaign .text p{
+        padding-bottom: 10px;
+        }
+
+
+/*サブページ ギャラリー （gallery）ここから*/
+/*今回はBOXのみ*/
+
+    .gallerybox{
+        margin:  0 0  30px 30px;
+        width: 250px; /*画像のみの場合は、画像のサイズに左右されるが、今回は、h4,pタグが一体化しているため、幅を決めたほうがいい！*/
+        float: left; /*左寄せ*/
+        }
+
+    .gallerybox h4{
+        padding: 10px 0;
+    }
+
+
+/*サブページ よくある質問（faq）ここから*/
+
+
+    .faqlist{
+        margin: 0     30px 20px;
+        }
+
+    .faqlist dd{
+        text-indent: -1em; /*段落で1文字分飛び出す！マイナス！*/
+        padding: 0 0 1em 1em;/*↓←を1文字飛び出すと！！チェック*/
+        }
+
+
+/*サブページ お客様の声（voice）ここから*/
+
+    .voicetext{
+        background-color: #fff;
+        margin: 0 30px;
+        padding: 10px;
+        border: 2px solid #598527;
+        border-radius: 80px 0 0 20px; /*角を丸くする。CSS3から出現*/
+        }
+
+    .voicetext2{
+        background-color: #fff;
+        margin: 0 30px;
+        padding: 10px;
+          border-top: 50px solid #F0897F;
+          border-right: 50px solid #f6da69;
+          border-bottom: 50px solid #b2ce54;
+          border-left: 50px solid #6aa7cd;
+        } /*三角にしてみた遊び。*/
+    /*memo：幅を持たせていないので、レスポンス対応っぽくなる！*/
+
+
+/*サブページ ご注文フォーム（form）ここから*/
+
+
+.formtable{
+    border-collapse: collapse;
+    margin-left: 30px;
+    background-color: #fff;
+    width: 72%;
+    }
+
+    /*"コラップス・collapse"隣接するセルのボーダーを重ねて表示します。*/
+    /*例、cellスペースだと、くっつけているだけなので、厳密には2重線になる。*/
+
+    /*memo:今回 form に幅を持たせる！ただし、pxではなく、％表示にするため、ディスプレイの拡大縮小に対しても対応することが可能に！*/
+
+.formtable th{
+    padding: 10px;
+    border: 1px solid #F9070B;
+    /*text-align: left; textでは、ここに入るが、デフォルトの設定には、tdは左寄りなので以下のthのみに掲載した方がリーダブル！*/    
+    }
+
+.formtable td{
+    padding: 10px;
+    border: 1px solid #054CEF;
+    }
+
+/*コラップス・collapseの重ね線はどちらが優先になるの？以下 遊び*/
+
+.formtable td.test{
+    padding: 10px;
+    border: 1px solid #07F722;
+    background-color: #ebd3cf;
+    }
+
+/*テキストの正しい色 置き換え。#ea68a2*/
+
+/*thとtdの隙間はmarginではつけられない！必ずpaddingで行うべし。padding、border、margin*/
+
+.formtable th{
+    text-align: left;
+    background-color: #ebd3cf;
+    }
+
+.formsubmit{
+    text-align: center;
+    margin: 20px 0 30px 30px; /*テーブルに合わせて（特に左側）*/
+    width: 72%; /*テーブルに合わせて*/
+    }
+
+
+
+
+

@@ -1,0 +1,239 @@
+@charset "utf-8";
+body, p, h1, h2, h3, ul {
+	padding: 0;
+	margin: 0;
+}
+img {
+	vertical-align: bottom;
+	border-style: none;
+}
+#all {
+	font-size: 94%;
+}
+
+header {
+	background-color: #385392;
+}
+
+header h1 {
+	margin-top: 10px;
+	margin-right: 10px;
+	margin-left: 10px;
+	padding: 5px 0;
+	float: left;
+	margin-bottom: 10px;
+}
+
+nav {
+	overflow: hidden;
+	padding-bottom: 5px;
+	padding-left: 30px;
+	margin-left: 600px;
+}
+nav ul {
+	margin-top: 10px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 20px;
+	list-style-type: none;
+}
+nav li {
+	float: left;
+	margin-right: 20px;
+	margin-left: 20px;
+	margin-bottom: 20px;
+	display: block;
+}
+nav li a {
+	display: block;
+}
+
+button {
+  background: none;
+  border: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 1em 2em;
+  box-shadow: inset 0 0 0 2px #f45e61;
+  color: #f45e61;
+  font-size: inherit;
+  font-weight: 700;
+  position: relative;
+  vertical-align: middle;
+}
+button::before, button::after {
+	box-sizing: inherit;
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	padding-bottom: 30px;
+}
+.draw {
+  transition: color 0.25s;
+}
+.draw::before, .draw::after {
+  border: 2px solid transparent;
+  width: 0;
+  height: 0;
+}
+.draw::before {
+  top: 0;
+  left: 0;
+}
+.draw::after {
+  bottom: 0;
+  right: 0;
+}
+.draw:hover {
+  color: #60daaa;
+}
+.draw:hover::before, .draw:hover::after {
+  width: 100%;
+  height: 100%;
+}
+.draw:hover::before {
+  border-top-color: #60daaa;
+  border-right-color: #60daaa;
+  transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
+}
+.draw:hover::after {
+  border-bottom-color: #60daaa;
+  border-left-color: #60daaa;
+  transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s;
+}
+.meet:hover {
+  color: #fbca67;
+}
+.meet::after {
+  top: 0;
+  left: 0;
+}
+.meet:hover::before {
+  border-top-color: #fbca67;
+  border-right-color: #fbca67;
+}
+.meet:hover::after {
+  border-bottom-color: #fbca67;
+  border-left-color: #fbca67;
+  transition: height 0.25s ease-out, width 0.25s ease-out 0.25s;
+}
+.buttons {
+  isolation: isolate;
+}
+h1 {
+  font-weight: 300;
+  font-size: 2.5em;
+}
+main {
+	height: 100vh;
+}
+.scrolling > .bg {
+  transform: skewY(-2.5deg);
+  background-color: #F6F4DB;
+  margin: -50px auto;
+  padding: 10px 0;
+}
+.scrolling > .bg > h2 {
+	transform: skewY(2.5deg);
+	width: 60%;
+	margin: 30px auto;
+	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	font-size: x-large;
+	line-height: 1.5;
+	text-align: center;
+	color: #1A1F70;
+}
+.scrolling > .bg > p {
+	transform: skewY(2.5deg);
+	width: 60%;
+	margin: 30px auto;
+	font-size: 16px;
+	color: #3F3517;
+}
+.scrolling > .bg > table {
+	transform: skewY(2.5deg);
+	margin: 0px auto 20px;
+	padding: 0 30px;
+	width: 80%;
+}
+.scrolling > .bg > table th {
+	padding: 5px;
+	text-align: center;
+	font-weight: normal;
+}
+
+
+.scrolling > .bg > .map {
+	transform: skewY(2.5deg);
+	margin: 10px auto 10px;
+	width: 60%;
+}
+.fixed {
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+}
+.fixed.bg1 {
+  background-image: url(img/n.jpg);
+}
+.fixed.bg2 {
+  background-image: url(img/f.jpg);
+}
+.fixed.bg3 {
+  background-image: url(img/j.jpg);
+}
+.fixed.bg4 {
+  background-image: url(img/b.jpg);
+}
+.fixed.bg1 {
+  position: relative;
+}
+.fixed.bg1 > .container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 90%;
+  transform: translateX(-50%) translateY(-50%);
+  text-align: center;
+  color: white;
+}
+.fixed.bg1 > .container > h1 {
+  font-size: 70px;
+  margin: 0;
+}
+.fixed.bg1 > .container > p {
+  font-size: 30px;
+}
+#all > .pagetop {
+	/* [disabled]position: absolute; */
+	right: 20px;
+	/* [disabled]bottom: 40px; */
+	/* [disabled]top: 5px; */
+	float: right;
+}
+
+footer {
+	text-align: center;
+	margin-top: 50px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 0;
+	padding: 10px;
+	background-color: rgba(0,0,0,0.70);
+	position: relative;
+}
+footer a {
+	padding: 5px;
+	color: rgba(255,255,255,1.00);
+	text-decoration: none;
+}
+footer a:hover {
+	color: #606060;
+}
+footer p {
+	padding: 5px;
+	color: rgba(255,255,255,1.00);
+}

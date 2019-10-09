@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>職業訓練 Lesson2 | ギャラリーページ</title>
+    
+<meta name="description" content="ここにメタディスクリプションのテキストを記述。タイトルの下に記述するのが通例。DWの場合は、挿入-メタの下、【詳細】でタグ入りが出現する！">
+<meta name="keywords" content="古いSEO対策のキーワード。セットで入れとけば？的なものkeywordは 単語,単語,単語,単語,単語とする">
+
+
+<link href="lesson2.css" rel="stylesheet" type="text/css">
+<script type="text/javascript">
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+</script>
+</head>
+
+<!--  今日一番の発見。コメントアウトのショートカットキーが発見される！！  -->
+<!--
+複製ページのロールオーバー、リンクの追加と、複製方法！
+デザインビューで選択して、コピペ…。そうするとビヘイビア等のコードも挿入される。
+-->
+    
+<body onLoad="MM_preloadImages('img/btn-home_on.png','img/btn-item_on.png','img/btn-canpaign_on.png','img/btn-gallery_on.png','img/btn-faq_on.png','img/btn-voice_on.png','img/btn-order_on.png')">
+<header>
+  <h1><a href="lesson2.html"><img src="img/logo.png" width="165" height="178" alt="jellybeans shop"/></a></h1>
+  <nav>
+    <ul>
+      <li><a href="lesson2.html"><img src="img/btn-home.png" alt="home" width="250" height="65" id="btn01" onMouseOver="MM_swapImage('btn01','','img/btn-home_on.png',1)" onMouseOut="MM_swapImgRestore()"/></a></li>
+      <li><a href="item.html"><img src="img/btn-item.png" alt="商品" width="250" height="65" id="btn02" onMouseOver="MM_swapImage('btn02','','img/btn-item_on.png',1)" onMouseOut="MM_swapImgRestore()"/></a></li>
+      <li><a href="campaign.html"><img src="img/btn-canpaign.png" alt="キャンペーン" width="250" height="65" id="btn03" onMouseOver="MM_swapImage('btn03','','img/btn-canpaign_on.png',1)" onMouseOut="MM_swapImgRestore()"/></a></li>
+      <li><a href="gallery.html"><img src="img/btn-gallery_on.png" alt="ギャラリー" width="250" height="65" id="btn04" onMouseOver="MM_swapImage('btn04','','img/btn-gallery_on.png',1)" onMouseOut="MM_swapImgRestore()"/></a></li>
+      <li><a href="faq.html"><img src="img/btn-faq.png" alt="よくある質問" width="250" height="65" id="btn05" onMouseOver="MM_swapImage('btn05','','img/btn-faq_on.png',1)" onMouseOut="MM_swapImgRestore()"/></a></li>
+      <li><a href="voice.html"><img src="img/btn-voice.png" alt="お客様の声" width="250" height="65" id="btn06" onMouseOver="MM_swapImage('btn06','','img/btn-voice_on.png',1)" onMouseOut="MM_swapImgRestore()"/></a></li>
+      <li><a href="form.html"><img src="img/btn-order.png" alt="カタログのご注文" width="250" height="65" id="btn07" onMouseOver="MM_swapImage('btn07','','img/btn-order_on.png',1)" onMouseOut="MM_swapImgRestore()"/></a></li>
+    </ul>
+  </nav>
+</header>
+<div class="content">
+        <nav class="sidenav">
+          <ol class="clearfix">
+            <li><a href="#">通販<br>利用規約</a></li>
+            <li><a href="#">運営会社<br>について</a></li>
+            <li><a href="#">ショップ<br>アクセス</a></li>
+          </ol>
+       </nav>
+          <!-- 改行はシフトタブを押しながらエンターで行ける！-->
+        
+      <main class="subpage clearfix">
+          <h2>ギャラリー</h2>
+<!--floatの解除に設定したCSS名。クリアフィックス-->
+<!-- galleryページで変更。各ページで設定できるので複製時注意。今回は、boxが並ぶだけなので、floatの基準点。クリアフィックスをここに設置する。（下のolは自己完結している。galleryboxの上はsubpage！）-->
+          
+          
+           <!-- パンくずリストは番号リストで作ったほうがいい！ -->
+          
+          <ol class="topic">
+            <li><a href="lesson2.html">home</a></li>
+            <li>ギャラリー</li>
+<!--            <li>test追加1</li>-->
+<!--            <li>test追加2</li>-->
+          </ol>
+<!--memo：隣接セレクターってどこ？CSS参照".subpage .topic li+li"の":before"を消して、背景色をつけてみよう！ -->
+          <h3>これまで作成したゼリービーンズ</h3>
+            <div class="gallerybox">
+                <img src="img/gallery01.jpg" width="250" height="250" alt="小粒ビーンズ"/> 
+                <h4>キュートな小粒ビーンズ</h4>
+                <p>お口にポン！と放り込める小粒 小さなお子様でも安心です。 イベント用小袋に入れてご提供します。</p>
+            </div>
+            <div class="gallerybox">
+                <img src="img/gallery02.jpg" width="250" height="250" alt="野菜ビーンズ"/> 
+                <h4>自然お野菜ビーンズ</h4>
+                <p>お野菜の自然な味を再現したビーンズ 意外なおいしさにみんなにっこり 小瓶に入れてご提供します。</p>
+            </div>
+            <div class="gallerybox">
+                <img src="img/gallery03.jpg" width="250" height="250" alt="おもちゃ箱ビーンズ"/> 
+                <h4>おもちゃ箱ビーンズ</h4>
+                <p>カラフルなビーンズをお徳用瓶に たくさん詰めました お味はひみつです。</p>
+            </div>
+       </main>
+      <footer>
+        <p><a href="lesson2.html">home</a>｜<a href="item.html">商品</a>｜<a href="campaign.html">キャンペーン</a>｜<a href="gallery.html">ギャラリー</a>｜<a href="faq.html">よくある質問</a>｜<a href="voice.html">お客様の声</a>｜<a href="form.html">カタログのご注文</a></p>
+        <p>Copyright &copy; 職業訓練授業課題.All Rights Reserved.</p>
+      </footer>
+    </div>
+    
+</body>
+</html>

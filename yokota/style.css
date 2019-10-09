@@ -1,0 +1,184 @@
+@charset "utf-8";
+
+/*リセットCSS*/
+
+    p, h1, h2, h3, ul, body {
+        padding: 0;
+        margin: 0;
+    }
+
+    img {
+        vertical-align: bottom;
+/*        vertical-align: top;*/
+        border-style: none;
+    }
+/*vertical-alignプロパティの、baselin（隙間）は下につく。*/
+
+/*　使わんかった。
+    .clearfix:after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+*/
+
+/*共有 ID　all*/
+
+    #all {
+        width: 100%;
+        /* [disabled]font-size: 94%; */
+    }
+
+/*ヘッダー*/
+
+    header{
+        color: blanchedalmond;
+        height:500px;
+        margin: 0 auto;
+        text-align: center;
+        background-color: black;
+        background-image: url(img/main.jpg);
+        background-repeat: no-repeat;
+        background-position: top center; /*上で中心*/
+        background-size:100% auto;/*この場合は高さが自動設定*/
+          position: relative;/*テキスト用の親要素*/
+        }
+        /*TOP画像があったので…。*/
+
+    header h1{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform : translate(-50%,-50%);
+      width: 75%;
+      text-align: center;/*一応BOX内の文字も中央寄せ*/
+        }
+
+
+/*ナビゲーション*/
+
+    nav {
+        background-color: #000000;
+/*        width: 1280px;*/
+        height: 80px;
+    }
+    nav ul  {
+        margin: 0 auto;
+        width: 1000px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        list-style-type: none;
+    }
+    nav li  {
+        margin-right: 40px;
+        float: left;
+        margin-left: 0px;
+        clear: none;
+    }
+
+/*メインここから*/
+
+    main {
+        display: block;
+        width: 100%;
+        margin: 0 auto;
+        padding-bottom: 30px;
+        background-image: url(img/bg-waku.jpg);
+        background-repeat: no-repeat;
+        background-position: top center; /*位置指定。上で中心*/
+        background-size:100% auto;/*この場合は高さが自動設定*/
+        }
+/*mainとmain sectionは同じ？またはすべてのセクション？
+    main section {
+        clear: both;回り込み解除。
+        width: 1000px;
+        margin: 0 auto;
+        display: block;
+        list-style-type: none;これはリストのやつ。
+    }ナビゲーション？？
+*/
+
+    main h2 {
+        padding: 0.5em;/*文字周りの余白*/
+        color: #494949;/*文字色変わったかも！？*/
+        background: #fffaf4;/*背景色つけただけ。*/
+        border-left: solid 5px #ffaf58;/*左線（実線 太さ 色）色変わったかも！？*/
+        width: 100%;
+        margin-left: 30px;
+        }
+
+/*section イントロダクションここから*/
+
+
+    .introduction .text{
+        padding: 20px 50px ; /*適当。h2の30pxより大きい方がいいかな？*/
+        }
+
+/*section ヒストリーここから*/
+
+    /*まだ適当。中央揃えてきな何か*/
+    /*memo:画像の幅が500px。テキストの箱も500px。であれば、floatしなくても、左右入れ替えれば行ける？*/
+
+    .history .box{ /*親要素*/
+        text-align: center;
+        margin: 0 auto;
+        display: flex; /*習ってない。横並びの技*/
+        justify-content: center; /*習ってない…中央ぞろえで検索したら出てきた*/
+        align-items: center;/*コンビ*/
+        height: 250px;/*コンビ*/
+        width: 1000px;
+        }
+
+    .history .text1{ /*子要素*/
+        display: block;
+        width: 500px /*適当500px以下に*/
+        }
+
+/*参考：https://saruwakakun.com/html-css/basic/centering#section3*/
+
+
+/*section　カンボジア　ここから*/
+    .cambodia table {
+        border-left-width: 960px;
+/*        margin: 24px 0 14px;*/
+        border-collapse: collapse;
+        margin: 0 auto; /*とりあえず中央に。*/
+        }
+
+    .cambodia th ,.cambodia td{
+        padding: 10px;
+    }
+    .cambodia th {
+        font-weight: normal;
+        text-align: left;
+        white-space: nowrap;
+        border-right: 1px solid #BABABA;
+        padding-right: 50px;
+    }
+    .cambodia tr:nth-child(odd) {
+    /*    .side tr:nth-child(odd)　不明なのでコメントアウト*/
+        border-color: #C0FF00;
+        background-color: #E0F799;
+    }
+    .cambodia tr:nth-child(even) {
+        background-color: #F5F5F5;
+    }
+
+/*section ACCESS ここから*/
+    .accesses .map {
+        text-align: center;
+        width: 960px;
+        margin: 0 auto;
+    }
+
+/*footer ここから*/
+    footer {
+        width: 1280px;
+        margin: 0 auto;
+        text-align: center;
+/*これだ！！！これいらない。
+        bottom: 0px;
+        clear: both;
+        position: absolute;
+*/
+    }

@@ -1,0 +1,269 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>angkor-wat</title>
+<style type="text/css">
+p, h1, h2, h3, ul, body {
+	padding: 0px;
+	margin: 0px;
+}
+img {
+	border-style: none;
+	vertical-align: bottom;
+}
+#all {
+	line-height: 1.5;
+}
+.header {
+	margin: 0 auto;
+	height: 960px;
+	background-image: url(img/bg-image00.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+.header .innner {
+	padding: 10px 40px;
+	margin: 0 auto;
+	width: 1200px;
+}
+.header h1 {
+	float: left;
+	padding-top: 30px;
+}
+.hover9 {
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  padding-bottom: 10px;
+}
+.hover9::after {
+  position: absolute;
+  content: '';
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: #0f095c;
+  transition: all 0.3s ease 0s;
+}
+.hover9:hover {
+  cursor: pointer;
+}
+.hover9:hover::after {
+  width: 100%;
+}
+nav ul {
+	margin: 0 40px 10px;
+	list-style-type: none;
+	float: right;
+	padding-top: 70px;
+}
+nav li {
+	padding: 0 10px;
+	float: left;
+}
+main {
+	background-image: url(img/bg-image01.jpg);
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	/* [disabled]clear: both; */
+	display: block;
+	padding-top: 10px;
+}
+main .box {
+	background-color: rgba(209,192,165,1.00);
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 10px;
+	width: 1000px;
+	overflow: hidden;
+}
+.box .fhoto {
+	float: left;
+}
+.box h2 {
+	padding: 5px 20px;
+	/* [disabled]float: left; */
+}
+.box .text {
+	padding: 10px 20px;
+	overflow: hidden;
+	/* [disabled]float: left; */
+}
+.access {
+	padding: 0 auto;
+	margin: 30px auto;
+	/* [disabled]text-align: center; */
+	width: 1000px;
+}
+.bg {
+	background-image: url(img/bg-image02.jpg);
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	padding-top: 30px;
+}
+.access h2 {
+	background-color: rgba(153,133,101,1.00);
+	padding: 5px 10px;
+	width: 980px;
+}
+.access p {
+}
+.pagetop {
+	/* [disabled]padding-top: 20px; */
+	padding-right: 10px;
+	text-align: right;
+}
+footer {
+	background-color: rgba(0,0,0,0.70);
+	padding: 10px;
+	margin: 0 auto;
+	text-align: center;
+}
+footer a {
+	color: rgba(255,255,255,1.00);
+	text-decoration: none;
+}
+footer a:hover {
+	color: rgba(96,96,96,1.00);
+}
+footer p {
+	padding: 5px;
+	color: rgba(255,255,255,1.00);
+}
+</style>
+<script type="text/javascript">
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+</script>
+</head>
+<body onLoad="MM_preloadImages('img/btn-01_on.png','img/btn-02_on.png','img/btn-03_on.png','img/btn-04_on.png')">
+<div id="all">
+  <div class="header">
+    <div class="innner">
+      <h1><img src="img/logo00.png" width="316" height="71" alt="アジア　トラベル"/></h1>
+      <nav>
+        <ul>
+          <li><a class="hover9" href="#"><img src="img/btn-01.png" alt="インフォメーション" width="189" height="22" id="Image1" onMouseOver="MM_swapImage('Image1','','img/btn-01_on.png',1)" onMouseOut="MM_swapImgRestore()"/></a></li>
+          <li><a class="hover9" href="#"><img src="img/btn-02.png" alt="ヒストリー" width="106" height="31" id="Image2" onMouseOver="MM_swapImage('Image2','','img/btn-02_on.png',1)" onMouseOut="MM_swapImgRestore()"/></a></li>
+          <li><a class="hover9" href="#"><img src="img/btn-03.png" alt="アバウト" width="92" height="23" id="Image3" onMouseOver="MM_swapImage('Image3','','img/btn-03_on.png',1)" onMouseOut="MM_swapImgRestore()"/></a></li>
+          <li><a class="hover9" href="#"><img src="img/btn-04.png" alt="アクセス" width="98" height="20" id="Image4" onMouseOver="MM_swapImage('Image4','','img/btn-04_on.png',1)" onMouseOut="MM_swapImgRestore()"/></a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <main>
+    <div class="box">
+      <p class="fhoto"><img src="img/image01.jpg" width="300" height="400" alt=""/></p>
+      <h2 id="info"><img src="img/Introduction.png" width="287" height="33" alt=""/></h2>
+      <div class="text">
+  <p>カンボジア北西部に位置するユネスコの世界遺産（文化遺産）であるアンコール遺跡の一つであり、<br>
+    その遺跡群を代表するヒンドゥー教寺院建築。<br>
+    サンスクリット語でアンコールは王都、クメール語でワットは寺院を意味します。<br>
+    大伽藍と美しい彫刻を特徴としクメール建築の傑作とされ、カンボジア国旗の中央にも同国の象徴として描かれています。</p>
+      </div>
+    </div>
+    <div class="box">
+      <p class="fhoto"><img src="img/image02.jpg" width="300" height="400" alt=""/></p>
+      <h2 id="history"><img src="img/History.png" width="174" height="43" alt=""/></h2>
+      <div class="text">
+        <p>「アンコールワット」は「都市の寺」を意味する寺院。<br>
+          カンボジアのシェムリアップ郊外にある「アンコール遺跡群」を代表する寺院です。<br>
+        </p>
+        <p>アンコールワットは12世紀前半、アンコール王朝のスーリヤヴァルマン2世によって<br>
+          ヒンドゥー教寺院として建立されました。東西1500m、南北1300mに渡るこの広大な寺院は当時、<br>
+          3万人もの労働者を動員し約30年の歳月をかけて造られたと言われています。<br>
+        </p>
+        <p>1431年頃に都がプノンペンに遷ると、一時アンコールは忘れ去られた存在となります。<br>
+          再発見後は、未完成であった第一回廊北面とその付近に彫刻が施され、のちに<br>
+          寺院は仏教寺院へと改修されました。</p>
+        <p>世界中から耳目を集めるようになったのは1860年。<br>
+          この寺院を訪れたフランス人のアンリ・ムーオがジャングルにひっそり佇んでいたこの建築の<br>
+          芸術性の高さを世界に発表したのです。</p>
+      </div>
+    </div>
+    <div class="box">
+      <p class="fhoto"><img src="img/image03.jpg" width="300" height="400" alt=""/></p>
+      <h2 id="about"><img src="img/About.png" width="142" height="33" alt=""/></h2>
+      <table>
+        <tbody>
+          <tr>
+            <td>国名</td>
+            <td>カンボジア王国</td>
+          </tr>
+          <tr>
+            <td>面積</td>
+            <td>18.1万平方km（日本の約半分）</td>
+          </tr>
+          <tr>
+            <td>人口</td>
+            <td>約1,300万人</td>
+          </tr>
+          <tr>
+            <td>首都</td>
+            <td>プノンペン</td>
+          </tr>
+          <tr>
+            <td>民族</td>
+            <td>クメール人</td>
+          </tr>
+          <tr>
+            <td>言語</td>
+            <td>公用語としてクメール語ですが、ホテルやレストランなどは英語も一部</td>
+          </tr>
+          <tr>
+            <td>宗教</td>
+            <td>仏教</td>
+          </tr>
+          <tr>
+            <td>通貨</td>
+            <td>通貨単位　リエル（Riel）、1US＄約4000リエル、 100リエル約2.9円</td>
+          </tr>
+          <tr>
+            <td>気候</td>
+            <td>大きく乾期（涼季11月上旬～1月下旬）（暑季2月上旬～5月中旬）と雨期（5月下旬から10月の下旬）の2つの季節。</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+  <div class="bg">
+    <div class="access">
+      <h2 id="access"><img src="img/Access.png" width="152" height="33" alt=""/></h2>
+      <div><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d542147.6838796148!2d103.41332880102642!3d13.447466667880134!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3110168aea9a272d%3A0x3eaba81157b0418d!2z44Ki44Oz44Kz44O844Or44O744Ov44OD44OI!5e0!3m2!1sja!2sjp!4v1570157955439!5m2!1sja!2sjp" width="1000" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe></div>
+      </div>
+    <div class="pagetop">
+      <p><a href="#all"><img src="img/pagetop.png" width="110" height="110" alt="ページトップ"/></a></p>
+      </div>
+    <footer>
+      <p><img src="img/footer-logo.png" width="190" height="48" alt="アジア　トラベル"/></p>
+      <p><a href="#all">home</a>|<a href="#info">information</a>|<a href="#history">History</a>|<a href="#about">About</a>|<a href="#access">Access</a></p>
+      <p>Copyright&copy; 職業訓練授業課題.All Rights Reserved.</p>
+    </footer>
+  </div>
+</div>
+</body>
+</html>
