@@ -1,0 +1,34 @@
+@charset "utf-8";
+
+/*固定バナーここからHOVERで左上から斜めに背景の色が変わる*/
+    a.cp_btn {
+        display: block;
+        text-align: center;
+        text-decoration: none;
+        color: #19F408; /*フォントcolor*/
+        width: 120px; /*大きさ*/
+        height: 120px; /*大きさ*/
+        line-height: 120px; /*行間。変えてみたらわかる！*/
+        border: double 4px #19F408; /*線の設定*/
+        border-radius: 50%; /*丸くする*/
+        vertical-align: middle; /*英語にはpjgなど出っ張りがあるって話のやつ。真ん中にする。*/
+        overflow: hidden;
+        transition: .6s; /*変化にかける時間*/
+        }
+
+    a.cp_btn:hover {
+        transform: rotateY(360deg); /*要素をくるっと回転！*/
+        }
+
+    #action {
+        position: fixed; /*表示位置のやつ：例では基準を画面の左上に*/
+        top: 0px; /*ポジションとセット・上から*/
+        left:0px; /*ポジションとセット・左から*/
+        margin: 0; /*余白が入らないように*/
+/*        width:200px; あってもなくても*/
+/*        padding: 10px; あってもなくても*/
+/*        background:#06F50F;*//*つけてみたら範囲がわかる？消さないと使えないよ*/
+/*        color:white;*/
+        }
+
+
