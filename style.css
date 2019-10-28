@@ -1,577 +1,503 @@
 @charset "utf-8";
 
-/* ◇◇◇◇◇ ボディーここから ◇◇◇◇◇ */
 
-    body {
-        margin: 0;
+#hoge{
+	width:1000px;
+	height:1000px;
+	margin:0 auto;
+/*	background-color:#000;*/
+	}
+
+/**********背景設定の追加*************/
+
+    .holder,
+    .first,
+    .second,
+    .third {
+      height: 80vh;
+      width: 100vw;
     }
-    .contents {
-        transition: transform .6s cubic-bezier(0.215, 0.61, 0.355, 1);
+    .first,
+    .second,
+    .third {
+      position: absolute;
     }
-    #navTgl:checked ~ .contents {
-        transform: translateX(250px);
+    .second,
+    .third {
+      opacity: 0;
+    }
+    .holder {
+      height: 100vh;
+      position: relative;
+      z-index: 1;
+    }
+    .first {
+      animation: first 10s infinite;
+      background: linear-gradient(#5ff8ca, #60e08c);
+      z-index: 10;
+    }
+      @keyframes first {
+        0% {opacity: 1.0;}
+        10% {opacity: 0.8;}
+        20% {opacity: 0.6;}
+        30% {opacity: 0.4;}
+        40% {opacity: 0.2;}
+        50% {opacity: 0.1;}
+        60% {opacity: 0.2;}
+        70% {opacity: 0.4;}
+        80% {opacity: 0.6;}
+        90% {opacity: 0.8;}
+        100% {opacity: 1.0;}
+      }
+
+    .second {
+      animation: second 10s infinite; animation-delay: 2s;
+      background: linear-gradient(#19eaa6, #00a1f0);
+      z-index: 20;
+    }
+      @keyframes second {
+        0% {opacity: 0;}
+        10% {opacity: 0.2;}
+        20% {opacity: 0.4;}
+        30% {opacity: 0.6;}
+        40% {opacity: 0.8;}
+        50% {opacity: 1.0;}
+        60% {opacity: 0.8;}
+        70% {opacity: 0.6;}
+        80% {opacity: 0.4;}
+        90% {opacity: 0.2;}
+        100% {opacity: 0;}
+      }
+
+    .third {
+      animation: third 10s infinite;
+      animation-delay: 8s;
+      background: linear-gradient(#aab7f8, #ff75c6);
+      z-index: 30;
+    }
+      @keyframes third {
+        0% {opacity: 0;}
+        10% {opacity: 0.2;}
+        20% {opacity: 0.4;}
+        30% {opacity: 0.6;}
+        40% {opacity: 0.8;}
+        50% {opacity: 1.0;}
+        60% {opacity: 0.8;}
+        70% {opacity: 0.6;}
+        80% {opacity: 0.4;}
+        90% {opacity: 0.2;}
+        100% {opacity: 0;}
+      }
+
+    .txt {
+	text-align: center;
+      margin-top: calc(50vh - 350px);
+	margin: 0 auto;
+      position: absolute;
+      width: 100%;
+      z-index: 1000;	
     }
 
-/* ◇◇◇◇◇ toggle buttonここから  ◇◇◇◇◇ */
-    #navTgl {
-        display: none;
+/*
+    h1 {
+      font-size: 40px;
+      font-weight: 400;
+      margin: 0;
     }
-    label {
-        cursor: pointer;
-        position: fixed;
-        top: 0;
-        left: 0;
+    p {
+      font-size: 20px;
+      margin-top: 26px;
     }
-    .open {
-        z-index: 2;
-        width: 48px;
-        height: 48px;
-        background: lightSeaGreen;
-        transition: background .6s, transform .6s cubic-bezier(0.215, 0.61, 0.355, 1);
-    }
-    .open::before,
-    .open::after {
-        content: "";
-    }
-    .open span,
-    .open::before,
-    .open::after {
-        content: "";
-        position: absolute;
-        top: calc(50% - 1px);
-        left: 30%;
-        width: 40%;
-        border-bottom: 2px solid white;
-        transition: transform .6s cubic-bezier(0.215, 0.61, 0.355, 1);
-    }
-    .open::before {
-        transform: translateY(-8px);
-    }
-    .open::after {
-        transform: translateY(8px);
-    }
-    .close {
-        z-index: 1;
-        width: 100%;
-        height: 100%;
-        pointer-events: none;
-        transition: background .6s;
-    }
-    #navTgl:checked + .open {
-        background: #345eeb;
-        transform: translateX(250px);
-    }
-    #navTgl:checked + .open span {
-        transform: scaleX(0);
-    }
-    #navTgl:checked + .open::before {
-        transform: rotate(45deg);
-    }
-    #navTgl:checked + .open::after {
-        transform: rotate(-45deg);
-    }
-    #navTgl:checked ~ .close {
-        pointer-events: auto;
-        background: rgba(0,0,0,.3);
-    }
+*/
 
-/* ◇◇◇◇◇ drawer menuここから  ◇◇◇◇◇ */
-    .menu {
-        z-index: 1;
-        position: fixed;
-        overflow: auto;
-        top: 0;
-        left: 0;
-        width: 250px;
-        height: 100%;
-        margin: 0;
-        padding: 10px;
-        box-sizing: border-box;
-        background: rgba(0,0,0,.6);
-        transform: translateX(-100%);
-        transition: transform .6s cubic-bezier(0.215, 0.61, 0.355, 1);
-    }
-    .menu h2,
-    .menu a {
-        color: white;
-    }
-    .menu h2 {
-        text-align: center;
-    }
-    .menu ul {
+
+/*********とりあえずここまで************/
+
+
+/********* 
+		NEW バックグランドここから。とりあえず張り付け
+			*****************/
+
+	html,
+	body {
+	  height: 100%;
+	}
+	html {
+	  background: #eee;
+	}
+	body {
+	  display: flex;
+	  justify-content: center;
+	  align-items: center;
+	}
+	.box {
+	  width: 80%;
+	  height: 50%;
+	  border-radius: 20px;
+	  box-shadow: 0 2px 30px rgba(0,0,0,0.2);
+	  background: #fbfcee;
+	  position: relative;
+	  overflow: hidden;
+	  transform: translate3d(0,0,0);
+	  margin: 0 auto;
+	}
+	.wave {
+	  opacity: 0.4;
+	  position: absolute;
+	  top: 3%;
+	  left: 50%;
+	  background: #0af;
+	  width: 800px;
+	  height: 800px;
+	  margin-left: -500px;
+	  margin-top: -400px;
+	  transform-origin: 50% 48%;
+	  border-radius: 43%;
+	  animation: drift 3000ms infinite linear;
+	}
+	.wave.-three {
+	  animation: drift 5000ms infinite linear;
+	}
+	.wave.-two {
+	  animation: drift 7000ms infinite linear;
+	  opacity: 0.1;
+	  background: yellow;
+	}
+	.box:after {
+	  content: '';
+	  display: block;
+	  left: 0;
+	  top: 0;
+	  width: 100%;
+	  height: 100%;
+	  background: linear-gradient(to bottom,#ee88aa,rgba(221,238,255,0) 80%,rgba(255,255,255,0.5));
+	  z-index: 11;
+	  transform: translate3d(0,0,0);
+	}
+	.title {
+	  position: absolute;
+	  left: 0;
+	  top: 0;
+	  width: 100%;
+	  z-index: 1;
+	  line-height: 300px;
+	  text-align: center;
+	  transform: translate3d(0,0,0);
+	  color: white;
+	  text-transform: uppercase;
+	  font-family: 'Playfair Display', serif;
+	  letter-spacing: 0.4em;
+	  font-size: 24px;
+	  text-shadow: 0 1px 0 rgba(0,0,0,0.1);
+	  text-indent: 0.3em;
+	}
+
+	@keyframes drift {
+	  from {
+		transform: rotate(0deg);
+	  }
+	  from {
+		transform: rotate(360deg);
+	  }
+	}
+
+
+/**********とりあえずここまで*************/
+
+
+
+/*最初の最初。ここから*/
+
+	*:after, *:before {
+	  box-sizing: border-box; /*paddingとborderを幅と高さに含める*/
+	}
+
+
+/*リセットCSSここから*/
+
+/*memo "*"は 全要素。テーブルがずれる倍は"p,h1,h2,h3,ul,body"に変更、*/
+    *{
         margin: 0;
         padding: 0;
-    }
-    .menu li {
-        font-size: .8em;
-        line-height: 1.4;
-    }
-    .menu li:not(:first-child) {
-        border-top: 1px solid rgba(255,255,255,.6);
-    }
-    .menu a {
-        display: block;
-        padding: 1em 2em;
-        text-decoration: inherit;
-        transition: background .6s cubic-bezier(0.215, 0.61, 0.355, 1);
-    }
-    .menu a:hover {
-        background: black;
-    }
-    #navTgl:checked ~ .menu {
-        transform: none;
-    }
+        }
 
-/* ◇◇◇◇◇ header, footerここから  ◇◇◇◇◇ */
-    header,
-    footer {
-        box-sizing: border-box;
-        text-align: center;
-    }
-    header .logo,
-    footer .copyright {
-        margin: 0;
-        color: #553969;
-        font-family: "Ubuntu Condensed", sans-serif;
-        font-weight: 400;
-        line-height: 120px;
-        letter-spacing: .1em;
-    }
-    header {
-        position: relative;
-        margin-bottom: 40px;
-    }
-    footer {
-        background: rgba(255,255,255,.6);
-    }
-    footer small {
-        font-size: 1em;
-    }
+    img{
+        vertical-align: bottom;
+        border:none;
+        }
 
-/* ◇◇◇◇◇ articleここから  ◇◇◇◇◇ */
-    article {
-        width: 100%;
-        max-width: 647px;
-        margin: 0 auto 100px;
-        padding: 0 16px;
-        box-sizing: border-box;
-    }
-    article h1 {
-        width: 7em;
-        height: 7em;
+/*memo "font-size: 94%;"*/
+/*とは、デフォルト16px→今回のデザインカンプ15pxなので、16：15＝100：X→15÷16＝0.9375より。*/
+/*フォントサイズは、ユーザーによってブラウザ表示の％が異なる為、（表示サイズ標準、大、小等）pxで指定すると、変動できない。初期値は％やem（X文字分）で求めた方がよい。*/
+    #all{
+        font-size: 94%;
+        line-height: 1.5;
+        width:100%;
+        }
+
+
+/*ナビゲーションここから*/
+
+    nav{
+        }
+
+    nav ul{
+        width: 1000px;
         margin: 0 auto;
-        font-size: 1em;
-        line-height: 7em;
-        font-weight: normal;
-        text-align: center;
-        background: rgba(0,0,0,.05);
-        border-radius: 50%;
-    }
-    section {
-        margin: 4em 0;
-    }
-    section h2 {
-        margin: 0 0 .6em;
-    }
-    figure {
-        position: relative;
-        margin: 0;
-        padding-bottom: 3.6em;
-    }
-    figure img {
-        max-width: calc(100% - 10px);
-        margin-bottom: .8em;
-        padding: 5px;
-        vertical-align: middle;
-        background: rgba(255,255,255,.6);
-    }
-    figcaption {
-        font-size: .8em;
-    }
-    section .btn {
-        display: block;
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        padding: 1em 2em;
-        color: white;
-        background: lightSeaGreen;
-        text-align: center;
-        text-decoration: inherit;
-        transition: background .3s;
-    }
-    section .btn:hover {
-        background: #345eeb;
-    }
-
-/* ◇◇◇◇◇ nav ここから  ◇◇◇◇◇ */
-    header nav {
-        max-width: 647px;
-        margin: 0 auto;
-    }
-    header nav ul {
-        display: flex;
-        width: 100%;
-        margin: 0;
-        padding: 0;
-        font-size: .8em;
-        text-align: center;
-        white-space: nowrap;
-    }
-    header nav li {
-        display: flex;
-        flex-basis: 20%;
-    }
-    header nav li:not(:first-child) {
-        border-left: 1px solid rgba(0,0,0,.1);
-    }
-    header nav li a {
-        flex-grow: 1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 1em;
-        color: white;
-        text-decoration: inherit;
-        background: lightSeaGreen;
-        transition: background .3s;
-    }
-    header nav li a:hover {
-        background: #345eeb;
-    }
-
-/* ◇◇◇◇◇ change mechanism ここから  ◇◇◇◇◇ */
-    header nav {
+        list-style-type: none;
         overflow: hidden;
-        transition: height .6s cubic-bezier(0.215, 0.61, 0.355, 1), opacity .6s;
-    }
-    @media screen and (min-width: 768px) {
-        .open {
-            transform: translateY(-100%);
         }
-        header nav {
-            height: 3em;
-            transition-delay: 0s, .4s;
+
+    nav li{
+        float: left;
+        margin-right: 31px;
         }
-    }
-    @media screen and (max-width: 767px) {
-        header nav {
-            height: 0;
-            opacity: 0;
-            pointer-events: none;
-            transition-delay: .4s, 0s;
-        }
-    }
 
-
-/* ◇◇◇◇◇ アコーディオンtest ここから ◇◇◇◇◇*/
-
-
-    .accordion-box {
-        position: relative;
-    }
-    .accordion-box label {
-        height: 140px; /* グラデーションの高さ */
-        cursor: pointer;
-        text-align: center;
-        font-size: 12px;
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-
-        /* 以下グラデーションは「背景が白」に併せて設定しています */ 
-        background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.95) 90%);
-        background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.95) 90%);
-        background: -o-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.95) 90%);
-        background: -ms-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.95) 90%);
-        background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.95) 90%);
-    }
-    .accordion-box input:checked + label {
-        background: inherit;
-        display: none;
-    }
-    /* 開いた時には背景グラデーションを消す */
-    .accordion-box label:after {
-    content: "続きをよむ"; /* ラベルの文字 */
-    letter-spacing: .05em;
-    line-height: 2.5rem;
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    -webkit-transform: translate(-50%, 0);
-    transform: translate(-50%, 0);
-    color: #fff;
-    background-color: #33A8A1;
-    width: 18.75rem;
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    border-radius: 20px;
-    }
-    .accordion-box label:before {
-        content: "↓";
-        font-weight: 700px;;
-        position: absolute;
-        bottom: 30px;
-        left: 50%;
-        -webkit-transform: translate(-140px, 0);
-        transform: translate(-140px, 0);
-        background-color: #fff;
-        z-index: 1;
-        -webkit-border-radius: 100%;
-        -moz-border-radius: 100%;
-        border-radius: 100%;
-        width: 20px;
-        height: 20px;
-        line-height: 20px;
-    }
-    .accordion-box input {
-        display: none;
-    }
-    .accordion-box .accordion-container {
-        overflow: hidden;
-        height: 100px; /* 開く前に見えている部分の高さ */
-        -webkit-transition: all 0.1s;
-        -moz-transition: all 0.1s;
-        -ms-transition: all 0.1s;
-        -o-transition: all 0.1s;
-        transition: all 0.1s;
-    }
-
-
-    .accordion-box input:checked + label {
-        /* display: none ; 閉じるボタンは要らないとき */
-    }
-    .accordion-box input:checked + label:after {
-        content: "閉じる";
-    }
-    .accordion-box input:checked + label:before {
-        content: "↑";
-    }
-    .accordion-box input:checked ~ .accordion-container {
-        height: auto;
-        padding-bottom: 80px; /* 閉じるボタンのbottomからの位置 */
-        -webkit-transition: all 0.1s;
-        -moz-transition: all 0.1s;
-        -ms-transition: all 0.1s;
-        -o-transition: all 0.1s;
-        transition: all 0.1s;
-    }
-
-
-/* ◇◇◇◇◇ contents photo ここから ◇◇◇◇◇*/
-
-	.details {
-		display: flex;
-		justify-content: space-around;
-		list-style: none;
-		width: 640px;
-		margin: 1em auto;
-		padding: 0;
-		text-align: center;
-	}
-	.details li,
-	.details li dl {
-		width: 200px;
-		height: 180px;
-	}
-	.details li {
-		position: relative;
-	}
-
-	.details dl {
-		box-sizing: border-box !important;
-		position: absolute;
-		top: 0;
-		margin: 0;
-		padding: 16px 24px;
-		color: #fff;
-		background: rgba(205,92,92,.9);
-	}
-	.details dl dd {
-		margin: 0;
-		font-size: 10px;
-		text-align: justify;
-		word-break: break-all;
-	}
-	.details dl dd:not(:first-child) {
-		margin-top: .5em;
-	}
-	.details dl dd:last-of-type {
-		text-align: right;
-	}
-	.details a {
-		padding: .5em;
-		background: #fff;
-		text-decoration: inherit;
-	}
-
-	/* ◇◇◇◇◇ type1 ◇◇◇◇◇ */
-	.details .type1 {
-		overflow: hidden;
-	}
-	.details .type1 dl {
-		transition: opacity .6s, transform .6s cubic-bezier(0.215, 0.61, 0.355, 1);
-	}
-	.details .type1:not(:hover) dl {
-		opacity: 0;
-		transform: translateY(100%);
-	}
-
-	/* ◇◇◇◇◇ type2 ◇◇◇◇◇ */
-	.details .type2 {
-		perspective: 1000px;
-	}
-	.details .type2 img,
-	.details .type2 dl {
-		transition: opacity .6s, transform .6s cubic-bezier(0.215, 0.61, 0.355, 1);
-		backface-visibility: hidden;
-	}
-	.details .type2:hover img {
-		transform: rotateX(180deg);
-	}
-	.details .type2 dl {
-		background-color: #cd5c5c;
-	}
-	.details .type2:not(:hover) dl {
-		transform: rotateX(-180deg);
-	}
-
-	/* ◇◇◇◇◇ type3 ◇◇◇◇◇ */
-	.details .type3 {
-		overflow: hidden;
-	}
-	.details .type3 dl {
-		background: transparent;
-	}
-	.details .type3 dl dt,
-	.details .type3 dl dd {
-		position: relative;
-		z-index: 1;
-		transition: opacity .3s .3s;
-	}
-	.details .type3:not(:hover) dl dt,
-	.details .type3:not(:hover) dl dd {
-		opacity: 0;
-		transition-delay: 0s;
-	}
-	.details .type3 dl::before,
-	.details .type3 dl::after {
-		content: "";
-		display: block;
-		position: absolute;
-		top: 0;
-		width: 50%;
-		height: 100%;
-		background: rgba(205,92,92,.9);
-		transition: opacity .3s, transform .3s cubic-bezier(0.215, 0.61, 0.355, 1);
-	}
-	.details .type3 dl::before {
-		left: 0;
-	}
-	.details .type3 dl::after {
-		right: 0;
-	}
-	.details .type3:not(:hover) dl::before,
-	.details .type3:not(:hover) dl::after {
-		opacity: 0;
-		transition-duration: .6s;
-	}
-	.details .type3:not(:hover) dl::before {
-		transform: translateX(-175px) skew(-30deg);
-	}
-	.details .type3:not(:hover) dl::after {
-		transform: translateX(275px) skew(-30deg);
-	}
-
-
-/*ここでメインフォトあそび*/
-
-    .photo {
-        margin: 0 auto;
-        width: 600px; /* img */
-        position: relative;
-        padding: 8px;
-        padding-bottom: 40px;
-        border: 1px solid #ccc;
-        -webkit-box-shadow: 3px 3px 3px #ccc;
-           -moz-box-shadow: 3px 3px 3px #ccc;
-                box-shadow: 3px 3px 3px #ccc;
-        /* IE */
-        -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(color=#cccccc,direction=135,strength=3,enabled=true)";
-        filter: progid:DXImageTransform.Microsoft.Shadow(color=#cccccc,direction=135,strength=3,enabled=true); /* IE5.5+ */
-        background: #fff;
-    }
-    .photo img {
-        width: 600px; /* .photo02 */
-    }
-    .photo p {
-        position: absolute;
-        height: 24px;
-        line-height: 24px;
-        bottom: 8px;
-        font-size: 14px;
-        color: #666;
-    }
-
-
-    .photo2 {
-        margin: 0 auto;
-        width: 600px; /* img */
-        position: relative;
-        padding: 8px;
-        padding-bottom: 40px;
-        border: 1px solid #ccc;
-        -webkit-box-shadow: 3px 3px 3px #ccc;
-           -moz-box-shadow: 3px 3px 3px #ccc;
-                box-shadow: 3px 3px 3px #ccc;
-        /* IE */
-        -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(color=#cccccc,direction=135,strength=3,enabled=true)";
-        filter: progid:DXImageTransform.Microsoft.Shadow(color=#cccccc,direction=135,strength=3,enabled=true); /* IE5.5+ */
-        background: #fff;
-    }
-    .photo2 img {
-        width: 600px; /* .photo02 */
-    }
-
-	/*pを h2に変えたら、ぱっと見うまく行っているように見える…。*/
-	.photo2 h2 {
-        position: absolute;
-        height: 200px;
-        line-height: 24px;
-        bottom: 8px;
-        font-size: 14px;
-        color: #666;
-    }
-
-
-/*カンボジアについて tableの箇所。*/
-   #article3 table{
-        width: 615px;
-        margin: 24px auto 14px;
-        border-collapse: collapse;
-        }
 /*memo*/
-/*border-collapse: collapse;*/
-/*テーブルに出来るわずかな隙間。collapse;でなくなる。*/
-
-    #article3 th, #article3 td{
-        color: #63906;
-        padding: 10px;
+/*今回 navの幅は1000pxと決まっている。また各ボタンの合計は、（50+180×5）950px。"nav ul"にて右側10px×6と入れたため、合計1010pxとオーバーしてしまったため、liタグの最後にクラスを振り分け、また、右側のmarginを打ち消すことでサイズ調整を図った。*/
+    nav li.last{
+        margin-right: 0;
         }
 
-    #article3 th{
-        border-right: 1px dashed lightSeaGreen;
-        font-weight: normal;
-        text-align: left;
-        white-space: nowrap;
-        }
+/* 共有事項*/
 
-    #article3 tr:nth-child(odd){
-        background-color:#fff;
-        }
+	body{
+	  font-family: 'PT Sans', sans-serif;
+	  display: table;
+	  width: 100%;
+	  background: #2E2EFE;
+	}
 
-    #article3 tr:nth-child(even){
-        background-color:lightSeaGreen;
-		color: #fff;
-        }
-/*用語memo：ゼブラテーブル（行ごとに色を変える。）*/
+/*名前のところ*/
+	h2 {
+		text-align: center;
+		color: ghostwhite;
+		font-family: cursive;
+		width: 100%;
+		margin: 0 auto;
+		padding: 30px;
+		}
+
+/*始まるよ！*/
+	.container{
+	  display: table-cell; /*絶対にカラム落ちしない floatみたいなもん*/
+	  vertical-align: middle;
+	  text-align: center;
+	  height: 90vh;
+	  margin: 0 auto;
+	}
+
+	button{
+	  display: inline-block;
+	  position: relative;
+	  background: none;
+	  border: none;
+	  color: #fff;
+	  font-size: 18px;
+	  cursor: pointer; /*カーソルの形。指定できる。*/
+	/*  margin: 20px 30px; こいつだ！Aタグ要素も広げてる！理由はわからんが…。*/
+	  background: rgba(0,0,0,0.09);
+		}
+
+	/*以下ノータッチ。（色とかは変えてるかも？）*/
+
+	span{
+	  display: block;
+	  padding: 25px 60px;
+	}
+
+	button::before, button::after{
+	  content:"";
+	  width: 0;
+	  height: 2px;
+	  position: absolute;
+	  transition: all 0.2s linear;
+	  background: #fff;
+	}
+
+	span::before, span::after{
+	  content:"";
+	  width:2px;
+	  height:0;
+	  position: absolute;
+	  transition: all 0.2s linear;
+	  background: #fff;
+	}
+	button:hover::before, button:hover::after{
+	  width: 100%;
+	}
+	button:hover span::before, button:hover span::after{
+	  height: 100%;
+	}
+	/*----- button 1 -----*/
+	.btn-1::before, .btn-1::after{
+	  transition-delay: 0.2s;
+	}
+	.btn-1 span::before, .btn-1 span::after{
+	  transition-delay: 0s;
+	}
+	.btn-1::before{
+	  right: 0;
+	  top: 0;
+	}
+	.btn-1::after{
+	  left: 0;
+	  bottom: 0;
+	}
+	.btn-1 span::before{
+	  left: 0;
+	  top: 0;
+	}
+	.btn-1 span::after{
+	  right: 0;
+	  bottom: 0;
+	}
+	.btn-1:hover::before, .btn-1:hover::after{
+	  transition-delay: 0s;
+	}
+	.btn-1:hover span::before, .btn-1:hover span::after{
+	  transition-delay: 0.2s;
+	}
+
+	/*--- Button 2 -------*/
+
+
+	.btn-2::before, .btn-2::after{
+	  transition-delay: 0s;
+	}
+	.btn-2 span::before, .btn-2 span::after{
+	  transition-delay: 0.2s;
+	}
+	.btn-2::before{
+	  right: 0;
+	  top: 0;
+	}
+	.btn-2::after{
+	  left: 0;
+	  bottom: 0;
+	}
+	.btn-2 span::before{
+	  left: 0;
+	  top: 0;
+	}
+	.btn-2 span::after{
+	  right: 0;
+	  bottom: 0;
+	}
+	.btn-2:hover::before, .btn-2:hover::after{
+	  transition-delay: 0.2s;
+	}
+	.btn-2:hover span::before, .btn-2:hover span::after{
+	  transition-delay: 0s;
+	}
+
+
+	/*----- button 3 -----*/
+	.btn-3::after{
+	  left: 0;
+	  bottom: 0;
+	  transition-delay: 0.6s;
+	}
+	.btn-3 span::after{
+	  transition-delay: 0.4s;
+	  right: 0;
+	  bottom: 0
+	}
+	.btn-3::before{
+	  right: 0;
+	  top: 0;
+	  transition-delay: 0.2s;
+	}
+	.btn-3 span::before{
+	  transition-delay: 0s;
+	  left: 0;
+	  top: 0;
+	}
+
+	.btn-3:hover::after{
+	  transition-delay: 0s;
+	}
+	.btn-3:hover span::after{
+	  transition-delay: 0.2s;
+	}
+	.btn-3:hover::before{
+	  transition-delay: 0.4s;
+	}
+	.btn-3:hover span::before{
+	  transition-delay: 0.6s;
+	}
+
+	/*----- button 4 -----*/
+	.btn-4::after{
+	  right:0;
+	  bottom: 0;
+	  transition-duration: 0.4s;
+	}
+	.btn-4 span::after{
+	  right:0;
+	  bottom: 0;
+	  transition-duration: 0.4s;
+	}
+	.btn-4::before{
+	  left: 0;
+	  top: 0;
+	  transition-duration: 0.4s;
+	}
+	.btn-4 span::before{
+	  left: 0;
+	  top: 0;
+	  transition-duration: 0.4s;
+	}
+
+	/*----- button 5 -----*/
+	.btn-5::after{
+	  left:0;
+	  bottom: 0;
+	  transition-duration: 0.4s;
+	}
+	.btn-5 span::after{
+	  right:0;
+	  top: 0;
+	  transition-duration: 0.4s;
+	}
+	.btn-5::before{
+	  right: 0;
+	  top: 0;
+	  transition-duration: 0.4s;
+	}
+	.btn-5 span::before{
+	  left: 0;
+	  bottom: 0;
+	  transition-duration: 0.4s;
+	}
+
+	/*----- button 6 -----*/
+	.btn-6::before{
+	  left: 50%;
+	  top: 0;
+	  transition-duration: 0.4s;
+	}
+	.btn-6::after{
+	  left: 50%;
+	  bottom: 0;
+	  transition-duration: 0.4s;
+	}
+	.btn-6 span::before{
+	  left: 0;
+	  top: 50%;
+	  transition-duration: 0.4s;
+	}
+	.btn-6 span::after{
+	  right: 0;
+	  top: 50%;
+	  transition-duration: 0.4s;
+	}
+	.btn-6:hover::before, .btn-6:hover::after{
+	  left: 0;
+	}
+	.btn-6:hover span::before, .btn-6:hover span::after{
+	  top: 0;
+	}
+
+
+

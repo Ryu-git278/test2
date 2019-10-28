@@ -1,0 +1,30 @@
+h2 {
+	font-size: 12px;
+	width: 400px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	text-indent: 10px;
+	margin-bottom: 0px;
+	background-image: url(img/bg03.jpg);
+	background-repeat: no-repeat;
+	color: #009900;
+}
+p {
+	width: 398px;
+	margin-top: 0px;
+	font-size: 12px;
+	line-height: 150%;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-right-color: #0033CC;
+	border-bottom-color: #0033CC;
+	border-left-color: #0033CC;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	background-color: #DEEFEF;
+	color: #003366;
+}

@@ -1,0 +1,141 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>テーブル練習</title>
+</head>
+
+<body>
+  <h1>テーブル練習</h1>
+  <p>ポイント：半角スペースの自動挿入に注意</p>
+<p>ポイント：見出しタグは勝手に改行される</p>
+  
+<table width="80%" border="1" cellspacing="0" cellpadding="10">
+ <tbody>
+  <tr>
+   <th scope="col">title1</th>
+   <th scope="col">title2</th>
+   <th scope="col">title3</th>
+  </tr>
+  <tr>
+   <th scope="row">テーブルの選択の仕方</th>
+     <td>デザインビューでそのままクリック。マウスの表示に注意</td>
+     <td>テーブルバーの出し方：メニューバーの"表示"、"デザインビュー"、"ビジュアルエイド"で選択</td>
+  </tr>
+  <tr>
+   <th scope="row">title2-1</th>
+     <td>サイズは指定していこう！</td>
+     <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <th scope="row"><title3></title3>-1</th>
+     <td><table width="400" border="1" cellspacing="0" cellpadding="10">
+      <tbody>
+       <tr>
+        <th scope="col">&nbsp;</th>
+        <th scope="col">&nbsp;</th>
+        <th scope="col">&nbsp;</th>
+       </tr>
+       <tr>
+        <th scope="row">&nbsp;</th>
+        <td>テーブルの中に</td>
+        <td>テーブルを作っても</td>
+       </tr>
+       <tr>
+        <th scope="row">&nbsp;</th>
+        <td>選択＆</td>
+        <td>切り取り、ペーストで</td>
+       </tr>
+       <tr>
+        <th scope="row">&nbsp;</th>
+        <td>OK</td>
+        <td nowrap="nowrap">忘れたころにやってみようああああああああああああああああああああああ！</td>
+       </tr>
+      </tbody>
+     </table></td>
+     <td>ポイント：テキストP.39 キャプションとサマリー</td>
+  </tr>
+ </tbody>
+</table>
+  
+<p>&nbsp;</p>
+  
+<table width="400" border="1" cellspacing="0" cellpadding="10">
+ <tbody>
+  <tr>
+   <th width="50" height="50" scope="col">&nbsp;</th>
+   <th width="200" height="50" scope="col">列を選択して、サイズの指定が可能だった！</th>
+   <th width="120" height="50" scope="col">&nbsp;</th>
+  </tr>
+  <tr>
+   <th colspan="2" rowspan="2" scope="row">セルを選択して、結合や分離ができた！</th>
+   <td width="120">&nbsp;</td>
+  </tr>
+  <tr>
+   <td width="120">&nbsp;</td>
+  </tr>
+  <tr>
+   <th width="50" height="100" rowspan="2" scope="row">&nbsp;</th>
+   <td width="200" height="100">高さは指定しても、テキストの量によって変動してしまうのでほとんど使わない。</td>
+   <td width="120" height="100"><p>書式設定を消す場合は</p>
+   <p>右クリックでクリアが出る。↓＆</p></td>
+  </tr>
+  <tr>
+   <td width="200">&nbsp;</td>
+   <td width="120">テーブルプロパティにゴミ箱が出る！押すと高さや幅の指定を削除できる！</td>
+  </tr>
+ </tbody>
+</table>
+<p>&nbsp;</p>
+<table width="80%" border="1" cellspacing="0" cellpadding="10">
+ <tbody>
+  <tr>
+   <td><img src="img/rocket01.gif" width="40" height="50" alt="ロケット1"/></td>
+   <td align="left" valign="top">テキストテキストテキストテキストテキストテキスト（上揃え）</td>
+   <td>&nbsp;</td>
+   <td>幅を設定していないテーブルに画像を挿入すると、そのセルの幅が自動で大きくなる</td>
+  </tr>
+  <tr>
+   <td><img src="img/rocket02.gif" width="40" height="50" alt="ロケット2"/>テキストテキストテキストテキスト</td>
+   <td><p>セルを結合しても、文字や画像データは残るが、分離した際にはテキストはずれてしまう。</p>
+   <p>選択した状態でドラック＆ドロップで移動できる。</p></td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><img src="img/rocket03.gif" width="40" height="50" alt="ロケット3"/></td>
+   <td>text text text text text text text text text text text text text text text text text text text text</td>
+   <td>&nbsp;</td>
+   <td>（文章とし判断）</td>
+  </tr>
+  <tr>
+   <td><img src="img/rocket04.gif" width="40" height="50" alt="ロケット4"/></td>
+   <td>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><img src="img/rocket05.gif" width="40" height="50" alt="ロケット4"/></td>
+   <td>texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext</td>
+   <td><p>列は選択セルの左に追加</p>
+   <p>Ctrl+shift+M</p></td>
+   <td>（一つの単語として判断</td>
+  </tr>
+  <tr>
+   <td>&nbsp;</td>
+   <td>行は選択セルの上に追加　Ctrl+M</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><img src="img/back.gif" width="32" height="32" alt=""/></td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+  </tr>
+ </tbody>
+</table>
+<p>&nbsp;</p>
+
+</body>
+</html>

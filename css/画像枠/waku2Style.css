@@ -1,0 +1,29 @@
+@charset "utf-8";
+/*CSSは外から内側へ記述していくと書きやすい？！*/
+
+h2,p{
+    margin: 0;
+    padding: 0;
+    }
+/*一回リセット 意味ないかも*/
+
+.box2{
+    background: url("img/waku-middle.gif")repeat-y;
+    width: 340px;
+    }
+
+.box2 h2,.box2 p{
+     padding: 0 50px 10px;
+    }
+
+.box2:before{
+    content: url("img/waku-head.gif");
+    display: block;
+    font-size: 0px;
+    }
+
+.box2:after{
+    content: url("img/waku-foot.gif");
+    display: block;
+    font-size: 0px;
+    }

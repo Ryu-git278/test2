@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Lightbox</title>
+ 
+<!--補足：本ファイルは IE上で不具合があるので、レイアウトが複雑な場合は旧Lightboxを使用すること。-->
+<!--	具体的には、対象画像が1stﾋﾞｭｰ以下になる場合、勝手に移動してしまい表示範囲外に拡大写真が表示されてしまう。なので1stビュー内に表示されているかどうかが新旧のポイントになる。いつか修正される"かも"しれないし。不明。-->
+	
+	
+<!--  必ず：先にライブラリファイルを読み込む！-->
+
+<link href="css/lightbox.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="js/lightbox.js"></script>
+<script> //OPTIONS お好みで
+    lightbox.option({
+		albumLabel:"～の画像 %1 / %2", //キャプションの下に表示されるテキスト。デフォルトのテキストには、現在の画像番号とセット内の画像の総数が表示されます。
+		//下記は初期値が記載されているので、変更がなければそのままでOK!
+		fadeDuration: 600, //ライトボックスコンテナとオーバーレイがフェードインおよびフェードアウトするのにかかる時間（ミリ秒単位）。
+		imageFadeDuration: 600, //読み込まれてから画像がフェードインするまでの時間（ミリ秒単位）。
+		resizeDuration: 700, //異なるサイズの画像間を遷移する際に、ライトボックスコンテナーが幅と高さをアニメーション化するのにかかる時間
+		positionFromTop	: 50, //ライトボックスコンテナが表示されるビューポートの上部からの距離（ピクセル単位）。
+		showImageNumberLabel:true, //falseの場合、現在の画像番号とセット内の画像の総数を示すテキスト（例： "image 2 of 4"）は非表示になります。
+		wrapAround:true //trueの場合、ユーザーがセットの最後の画像に到達すると、右のナビゲーション矢印が表示され、ユーザーは前方に移動し続け、セットの最初の画像に戻ります。
+    	});
+</script>
+</head>
+
+<body>
+	
+<div id="all">
+	
+<header>
+  <h1>lightboxの練習</h1>
+</header>
+    
+<!--ナビゲーションここから-->
+<nav>
+
+</nav>
+<!--メインコンテンツここから-->
+<main>
+    <section id="contents"> 
+<!--data-lightbox:グループ名。同じグループにまとめられる-->
+<!--data-title="ねこ" 画像拡大時に表示されるタイトル名-->
+		
+		<p><a href="img/big-01.jpg" data-lightbox="lightbox" data-title="ねこ"><img src="img/small-01.jpg" width="140" height="140" alt=""/></a></p>
+		<p><a href="img/big-02.jpg" data-lightbox="lightbox" data-title="いぬ"><img src="img/small-02.jpg" width="140" height="140" alt=""/></a></p>
+		<p><a href="img/big-03.jpg" data-lightbox="lightbox" data-title="うさぎ"><img src="img/small-03.jpg" width="140" height="140" alt=""/></a></p>
+		<p><a href="img/big-04.jpg" data-lightbox="lightbox" data-title="ハリネズミ"><img src="img/small-04.jpg" width="140" height="140" alt=""/></a></p>
+		<p><a href="img/big-05.jpg" data-lightbox="lightbox" data-title="ぺんぎん"><img src="img/small-05.jpg" width="140" height="140" alt=""/></a></p>
+	</section>
+
+<p><a href="#all">このページのトップへ</a></p>
+
+</main>
+    
+<footer>
+	
+</footer>
+	
+</div>
+</body>
+</html>

@@ -1,0 +1,17 @@
+@charset "utf-8";
+	body{
+        width:1000px;
+    }
+    
+    
+	h1,h2{
+		text-align:center;
+	}
+
+	.honbun{
+		text-align:center;
+		font-soze: small;
+		line-height:1.5;
+        width: 900px;
+        margin: 0 auto;
+	}

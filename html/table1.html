@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>テーブルの作成練習_CSS画像背景の挿入</title>
+
+<style>
+	body{
+		/*コメントアウト：背景色を設定*/
+		background-color: #00ccff;
+		/*background-image: url(img/cloud.gif);*/
+	}
+
+	h1{
+		text-align:center;
+		width:800px;
+		margin-left:auto;
+		margin-right:auto;
+	}
+
+	th{
+		/*コメントアウト：背景色を設定*/
+		background-color: #006400;
+		}
+
+	td{
+		/*コメントアウト：背景色を設定*/
+		background-color: #ffffff;
+		}
+
+	.bg1{
+		background-image: url(img/cloud.gif);
+	}
+
+	.bg2{
+		background-image: url(img/pin.gif);
+	}
+
+</style>
+
+</head>
+
+<body>
+
+	<h1 class ="bg1">テーブルの作成練習&CSS画像背景の挿入</h1>
+
+	<table border="10" cellspacing="10" cellpadding="10">
+
+		<tr>
+			<th> /*CSSのコメントアウト*/</th>
+			<th>＜!-- --＞  HTMLのコメントアウト</th>
+		</tr>
+
+		<tr>
+			<td class ="bg1"> (現在はHTML内に記述しているため無関係)</td>
+			<td>右上</td>
+		</tr>
+
+		<tr>
+			<td class ="bg2">左下</td>
+			<td>右下</td>
+		</tr>
+
+		<tr>
+			<th> /*CSSのコメントアウト*/</th>
+			<th>＜!-- --＞  HTMLのコメントアウト</th>
+		</tr>
+
+		<tr>
+			<td class ="bg1"> (現在はHTML内に記述しているため無関係)</td>
+			<td>右上</td>
+		</tr>
+
+		<tr>
+			<td class ="bg2">左下</td>
+			<td>右下</td>
+		</tr>
+
+	</table>
+</body>
+</html>

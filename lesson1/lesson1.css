@@ -1,0 +1,438 @@
+@charset "utf-8";
+
+/*■■■■リセットCSSここから■■■■*/
+
+/*memo "*"は 全要素。テーブルがずれる倍は"p,h1,h2,h3,ul,body"に変更、*/
+    *{
+        margin: 0;
+        padding: 0;
+		list-style-type: none;
+        }
+
+    img{
+        vertical-align: bottom;
+        border:none;
+		max-width: 100%; /*カルーセル用追加*/
+		height: auto; /*カルーセル用追加*/
+        }
+
+	body{
+		max-width: 1000px; /*カルーセル用追加*/
+		margin: 0 auto; /*カルーセル用追加*/
+		}
+
+	/*memo "font-size: 94%;"*/
+	/*とは、デフォルト16px→今回のデザインカンプ15pxなので、16：15＝100：X→15÷16＝0.9375より。*/
+	/*フォントサイズは、ユーザーによってブラウザ表示の％が異なる為、（表示サイズ標準、大、小等）pxで指定すると、変動できない。初期値は％やem（X文字分）で求めた方がよい。*/
+	#all{
+        font-size: 94%;
+        line-height: 1.5;
+        width:100%;
+		max-width: 1000px;  /*カルーセル用追加*/
+        }
+
+
+/*■■■■ヘッダーここから■■■■*/
+
+    header{
+        background-color: rgba(209,192,165,0.50);
+        }
+
+	/*memo width: 995px;について*/
+	/*今回のデザインカンプ上では、幅は1000px。ただし、ロゴ配置のため、下でpaddingを記述したため、全体調整を行うため1000-5＝995pxになった。*/
+    header .inner {
+	/*      background-color: rgba(0,255,255,0.51);*/
+        width: 995px;
+        margin: 0 auto;
+        padding: 10px 0 10px 5px;
+        overflow: hidden;
+	    position: relative; /*textresizer設定の基準点。自身と、解説共通*/
+        }
+	/*		keyword memo：クリアフィックスでもやってみよう！*/
+
+    header h1{
+	/*      background-color: rgba(127,255,212,0.44);*/
+        float: left;
+        }
+
+    header .inner .text {
+	/*      background-color: rgba(0,0,255,0.50);*/
+        float: right;
+        padding-top: 1.5em;
+        }
+
+
+
+/*textresizer設定ここから。解説*/
+
+
+	.textsize .textresizer-active{ /*".textsize a{"と比較して、優先順位を上げるため、".textsize "を追加*/
+			background-color: orange;
+			} /*ボタンを押したところに色を付けるぜ！*/
+
+
+	.textsize p{
+			float: left; /*フロートさせよう*/
+			}
+
+
+	.textsize ul{
+			float: left; /*フロートさせよう*/
+			list-style-type: none; /*リストの点を取ろう！*/
+			}
+
+	.textsize li{
+			float: left; /*フロートさせよう*/
+			margin-left: 5px; /*左側に着ければ、右ぴったりの左空きが可能に！*/
+			}
+
+
+	.textsize a{
+			background-color: #fff; /*背景白*/
+			text-decoration: none; /*リンク下線を取る*/
+			border: 1px solid #000; /*実線を引く*/
+			padding: 3px; /*上下左右にスペースを*/
+			display: block; /*aタグはデフォルトでは、インラインなので、クリック範囲や、背景色範囲を維持するため、ブロックに変更した方がいい。chromeだとしなくても機能してしまう。*/
+			line-height: 1; /*＃allで行間が1.5に設定されているため、縦長の四角になっていた。それを1行に上書きする。*/
+			}
+
+	.textsize{
+			position: absolute;
+			right: 0;
+			top:3px;
+			}
+
+/*textresizer設定ここから。自分の案*/
+/*
+
+	header .textresizer-active{
+		background-color: orange;
+		}ボタンを押したところに色を付けるぜ！
+
+	header .box{
+		position: absolute;
+   	 	top: 2px;
+ 	  	right: 0px;
+        }
+
+	header .textsize{
+		display: block;
+		width: 100%;
+        }
+
+	header .textsize p ,header .textsize ul{
+		float: left;
+        }
+
+	header .inner .textsize p{
+        float: left;
+		padding: 5px;
+        }
+
+    header .inner .textsize li{
+        float: left;
+		background-color: aliceblue;
+		border: 1px solid #030303;
+		margin:0 2px;
+        }
+
+    header .inner .textsize a{
+		text-decoration: none;
+		display: block;
+		padding: 1px  4px;
+        }
+*/
+
+
+/*■■■■ナビゲーションここから■■■■*/
+
+    nav{
+       background-image: url("img/bg-nav.jpg") ;
+        background-repeat: repeat-x;
+        height: 65px;
+        }
+
+    nav ul{
+/*        background-color: rgba(138,43,226,0.50);*/
+        width: 1000px;
+        margin: 0 auto;
+        padding-top: 8px;
+        list-style-type: none;
+        overflow: hidden;
+        }
+
+    nav li{
+        float: left;
+        margin-right: 10px;
+        }
+
+	/*memo*/
+	/*今回 navの幅は1000pxと決まっている。また各ボタンの合計は、（50+180×5）950px。"nav ul"にて右側10px×6と入れたため、合計1010pxとオーバーしてしまったため、liタグの最後にクラスを振り分け、また、右側のmarginを打ち消すことでサイズ調整を図った。*/
+    nav li.last{
+        margin-right: 0;
+        }
+
+/* ■■■■メイン（主にTOP画像と共通画像）ここから*/
+/* ■■■■カルーセル設定追加*/
+	.mainimg p{
+		float: left; 
+		}
+
+	.slide-outer{
+		position: relative;
+		}
+	
+	.btn-prev{
+		position: absolute;
+		top: 50%; /*上から50％。あとは、矢印マークの半分上にあげたい！*/
+		transform: translateY(-50%); /*translate移動する。x軸→ ｙ軸↑。*//*50％："自分の高さの半分"*/
+        left: 2%; /*750px最大値で、5pxくらいなので、こんなもんかなって。*/
+		z-index: 10; /*重ね順の話！。z-indexを指定することで、レイアウト順序を変更していく。ポイントが多いほうが上に行くので、数値は、厳密ではない。時々にかわる。*/
+		opacity: 1;
+		}
+
+	.btn-next{
+		position: absolute;
+        top: 50%;
+		transform: translateY(-50%);
+        right: 2%;
+		z-index: 10; /*重ね順の話！。z-indexを指定することで、レイアウト順序を変更していく。ポイントが多いほうが上に行くので、数値は、厳密ではない。時々にかわる。*/
+		opacity: 1;
+		}
+
+
+	.pagination {
+		text-align: center;
+		}
+
+	.pagination a {
+		background-color: orange;
+		width: 15px;
+		height: 15px;
+		margin: 5px 5px 0 0;
+		border-radius: 50%;
+		display: inline-block;
+		}
+
+	.pagination a.selected {
+    background-color: green;
+    cursor: default;
+    box-shadow: 1px 1px 3px;
+		}
+
+	.pagination a span {
+		display: none;
+		}
+
+
+/*カルーセル設定追加ここまで*/
+
+    main{
+        display: block;
+/*        background-color: rgba(119,74,14,0.54);*/
+/*        width: 1000px;*/ /*カルーセル時にレスポンシブ対応のため解除*/
+        margin: 0 auto;
+        padding-top: 20px;
+        }
+
+    main h2{
+/*        background-color: rgba(127,255,0,0.44);*/
+        padding-top: 30px;
+        margin-left: -9px;
+        clear:both;
+        }
+	/*memo*/
+	/*"margin-left: -9px;"*/
+	/*ネガティブマージン ↑と←については、押し出す効果があるが、→と↓については、【要素を引き上げる】効果がある。試しに上記を"margin-bottom:-50px;"にすると面白い。*/
+
+	/*"cler:both;"*/
+	/*回り込み回避のテクニック*/
+	/*main div boxのお米のメニューを複製すると良さがでる！！*/
+
+    main section{
+        clear:both;
+        }
+
+/* ■■■■セクション メニュー.ボックス　ここから*/
+
+    .menu .box{
+ /*       background-color: rgba(255,127,80,0.50);*/
+        background-image: url("img/bg-waku02.jpg");
+        background-repeat: repeat-y;
+        text-align: center;
+        width: 300px;
+        margin: 5px 50px 12px 0;
+        float: left;
+        }
+	/*memo*/
+	/*"width: 300px; margin: 5px 50px 12px 0; float: left;"*/
+	/* （300px+50pc)×3＝1050pxのため、幅1000pxを飛び出してしまう。そこで、3つめのmargin 50pxを無効化する。*/
+
+    .menu .box:nth-of-type(3n){
+        margin-right: 0;
+        }
+	/*memo*/
+	/* "3n"の"n" */
+	/*3の"倍数"という指定ができる*/
+
+    .menu .box h3{
+        height: 48px;
+        padding: 30px 15px 0;
+        background-image: url("img/bg-waku01.jpg");
+        background-repeat: no-repeat;
+/*        background-color: rgba(210,105,30,0.48);*/
+        text-align:left;
+        }
+
+    .menu .box .text{
+        text-align: left;
+        padding: 10px 15px 5px;
+        }
+
+    .menu .box:after{
+        content: url("img/bg-waku03.jpg");
+        display: block;
+        font-size: 0;
+        }
+
+/* ■■■■セクション ライス.ボックス　ここから*/
+    .rice .inner{
+        background-color: #cce198;
+        padding: 10px;
+        margin: 14px 50px;
+        border: 1px solid #fff;
+        box-shadow: 10px 10px 2px 0px #ccc;
+        overflow: hidden;
+        position: relative;
+        }
+	/*memo*/
+	/*"box-shadow:"にはベンダーキットが入る場合がある。ブラウザごとに異なるが新しく作る分には不要。*/
+
+    .rice .inner .photo{
+/*        background-color: rgba(184,134,11,0.25);*/
+        float: left;
+        }
+
+    .rice .inner .text{
+        margin: 0 0 75px 260px;
+        }
+
+    .rice .inner .text p{
+        padding-bottom: 10px;
+        }
+
+    .rice .inner .btn{
+        position: absolute;
+        right: 10px;
+        bottom: 0;
+        }
+
+/* ■■■■セクション アレンジ　ここから*/
+/* ■■■■カルーセル設定追加		*/
+
+    .arrnge .inner{
+        background-color: #fbedd7;
+        margin: 23px 0 14px;
+        width: auto;
+        padding: 50px;
+        overflow:hidden;
+        }
+	/*memo*/
+	/*"width: auto;""width: 100%;何が違うの"*/
+	/*参考：http://bashalog.c-brains.jp/15/03/11-205639.php*/
+	/* autoは初期値。100％ととして、数値を加えるとボックス要素がプラスされて、上記の場合だと、全体設定1000px+padding50px×2が加算されて1100pxとなる！！二つは違うもの！*/
+
+    .arrnge .inner img{/*遊んでるだけ。*/
+        border-radius: 30%;
+        }
+
+
+    .arrnge .inner p{
+        padding: 10px;
+        float: left;
+        }
+
+
+/* ■■■■セクション サイド　ここから*/
+
+    .side table{
+        width: 900px;
+        margin: 24px auto 14px;
+        border-collapse: collapse;
+        }
+	/*memo*/
+	/*border-collapse: collapse;*/
+	/*テーブルに出来るわずかな隙間。collapse;でなくなる。*/
+
+    .side th, .side td{
+        color: #63906;
+        padding: 10px;
+        }
+
+    .side th{
+        border-right: 2px solid #3d0c0c;
+        font-weight: normal;
+        text-align: left;
+        white-space: nowrap;
+        }
+
+    .side tr:nth-child(odd){
+        background-color: #d1c0a5;
+        }
+
+    .side tr:nth-child(even){
+        background-color: #fcd9a0;
+        }
+	/*用語memo：ゼブラテーブル（行ごとに色を変える。）*/
+
+/* ■■■■セクションコンテンツ　ここから*/
+
+    .contant p{
+        padding: 24px 55px;
+        }
+
+    .contant .map {
+		position: relative;
+		padding-bottom: 75%;
+		height: 0;
+		overflow: hidden;
+		}
+    .contant .map iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100% !important;
+		height: 100% !important;
+   		}
+	/* padding-bottom: 75%;これが縦横比*/
+	/*todo:Googleマップのレスポンス対応・失敗中*/
+
+/* ■■■■セクションなし。ページトップ　ここから*/
+
+    .pagetop{
+        text-align: right;
+        padding-top: 60px;
+        }
+
+
+/* ■■■■footer　ここから*/
+
+    footer{
+        background-color: #d1c0a5;
+        text-align: center;
+        padding: 10px 0 60px;
+        }
+
+    footer .logo{
+        padding-bottom: 10px;
+        }
+
+    footer a{
+        color: #000;
+        text-decoration: none;
+    }
+
+    footer a:hover{
+        color: #844e45;
+        text-decoration: none;
+    }

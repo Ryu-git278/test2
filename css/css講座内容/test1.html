@@ -1,0 +1,137 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CSS練習</title>
+
+<link href="test1Style.css" rel="stylesheet" type="text/css">
+</head>
+	
+<body>
+<div class="content">
+    <h1>CSS練習</h1>
+
+    <nav>
+        <ul class="nav">
+          <li><a href="#">HOME</a></li>
+          <li><a href="#">btn1</a></li>
+          <li><a href="#">btn2</a></li>
+          <li><a href="#">btn3</a></li>
+          <li><a href="#">btn4</a></li>
+        </ul>
+    </nav>
+
+    <h2>ここではCSSの操作を覚えていきましょう。</h2>
+    <!--
+    <p class="text02">ここではCSSの操作を覚えていきましょう。</p>
+     この上のPタグにはクラスをつけたが、"text02"は要素strongにつけたため、無効になっている。-->
+
+    <p>CSSの設定は右の<span>「CSSデザイナーパネル」</span>から設定します。</p>
+    <p>テキストはCSSの基本と練習です。</p>
+    <h2>タイプセレクタ：５ページ</h2>
+    <p>指定されたタグすべてにCSSが適用されます。</p>
+    <h2>CSSデザイナーパネルの使い方：13ページ</h2>
+    <p>CSSを設定する前にstyleタグを追加します。「CSSデザイナーのソースペイン」から設定します。<strong>※この設定は最初だけ行います。：13ページ</strong></p>
+    <p>CSSの設定は<span>「セレクターペイン」</span>から設定します。<strong>※矢印キーをうまく使用しましょう。：13ページ</strong></p>
+    <p>CSSの追加設定をくり返し行っていきます。</p>
+    <p>セレクター名を間違えた際には、「セレクターペイン」で変更できます。</p>
+    <p>「セレクターペイン」の「-」でCSS設定を削除することができます。</p>
+
+    <div>
+      <h2>クラスセレクタ：５ページ</h2>
+      <p>ドットから始まる任意の名前を考えます。</p>
+      <p>CSSの設定をしたら、下のステータスバーで名前を付けます。</p>
+      <p>ざっくり指定する:【.text01】他の要素に同じクラス名があると事故る。</p>
+
+      <p><strong class="text02">固定して指定する:【.text02】</strong></p>
+    </div>
+
+    <div id="text01">
+        <h2>IDセレクタ：６ページ</h2>
+        <p>ジャープから始まる任意の名前を考えます。</p>
+        <p>CSSの設定をしたら、下のステータスバーで名前を付けます。</p>
+        <p>ざっくり指定する:【#text01】</p>
+        <p><strong id="text02">固定して指定する:【#text02】</strong></p>
+    </div>
+
+    <div>
+      <h2>グルーピング：７ページ</h2>
+        <p>今回は<span>「ページプロパティ」</span>から文字色の設定してみましょう。<strong>※CSSデザイナーパネルからも設定できます。</strong></p>
+    </div>
+
+    <div class="progeny">
+        <h2>子孫セレクタ：7ページ</h2>
+            <p>text <span>text</span> text text text text text text text<br>
+            text text text text text text text text text<br>
+            text text 
+            <span>text text text</span>text text text text<br>
+            text text text text text text text text text<br>
+            text text text text </p>
+        <h3>divとspan</h3>
+            <p>divタグはブロック要素のため、幅や位置、余白などの指定が柔軟にできます。主にdivタグの段落の中にpタグでテキストを記述して、<span>部分的にspanで装飾をするといった使い方をします。また、spanタグのようなインライン要素を、divタグのようブロック要素として扱うには、以下のようにcssで「display:block;」を指定する方法があります。</span></p>
+    </div>
+
+
+    <h2>リンクの疑似クラス</h2>
+        <p><a href="#" target="_blank" >nullリンク</a></p>
+    <div class="jump">
+      <h3>エリアの中のリンクに対して(記述例1)</h3>
+      <p><a href="https://www.yahoo.co.jp/" target="_blank">ヤフー</a></p>
+      <p><a href="https://www.google.com/?hl=ja" target="_blank">グーグル</a></p>
+      <p><a href="http://www.rico-web.net/" target="_blank">ricoweb</a></p>
+    </div>
+    <h3>一部分のリンクに対して(記述例2)</h3>
+    <p><a href="https://www.apple.com/jp/?afid=p238|sEpkq6Qw0-dc_mtid_18707vxu38484_pcrid_286568846824_&cid=aos-jp-kwgo-brand--slid--product-" target="_blank" class="jump">アップル</a></p>
+    <p><a href="https://www.nttdocomo.co.jp/" target="_blank">ドコモ</a></p>
+    <p><a href="https://www.au.com/" target="_blank" class="jump">エーユー</a></p>
+
+    <table width="400">
+      <tbody>
+        <tr>
+          <th scope="col">テストあ</th>
+          <th scope="col">テストい</th>
+          </tr>
+        <tr>
+          <th scope="row">テストう</th>
+          <td>テストえ</td>
+          </tr>
+        <tr>
+          <th scope="row">テストお</th>
+          <td>テストか</td>
+          </tr>
+        <tr>
+          <th scope="row">テストき</th>
+          <td>テストく</td>
+          </tr>
+        <tr>
+          <th scope="row">テストけ</th>
+          <td>テストこ</td>
+          </tr>
+        </tbody>
+    </table>
+
+    <h2>絶対配置の練習：35ページ</h2>
+    <div class="photo">
+        <img src="img/photo01.jpg" width="640px" height="480px" alt=""/>
+        <div  class="news">
+            <h3>新着情報</h3>
+            <p>お空の写真だよお空の写真だよお空の写真だよお空の写真だよお空の写真だよお空の写真だよお空の写真だよお空の写真だよお空の写真だよ</p>
+        </div>
+    </div>
+
+    <h2>応用-定義リスト-14ページ</h2>
+    <dl class="list1">
+        <dt>説明タイトル</dt>
+        <dd>ここに説明文が入ります。ここに説明文が入ります。ここに説明文が入ります。ここに説明文が入ります。ここに説明文が入ります。ここに説明文が入ります。ここに説明文が入ります。ここに説明文が入ります。ここに説明文が入ります。ここに説明文が入ります。ここに説明文が入ります。ここに説明文が入ります。ここに説明文が入ります。ここに説明文が入ります。ここに説明文が入ります。ここに説明文が入ります。ここに説明文が入ります。ここに説明文が入ります。ここに説明文が入ります。ここに説明文が入ります。ここに説明文が入ります。ここに説明文が入ります。ここに説明文が入ります。ここに説明文が入ります。ここに説明文が入ります。ここに説明文が入ります。ここに説明文が入ります。ここに説明文が入ります。</dd>
+        <dt>説明タイトル</dt>
+        <dd>ここに説明文が入ります。ここに説明文が入ります。ここに説明文が入ります。</dd>
+        <dt>説明タイトル</dt>
+        <dd>ここに説明文が入ります。ここに説明文が入ります。ここに説明文が入ります。ここに説明文が入ります。ここに説明文が入ります。ここに説明文が入ります。ここに説明文が入ります。</dd>
+        <dt>説明タイトル</dt>
+        <dd>ここに説明文が入ります。ここに説明文が入ります。ここに説明文が入ります。</dd>
+</dl>
+</div>
+
+<footer class="footer"> class "footer" の内容がここに入ります</footer>
+</body>
+</html>

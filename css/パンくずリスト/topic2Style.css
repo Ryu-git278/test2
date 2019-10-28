@@ -1,0 +1,17 @@
+@charset "utf-8";
+
+.topic2{
+    padding-left: 0;
+    margin: 0;
+    list-style-type: none;
+    }
+.topic2 li {
+    display: inline;
+    }
+.topic2 li a {
+    background-repeat: no-repeat;
+    background-position: right center;
+    /*右に水平に画像を並べたい*/
+    background-image: url("img/topic.gif");
+    padding-right: 18px;
+    }

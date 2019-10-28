@@ -1,0 +1,190 @@
+@charset "utf-8";
+/*全体reset*/
+    p,h1,h2,h3,h4,ul,ol,dl,dd,body,form{
+        margin: 0px;
+        padding: 0px;
+        }
+
+    img{
+        vertical-align: bottom; /*imgに対する文字要素の打ち消し。隙間がなくなる*/
+        border: none;
+        }
+
+    ul,ol{
+        list-style-type: none;
+        }
+
+    main{    
+        display: block; /*ブロックボックスを生成する*/
+        }
+
+/*all設定*/
+
+    #all{
+        font-size: 100%;
+        line-height: 1.5;
+        width: 100%;
+        }
+
+/*リンクのカラー設定。順番重要！全体設定のため、個別に変えたい場合は、クラスを変えていく。*/
+    a:link {
+        color: #fff;
+        }
+    a:visited {
+        color: #939393;
+        }
+    a:hover {
+        color: #2F2F2F;
+        }
+    a:active {
+        color: #CCCCCC;
+        }
+
+/*ヘッダーここから*/
+
+    header{
+        background-color:antiquewhite;
+        }
+
+    header .inner {
+        width: 900px;
+        margin: 0 auto;
+        padding: 10px 0 10px 5px;
+        overflow: hidden;
+        }
+
+    header h1{
+        margin: 0 auto;
+        float: left;
+        }
+
+    header .text {
+        float: right;
+        }
+
+/*ヘッダーここまで*/
+/*ナビゲーションここから*/
+
+    nav{
+        background-color:blue;
+        height: 50px;
+        }
+
+    nav ul{
+        width: 900px;;
+        margin: 0 auto;
+        list-style-type: none;
+        overflow:hidden;
+        }
+
+    nav li{
+        text-align: center;
+        width: 180px;
+        height: 50px;
+        line-height: 2.5em;
+        float: left;
+        }
+
+    nav li a {
+        text-decoration: none;
+        display: block; /*インラインレベルをブロックレベルに繰り上げ！*/
+        width: 180px;
+        height: 50px;
+        padding: 5px 0px;
+        }
+
+    nav li a:hover {
+        background-color:aqua;
+        }
+/*ナビゲーションここまで*/
+
+/*メイン共通　ここから*/
+
+    main{
+        width: 920px; /*画像に合わせてみただけ*/
+        margin: 0 auto;
+        padding-top: 5px;
+        }
+
+    h2 {
+        margin: 10px 0;
+        padding: 10px 20px;	/*上下、左右への余白*/
+        font-size: 120%;	/*文字サイズ*/
+        color: #fff;		/*文字色*/
+        background: #0E1ECD;	/*背景色*/
+        border-radius: 10px;	/*角丸のサイズ。この行を削除すれば角が尖った長方形になります。*/
+        }
+/*h2タグの１文字目への追加設定*/
+    h2::first-letter {
+        border-left: 3px solid #fff;	/*左の線の幅、線種、色*/
+        padding-left: 15px;				/*線とテキストとの余白*/
+        }
+
+/*メイン　ここまで*/
+/*sectionここから。できるだけ共通に作る作戦*/
+
+    .box{
+        clear:both; /*始点*/
+        overflow: hidden;
+        padding: 10px;
+        margin-top: 10px;
+        border: 1px solid #1426F0;
+        border-radius: 10px;
+        }
+
+    .box p{
+        padding: 1em 20px 1em 20px;
+        }
+
+    .box2{
+        text-align: center;
+        width: 280px;
+        margin: 5px 9px 12px ;
+        float: left; /*box2はすべて最寄りのbox1を目指して浮く！*/
+        }
+
+/*memo*/
+/*"width: 300px; margin: 5px 50px 12px 0; float: left;"*/
+/* （300px+50pc)×3＝1050pxのため、幅1000pxを飛び出してしまう。そこで、3つめのmargin 50pxを無効化する。*/
+
+    .box:nth-of-type(3n){
+        margin-right: 0;
+        }
+/*memo*/
+/* "3n"の"n" */
+/*3の"倍数"という指定ができる*/
+
+    .box2 h3{
+        width: 280px;
+        height: 30px;
+        padding: 10px 0px 0;
+        text-align:left;
+        }
+
+    .box2 p{
+        width: 280px;
+        text-align: left;
+        padding: 10px 0px 5px;
+        }
+
+    .foodstuff .box2 p{
+        width: 250px;
+        text-align: left;
+        padding: 10px 0px 5px 30px;
+        }
+
+/*ページトップ設定ここから*/
+    aside .pagetop{
+        text-align: right;
+        padding: 10px 0 0;
+        }
+
+/*footer　ここから*/
+
+    footer{
+        background-color: blue;
+        padding: 15px;
+        text-align: center;
+        color:aliceblue;
+        }
+

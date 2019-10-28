@@ -1,0 +1,26 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+
+h1{
+	text-align: center;
+	color:darkblue;
+	}
+
+
+#hoge{
+	width:1000px;
+	height:500px;
+	margin:0 auto;
+	background-color:#000;
+	}
+
+
+
+#hoge2{
+	width:1000px;
+	height:500px;
+	margin:0 auto;
+	background-color:#c70000;
+	}

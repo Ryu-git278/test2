@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>ロールオーバー</title>
+    
+    
+<!-- 備考：
+        ロールオーバーについて：授業にて：  
+        ・https://rewish.jp/blog/releases/jquery_rollover
+        ：ダウンロード "jquery.rollover.js - v1.0.4"
+        "クリックでソースコードが出る場合"右クリックで"名前を付けてリンク先を保存"でダウンロード。
+-->
+
+<!--script ファイルを挿入！-->
+<!--先-->
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+<!--プラグインファイル-->
+<script type="text/javascript" src="js/jquery.rollover.js"></script>
+<!--更に記述。下記はテンプレがないので記述-->
+<script>
+$(function() {
+    //$(function() { ロールオーバーをこの画像にするよ！
+    $(".menu img").rollover(); //.rollover("_over");等 別のルールに変えることもできる。今回は_on
+});　//カッコは必ずついになる。〇[{()}] ×[({)]}
+</script> 
+<!--memo: (".menu img")は CSSの子孫セレクタ-->
+	
+<!--$(".menu img , .nav img , .seccion img").rollover();等 ,で区切って増やすことも可能！-->
+
+<!--memo：字下げ、インデント：わかりやすくするために書いている。-->
+<!--memo：<script>タグ内のコメントは "// memo"と"/* memo */"の2パターンある -->
+
+</head>
+
+<body>
+<!--ヘッダーここから-->
+
+<header>
+    <h1>ロールオーバー</h1>
+</header>
+    
+<!--ナビゲーションここから-->
+<nav>
+    <div class="menu">　<!--クラス名は適当-->
+    <ul>
+        <li><a href="#"><img src="img/navi-home.jpg" width="190" height="50" alt="home"/></a></li>
+        <li><a href="#"><img src="img/navi-p1.jpg" width="190" height="50" alt=""/></a></li>
+        <li><a href="#"><img src="img/navi-p2.jpg" width="190" height="50" alt=""/></a></li>
+        <li><a href="#"><img src="img/navi-p3.jpg" width="190" height="50" alt=""/></a></li>
+    </ul>
+    </div>
+</nav>
+
+</body>
+</html>

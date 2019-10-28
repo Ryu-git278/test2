@@ -1,0 +1,49 @@
+@charset "utf-8";
+
+/*フォームここから*/
+
+/*テーブル設定*/
+#formtable{
+    border-collapse: collapse;
+    background-color: #86b8cb;
+    width: 600px;
+    color: #fff;
+    }
+
+#formtable th,#formtable td{
+    padding: 10px;
+    border: 1px solid #fff;
+    text-align: center;
+    }
+
+/*todo*/
+#formtable td .submitbt{
+    background-color:blue;
+    }    
+
+#formtable th{
+    background-color: #44737b;
+    }
+
+/*">"直近の子供セレクタのみ！チェックボックスなどを確認すると、子孫セレクタになっているので、のぞくことが出来る！.例*/
+/*#formtable td>input ,*/
+#formtable textarea{
+    background-color: #fffce9;
+    width: 95%;
+    line-height: 2em;
+    }
+
+/*↑属性セレクタを指定してCSSすることもできる！"input[type="○○○○"]"*/
+input[type="text"]{
+    background-color: #fffce9;
+    width: 95%;
+    line-height: 2em;
+    }
+
+#formtable #submit, #formtable #reset{
+    width: 200px;
+    background-color: #f1fbc6;
+    line-height: 2em;
+    }
+    
+

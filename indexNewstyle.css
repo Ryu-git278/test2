@@ -1,0 +1,115 @@
+@charset "utf-8";
+
+/*フォントファミリーを設定（HTMLプロパティから可能：基本はこのフォントがよさそう）*/
+body {
+    font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	font-size: large;
+	color: rgba(210,212,212,1);
+	background-color: rgba(31,31,31,1);
+	width: 960px;
+ 	margin: 0 auto;
+	}
+  /*背景を設定（HTMLプロパティから可能：エディタに合わせただけ。）*/
+
+header{
+	}
+
+img{
+    border-radius:50%;  /* 角丸半径を50%にする(=円形にする) */
+    width:200px;
+    height:200px;
+    }
+
+/*リンク設定*/
+a:link {
+	text-decoration: none;
+	color: rgba(20,18,251,1);
+	/*linkカラー*/
+	}
+a:visited {
+	text-decoration: none;
+	color: rgba(4,150,243,1);
+	/*訪問済みlinkカラー*/
+	}
+a:hover {
+	text-decoration: underline;
+	color: rgba(0,19,108,1);
+	/*ロールオーバーlinkカラー*/
+	}
+a:active {
+	text-decoration: none;
+	color: rgba(20,18,251,1);
+	/*アクティブlinkカラー*/
+	}
+
+.nav{
+    margin-left: 0px;
+    padding-left: 0px;
+    list-style-type: none;
+    font-size: small;
+	text-align: center;
+	margin: 0 auto;
+	width: 840px;
+	}
+
+.nav li{
+    text-align: center;
+    width: 120px;
+    height: 40px;
+    float: left;
+    }
+
+.nav li a{
+/*    color: #fff;*/
+    text-decoration: none;
+    background-image: url(img/btn.png);
+    background-repeat: no-repeat;
+    display: block;
+    width: 120px;
+    height: 28px;
+    padding-top: 12px;
+    }
+
+.nav li a:hover{
+    background-position: 0 -60px;
+    }
+
+.title{
+	margin: 0 auto;
+	color: crimson;
+	font-size: large;
+	text-align: center;
+	width: 960px;
+	height: auto;
+	padding-top: 30px;
+	padding-bottom: 60px;
+
+	}
+
+.title img{
+	border-radius: 50%;  /* 角丸半径を50%にする(=円形にする) */
+    width:  250px;       /* ※縦横を同値に */
+    height: 250px;       /* ※縦横を同値に */
+	}
+
+.main{
+	width: auto;
+	}
+
+.content0{
+	}
+
+.content1{
+	}
+
+.content2{
+	}
+
+.content3{
+	}
+
+.content4{
+	}
+
+.footer{
+	}

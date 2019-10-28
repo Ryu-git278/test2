@@ -1,0 +1,31 @@
+@charset "utf-8";
+#nav1{
+    margin-left: 0px;
+    padding-left: 0px;
+    font-size: small;
+    width: 960px;
+    list-style-type: none;
+    }
+#nav1 li{
+    text-align: center;
+    width: 120px;
+    height: 40px;
+    float: left;
+    }
+#nav1 li a{
+    text-decoration: none;
+    background-image: url(img/btn.png);
+    background-repeat: no-repeat;
+    display: block;
+    width: 120px;
+    height: 28px;
+    padding-top: 12px;
+    }
+/*    color: #fff;*/
+
+#nav1 li a:hover{
+    background-position: 0 -60px;
+    }
+.main{
+    width: 960px;
+    }

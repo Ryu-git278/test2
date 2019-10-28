@@ -1,0 +1,19 @@
+h1 {
+	font-size: 90%;
+	font-weight: normal;
+	background-color: #E6F2FF;
+	width: 400px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	text-indent: 10px;
+	margin-bottom: 0px;
+	border-bottom: 1px solid #039;
+	border-left: 1px solid #039;
+}
+p {
+	padding: 5px;
+	width: 400px;
+	margin-top: 0px;
+	font-size: 90%;
+	line-height: 150%;
+}

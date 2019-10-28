@@ -1,0 +1,128 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>職業訓練 Lesson2 | 商品ページ</title>
+
+<meta name="description" content="ここにメタディスクリプションのテキストを記述。タイトルの下に記述するのが通例。DWの場合は、挿入-メタの下、【詳細】でタグ入りが出現する！">
+<meta name="keywords" content="古いSEO対策のキーワード。セットで入れとけば？的なものkeywordは 単語,単語,単語,単語,単語とする">
+
+<link href="lesson2.css" rel="stylesheet" type="text/css">
+
+<!--  必ず：先にライブラリファイルを読み込む！-->
+
+<link href="css/lightbox.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="js/lightbox.js"></script>
+<script> //OPTIONS お好みで
+    lightbox.option({
+		albumLabel:"Image %1 of %2", //キャプションの下に表示されるテキスト。デフォルトのテキストには、現在の画像番号とセット内の画像の総数が表示されます。
+		fadeDuration: 600, //ライトボックスコンテナとオーバーレイがフェードインおよびフェードアウトするのにかかる時間（ミリ秒単位）。
+		imageFadeDuration: 600, //読み込まれてから画像がフェードインするまでの時間（ミリ秒単位）。
+		resizeDuration: 700, //異なるサイズの画像間を遷移する際に、ライトボックスコンテナーが幅と高さをアニメーション化するのにかかる時間
+		positionFromTop	: 50, //ライトボックスコンテナが表示されるビューポートの上部からの距離（ピクセル単位）。
+		showImageNumberLabel:true, //falseの場合、現在の画像番号とセット内の画像の総数を示すテキスト（例： "image 2 of 4"）は非表示になります。
+		wrapAround:true //trueの場合、ユーザーがセットの最後の画像に到達すると、右のナビゲーション矢印が表示され、ユーザーは前方に移動し続け、セットの最初の画像に戻ります。
+    	});
+</script>
+
+<!--ビヘイビア対応-->
+<script type="text/javascript">
+	function MM_preloadImages() { //v3.0
+	  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+		var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+		if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+	}
+
+	function MM_swapImgRestore() { //v3.0
+	  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+	}
+
+	function MM_findObj(n, d) { //v4.01
+	  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+		d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+	  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+	  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+	  if(!x && d.getElementById) x=d.getElementById(n); return x;
+	}
+
+	function MM_swapImage() { //v3.0
+	  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+	   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+	}
+</script>
+</head>
+
+<!--  今日一番の発見。コメントアウトのショートカットキーが発見される！！  -->
+    
+<!--
+複製ページのロールオーバー、リンクの追加と、複製方法！
+デザインビューで選択して、コピペ…。そうするとビヘイビア等のコードも挿入される。
+-->
+    
+<body onLoad="MM_preloadImages('img/btn-home_on.png','img/btn-item_on.png','img/btn-canpaign_on.png','img/btn-gallery_on.png','img/btn-faq_on.png','img/btn-voice_on.png','img/btn-order_on.png')">
+    <header>
+      <h1><a href="lesson2.html"><img src="img/logo.png" width="165" height="178" alt="jellybeans shop"/></a></h1>
+      <nav>
+        <ul>
+            <li><a href="lesson2.html"><img src="img/btn-home.png" alt="home" width="250" height="65" id="btn01" onMouseOver="MM_swapImage('btn01','','img/btn-home_on.png',1)" onMouseOut="MM_swapImgRestore()"/></a></li>
+            <li><a href="item.html"><img src="img/btn-item_on.png" alt="商品" width="250" height="65" id="btn02" onMouseOver="MM_swapImage('btn02','','img/btn-item_on.png',1)" onMouseOut="MM_swapImgRestore()"/></a></li>
+            <li><a href="campaign.html"><img src="img/btn-canpaign.png" alt="キャンペーン" width="250" height="65" id="btn03" onMouseOver="MM_swapImage('btn03','','img/btn-canpaign_on.png',1)" onMouseOut="MM_swapImgRestore()"/></a></li>
+            <li><a href="gallery.html"><img src="img/btn-gallery.png" alt="ギャラリー" width="250" height="65" id="btn04" onMouseOver="MM_swapImage('btn04','','img/btn-gallery_on.png',1)" onMouseOut="MM_swapImgRestore()"/></a></li>
+            <li><a href="faq.html"><img src="img/btn-faq.png" alt="よくある質問" width="250" height="65" id="btn05" onMouseOver="MM_swapImage('btn05','','img/btn-faq_on.png',1)" onMouseOut="MM_swapImgRestore()"/></a></li>
+            <li><a href="voice.html"><img src="img/btn-voice.png" alt="お客様の声" width="250" height="65" id="btn06" onMouseOver="MM_swapImage('btn06','','img/btn-voice_on.png',1)" onMouseOut="MM_swapImgRestore()"/></a></li>
+            <li><a href="form.html"><img src="img/btn-order.png" alt="カタログのご注文" width="250" height="65" id="btn07" onMouseOver="MM_swapImage('btn07','','img/btn-order_on.png',1)" onMouseOut="MM_swapImgRestore()"/></a></li>
+          </ul>
+      </nav>
+    </header>
+    
+    <div class="content">
+        <nav class="sidenav">
+          <ol class="clearfix">
+            <li><a href="#">通販<br>利用規約</a></li>
+            <li><a href="#">運営会社<br>について</a></li>
+            <li><a href="#">ショップ<br>アクセス</a></li>
+          </ol>
+       </nav>
+          <!-- 改行はシフトタブを押しながらエンターで行ける！-->
+        
+      <main class="subpage">
+          <h2>商品</h2>
+          
+           <!-- パンくずリストは番号リストで作ったほうがいい！ -->
+          
+          <ol class="topic">
+            <li><a href="lesson2.html">home</a></li>
+            <li>商品</li>
+          </ol>
+          
+          <h3>おすすめのゼリービーンズ(小さい画像消えてた！いつか直す)</h3>
+          <div class="items clearfix">
+<!--クラス属性を2つ以上つけたい場合は、半角スペースで継続可能！コードに直接入力だ！-->
+              <p><a href="img/bg01.jpg" data-lightbox="lightbox" data-title="拡大お菓子1"><img src="img/sm01.jpg" width="150" height="150" alt="○○お菓子1"/></a></p>
+              <p><a href="img/bg02.jpg" data-lightbox="lightbox" data-title="拡大お菓子2"><img src="img/sm02.jpg" width="150" height="150" alt="○○お菓子2"/></a></p>
+			  <p><a href="img/bg03.jpg" data-lightbox="lightbox" data-title="拡大お菓子3"><img src="img/sm03.jpg" width="150" height="150" alt="○○お菓子3"/></a></p>
+			  <p><a href="img/bg04.jpg" data-lightbox="lightbox" data-title="拡大お菓子4"><img src="img/sm04.jpg" width="150" height="150" alt="○○お菓子4"/></a></p>
+			  <p><a href="img/bg05.jpg" data-lightbox="lightbox" data-title="拡大お菓子5"><img src="img/sm05.jpg" width="150" height="150" alt="○○お菓子5"/></a></p>
+			  <p><a href="img/bg06.jpg" data-lightbox="lightbox" data-title="拡大お菓子6"><img src="img/sm06.jpg" width="150" height="150" alt="○○お菓子6"/></a></p>
+			  <p><a href="img/bg07.jpg" data-lightbox="lightbox" data-title="拡大お菓子7"><img src="img/sm07.jpg" width="150" height="150" alt="○○お菓子7"/></a></p>
+			  <p><a href="img/bg08.jpg" data-lightbox="lightbox" data-title="拡大お菓子8"><img src="img/sm08.jpg" width="150" height="150" alt="○○お菓子8"/></a></p>
+			  <p><a href="img/bg09.jpg" data-lightbox="lightbox" data-title="拡大お菓子9"><img src="img/sm09.jpg" width="150" height="150" alt="○○お菓子9"/></a></p>
+			  <p><a href="img/bg10.jpg" data-lightbox="lightbox" data-title="拡大お菓子10"><img src="img/sm10.jpg" width="150" height="150" alt="○○お菓子10"/></a></p>
+			  <p><a href="img/bg11.jpg" data-lightbox="lightbox" data-title="拡大お菓子11"><img src="img/sm11.jpg" width="150" height="150" alt="○○お菓子11"/></a></p>
+			  <p><a href="img/bg12.jpg" data-lightbox="lightbox" data-title="拡大お菓子12"><img src="img/sm12.jpg" width="150" height="150" alt="○○お菓子12"/></a></p>
+			  <p><a href="img/bg13.jpg" data-lightbox="lightbox" data-title="拡大お菓子13"><img src="img/sm13.jpg" width="150" height="150" alt="○○お菓子13"/></a></p>
+			  <p><a href="img/bg14.jpg" data-lightbox="lightbox" data-title="拡大お菓子14"><img src="img/sm14.jpg" width="150" height="150" alt="○○お菓子14"/></a></p>
+			  <p><a href="img/bg15.jpg" data-lightbox="lightbox" data-title="拡大お菓子15"><img src="img/sm15.jpg" width="150" height="150" alt="○○お菓子15"/></a></p>
+          </div>
+    </main>
+        
+      <footer>
+        <p><a href="lesson2.html">home</a>｜<a href="item.html">商品</a>｜<a href="campaign.html">キャンペーン</a>｜<a href="gallery.html">ギャラリー</a>｜<a href="faq.html">よくある質問</a>｜<a href="voice.html">お客様の声</a>｜<a href="form.html">カタログのご注文</a></p>
+        <p>Copyright &copy; 職業訓練授業課題.All Rights Reserved.</p>
+      </footer>
+    </div>
+    
+</body>
+</html>

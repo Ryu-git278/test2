@@ -1,0 +1,187 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>スムーススクロール</title>
+    
+<!--head内に "挿入""HTML"の"Script"を使用して挿入していく！-->
+<!--  必ず：先にライブラリファイルを読み込む！-->
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+<!--　2つ目のファイルはプラグインファイル（今回はスムーススクロール機能が入っているもの）-->
+<script type="text/javascript" src="js/jquery.smoothscroll.js"></script>
+<!--上記 Jqは、ページ内リンク全てにスムーススクロール機能を実装可能！-->
+    
+    
+    <!-- 備考：
+        スムーススクロール：授業にて：
+        上記プラグインファイルは、"Downloading jQuery"
+        https://jquery.com/download/
+        ⇒ Download the compressed, production jQuery 3.4.1 をダウンロード
+        "クリックでソースコードが出る場合"右クリックで"名前を付けてリンク先を保存"で
+        ダウンロード。
+    -->
+
+    
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body id="top">
+	
+	
+<div id="all">
+	
+<header>
+  <h1>スムーススクロールの練習</h1>
+</header>
+    
+<!--ナビゲーションここから-->
+<nav class="menu"> <!--遊び。スマホなイメージ。-->
+	<ul>
+    　<li><a href="scroll.html">ホーム</a></li>
+      <li><a href="#contents1">第一章</a></li>
+      <li><a href="#contents2">第二章</a></li>
+      <li><a href="#contents3">第三章</a></li>
+      <li><a href="#contents4">第四章</a></li>
+      <li><a href="#contents5">第五章</a></li>
+      <li><a href="#access">アクセス</a></li>
+  </ul>
+</nav>
+<!--メインコンテンツここから-->
+<main>
+    <section id="contents1">
+        <h2>第一章：スムーススクロールさせよう</h2>
+        <p><img src="https://placehold.jp/600x250.png" alt=""/></p>
+        <p>スクロールバーが出るくらいテキストや文章を入力。</p>
+        <p>HTMLのリンク機能は"切り替わった"ように見えるため、<br>
+           ぬるぬる動いた方がわかりやすい。</p>
+        <p>todo:補足：デフォルトの設定だとcontentsが長いと一瞬で移動してる？:検証</p>
+        <p>補足memo:nullリンクだと、スムーススクロールしないので注意。</p>
+        <p>sample text sample text sample text sample text sample text sample text</p>
+        <p>sample text sample text sample text sample text sample text sample text</p>
+        <p>sample text sample text sample text sample text sample text sample text</p>
+        <p>sample text sample text sample text sample text sample text sample text</p>
+        <p>sample text sample text sample text sample text sample text sample text</p>
+        <p>sample text sample text sample text sample text sample text sample text</p>
+        <p>sample text sample text sample text sample text sample text sample text</p>
+        <p>sample text sample text sample text sample text sample text sample text</p>
+        <p>sample text sample text sample text sample text sample text sample text</p>
+        <p>sample text sample text sample text sample text sample text sample text</p>
+        <p>sample text sample text sample text sample text sample text sample text</p>
+        <p>sample text sample text sample text sample text sample text sample text</p>
+        <p>sample text sample text sample text sample text sample text sample text</p>
+        <p>sample text sample text sample text sample text sample text sample text</p>
+    </section>
+
+<p><a href="#top">このページのトップへ</a></p>
+
+  <section id="contents2">
+        <h2>第二章：スムーススクロールさせよう</h2>
+        <p><img src="https://placehold.jp/600x250.png" alt=""/></p>
+        <p>sample text sample text sample text sample text sample text sample text</p>
+        <p>sample text sample text sample text sample text sample text sample text</p>
+        <p>sample text sample text sample text sample text sample text sample text</p>
+        <p>sample text sample text sample text sample text sample text sample text</p>
+        <p>sample text sample text sample text sample text sample text sample text</p>
+        <p>sample text sample text sample text sample text sample text sample text</p>
+        <p>sample text sample text sample text sample text sample text sample text</p>
+        <p>sample text sample text sample text sample text sample text sample text</p>
+        <p>sample text sample text sample text sample text sample text sample text</p>
+        <p>sample text sample text sample text sample text sample text sample text</p>
+        <p>sample text sample text sample text sample text sample text sample text</p>
+        <p>sample text sample text sample text sample text sample text sample text</p>
+        <p>sample text sample text sample text sample text sample text sample text</p>
+        <p>sample text sample text sample text sample text sample text sample text</p>
+        <p>sample text sample text sample text sample text sample text sample text</p>
+        <p>sample text sample text sample text sample text sample text sample text</p>
+    </section>
+
+<p><a href="#top">このページのトップへ</a></p>
+
+    <section id="contents3">
+        <h2>第三章：スムーススクロールさせよう</h2>
+        <p><img src="https://placehold.jp/600x250.png" alt=""/></p>
+        <p>sample text sample text sample text sample text sample text sample text</p>
+        <p>sample text sample text sample text sample text sample text sample text</p>
+        <p>sample text sample text sample text sample text sample text sample text</p>
+        <p>sample text sample text sample text sample text sample text sample text</p>
+        <p>sample text sample text sample text sample text sample text sample text</p>
+        <p>sample text sample text sample text sample text sample text sample text</p>
+        <p>sample text sample text sample text sample text sample text sample text</p>
+        <p>sample text sample text sample text sample text sample text sample text</p>
+        <p>sample text sample text sample text sample text sample text sample text</p>
+        <p>sample text sample text sample text sample text sample text sample text</p>
+        <p>sample text sample text sample text sample text sample text sample text</p>
+        <p>sample text sample text sample text sample text sample text sample text</p>
+        <p>sample text sample text sample text sample text sample text sample text</p>
+        <p>sample text sample text sample text sample text sample text sample text</p>
+        <p>sample text sample text sample text sample text sample text sample text</p>
+        <p>sample text sample text sample text sample text sample text sample text</p>
+    </section>
+
+<p><a href="#top">このページのトップへ</a></p>
+
+    <section id="contents4">
+        <h2>第四章：スムーススクロールさせよう</h2>
+        <p><img src="https://placehold.jp/600x250.png" alt=""/></p>
+        <p>sample text sample text sample text sample text sample text sample text</p>
+        <p>sample text sample text sample text sample text sample text sample text</p>
+        <p>sample text sample text sample text sample text sample text sample text</p>
+        <p>sample text sample text sample text sample text sample text sample text</p>
+        <p>sample text sample text sample text sample text sample text sample text</p>
+        <p>sample text sample text sample text sample text sample text sample text</p>
+        <p>sample text sample text sample text sample text sample text sample text</p>
+        <p>sample text sample text sample text sample text sample text sample text</p>
+        <p>sample text sample text sample text sample text sample text sample text</p>
+        <p>sample text sample text sample text sample text sample text sample text</p>
+        <p>sample text sample text sample text sample text sample text sample text</p>
+        <p>sample text sample text sample text sample text sample text sample text</p>
+        <p>sample text sample text sample text sample text sample text sample text</p>
+        <p>sample text sample text sample text sample text sample text sample text</p>
+        <p>sample text sample text sample text sample text sample text sample text</p>
+        <p>sample text sample text sample text sample text sample text sample text</p>
+    </section>
+
+<p><a href="#top">このページのトップへ</a></p>
+
+    <section id="contents5">
+        <h2>第五章：スムーススクロールさせよう</h2>
+        <div class="box">
+            <p><img src="https://placehold.jp/180x250.png" alt=""/></p>
+            <h3>BOX1</h3>
+            <p>sample text sample text sample text sample text sample text sample text</p>
+        </div>
+        <div class="box">
+            <p><img src="https://placehold.jp/180x250.png" alt=""/></p>
+            <h3>BOX1</h3>
+            <p>sample text sample text sample text sample text sample text sample text</p>
+        </div>
+        <div class="box">
+            <p><img src="https://placehold.jp/180x250.png" alt=""/></p>
+            <h3>BOX1</h3>
+            <p>sample text sample text sample text sample text sample text sample text</p>
+        </div>
+    </section>
+
+<p><a href="#top">このページのトップへ</a></p>
+
+    <section id="access">
+        <h2>アクセス</h2>
+        <p><img src="https://placehold.jp/600x250.png" alt=""/></p>
+        <p>sample text sample text sample text sample text sample text sample text</p>
+    </section>
+
+<p><a href="#top">このページのトップへ</a></p>
+
+
+</main>
+    
+<footer>
+  <p>ぬるぬるリンクテスト。</p>
+
+  <p><a href="scroll.html">ホーム</a>|<a href="#contents1">第一章</a>|<a href="#contents2">第二章</a>|<a href="#contents3">第三章</a>|<a href="#contents4">第四章</a>|<a href="#contents5">第五章</a>|<a href="#access">アクセス</a></p>
+
+</footer>
+	
+</div>
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>テーブルタグにクラスを設定してみよう</title>
+<style type="text/css">
+
+.hyou td {
+    font-size: small;
+    padding: 10px 0px;
+    border-bottom: 1px solid #09c;
+}
+.hyou {
+    border-top: 1px solid #F3024D;
+}
+.leftcell {
+    border-right: 1px dashed #12E43D;
+    border-left: 1px dashed #0CABE4;
+}
+.hyou2 th {
+    font-size: xx-large;
+    padding: 10px 0px;
+    border-left: 5px solid #0099CC;
+    border-right: 5px solid #00B8F5;
+    border-bottom: 5px solid #00516C;
+    border-top: 7px solid #26C8FF;
+    color: #091CEB;
+    background-color: #9FE6FF;
+    border-radius: 100%;
+    }
+.hyou2 td {
+    font-size: xx-large;
+    padding: 10px 0px;
+    border-left: 7px solid #1919F4;
+    border-right: 7px solid #060683;
+    border-bottom: 7px solid #030350;
+    border-top: 7px solid #0B0BE8;
+    color: #EB0A0E;
+    background-color: #2424F5;
+    border-radius: 40px;
+}
+.hyou2 {
+    border-top: 1px solid #F3024D;
+    width: 70%;
+    margin-top: 20px;
+    margin-right: 30px;
+    margin-left: 10px;
+    margin-bottom: 40px;
+    height: auto;
+    float: right;
+    text-align: center;
+}
+.leftcell2 {
+    border-right: 1px dashed #12E43D;
+    border-left: 1px dashed #0CABE4;
+}
+</style>
+</head>
+
+<body>
+<h1>テーブルタグにＣＳＳを設定してみよう</h1>
+<table width="500" class="hyou">
+<tr>
+		<td class="leftcell">項目１</td>
+		<td>内容内容内容内容内容内容</td>
+	</tr>
+	<tr>
+		<td class="leftcell">項目２</td>
+		<td>内容内容内容内容内容内容内容内容内容内容内容内容</td>
+	</tr>
+	<tr>
+		<td class="leftcell">項目３</td>
+		<td>内容内容内容内容内容内容内容内容内容内容内容内容</td>
+	</tr>
+	<tr>
+		<td class="leftcell">項目４</td>
+		<td>内容内容内容内容内容内容</td>
+	</tr>
+	<tr>
+		<td class="leftcell">項目５</td>
+		<td>内容内容内容内容内容内容内容内容内容内容内容内容</td>
+	</tr>
+	<tr>
+		<td class="leftcell">項目６</td>
+		<td>内容内容内容内容内容内容</td>
+	</tr>
+	<tr>
+		<td class="leftcell">項目７</td>
+		<td>内容内容内容内容内容内容内容内容内容内容内容内容</td>
+	</tr>
+	<tr>
+		<td class="leftcell">項目８</td>
+		<td>内容内容内容内容内容内容内容内容内容内容</td>
+	</tr>
+	<tr>
+		<td class="leftcell">項目９</td>
+		<td>内容内容内容内容内容内容</td>
+	</tr>
+	<tr>
+		<td nowrap class="leftce  ll">項目１０</td>
+		<td>内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</td>
+	</tr>
+</table>
+<p>&nbsp;</p>
+<table width="500" cellpadding="1" cellspacing="2" class="hyou2">
+	<tr>
+		<th>項目１</th>
+		<td class="leftcell2">内容内容内容内容内容内容</td>
+	</tr>
+	<tr>
+		<th>項目２</th>
+		<td class="leftcell2">内容内容内容内容内容内容内容内容内容内容内容内容</td>
+	</tr>
+	<tr>
+		<th>項目３</th>
+		<td class="leftcell2">内容内容内容内容内容内容内容内容内容内容内容内容</td>
+	</tr>
+	<tr>
+		<th>項目４</th>
+		<td class="leftcell2">内容内容内容内容内容内容</td>
+	</tr>
+	<tr>
+		<th>項目５</th>
+		<td class="leftcell2">内容内容内容内容内容内容内容内容内容内容内容内容</td>
+	</tr>
+	<tr>
+		<th>項目６</th>
+		<td class="leftcell2">内容内容内容内容内容内容</td>
+	</tr>
+	<tr>
+		<th>項目７</th>
+		<td class="leftcell2">内容内容内容内容内容内容内容内容内容内容内容内容</td>
+	</tr>
+	<tr>
+		<th>項目８</th>
+		<td class="leftcell2">内容内容内容内容内容内容内容内容内容内容</td>
+	</tr>
+	<tr>
+		<th>項目９</th>
+		<td class="leftcell2">内容内容内容内容内容内容</td>
+	</tr>
+	<tr>
+		<th nowrap>項目１０</th>
+		<td class="leftcell2">内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</td>
+	</tr>
+</table>
+
+<p>テーブルにCSSを設定するには子孫セレクタを使用するのが効果的です。<br>
+	テーブルは様々な用途でHTML内に使われている場合があるので<br>
+	tableタグにIDやクラスを適用して、子孫セレクタでtdタグのCSSを定義します。</p>
+    
+</body>
+</html>

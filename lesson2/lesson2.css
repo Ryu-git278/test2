@@ -341,7 +341,21 @@ DWでは、メタ【詳細】と【keyword】を設定する。
     width: 72%; /*テーブルに合わせて*/
     }
 
+/*フォーム習ってから。テキスト記載外*/
+/*3つのテキストBOXのサイズを調整する*/
+.formtable input[type="text"]{
+    width: 100%;
+    }
 
+.formtable input[type="text"]:focus{
+    background-color: darkkhaki;
+    }
 
+/*<INPUT>タグ http://www.htmq.com/html/input.shtml*/
+
+/*要素名:focus {プロパティ名:値;}
+http://www.htmq.com/selector/focus.shtml
+テキストにカーソルが入っているときに～
+*/
 
 

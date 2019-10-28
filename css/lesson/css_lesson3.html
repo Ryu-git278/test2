@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>divタグでくくってCSSを定義してみよう</title>
+<style type="text/css">
+    #waku1 {
+    background-color: aqua;
+    width: 460px;
+    border: 10px solid #0101FF;
+    padding: 10px;
+    }
+    /*上下左右の順番*/
+    #waku2 {
+    background-color: #0101FF;
+    color: aliceblue;
+    width: 462px;    
+    border: 2px solid aqua;
+    padding: 17px;
+    }
+</style>
+</head>
+<body>
+
+    <h1>divタグでくくってCSSを定義してみよう</h1>
+
+<div id="waku1">
+    <p>divタグでくくって、そのdivタグに定義を適用するには<br>
+    はじめにdivタグでくくってから定義を作成する方法と<br>
+    定義を作ってからdivタグでくくって適用する方法があります。</p>
+    <p>選択した範囲をdivタグでくくるには<br>
+    くくりたい部分をドラックして選択し、<br>
+    「挿入」メニュー　→　「レイアウトオブジェクト」　→　「divタグ」　をクリック。</p>
+    <p>もしくは「挿入」パネルの「Divタグを挿入」ボタンを押す。</p>
+</div>
+
+<div id="waku2">
+    <p> 「Divタグを挿入」ウィンドウが表示されたら<br>
+    適用するIDまたはクラス名が分かっている場合は<br>
+    ID名またはクラス名を所定の場所に記述する。<br>
+    （その際「.」や「#」は記述しない）<br>
+    適用するIDまたはクラス名が不明な場合は<br>
+    何も記述せずに「OK」を押す。 </p>
+    <p>後からタグにCSSを適用する場合は先にCSS定義を作成し、<br>
+    ステイタスバーの適用したいタグをクリック<br>
+    その場で右クリックして <br>
+    「クラス設定」あるいは「ID設定」の中から<br>
+    適用したいクラス名またはID名を選択する。</p>
+</div>
+</body>
+</html>

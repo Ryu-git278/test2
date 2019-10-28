@@ -1,0 +1,81 @@
+@charset "utf-8";
+
+body{
+	}
+
+	h1{ /* 授業でやった、h1 真ん中に */
+		text-align:center;
+		width:750px;
+		margin-left:auto;
+		margin-right:auto;
+	}
+
+	img {
+			border-radius:50%;  /* 角丸半径を50%にする(=円形にする) */
+			width:200px;
+			height:200px;
+	}
+
+	.contents{   /* 背景画像に合わせるために上下と、横の枠（的なもの？）を設定 */
+		padding-top:20px;
+		padding-bottom:20px;
+		margin: 20px;
+	}
+
+	.title{
+		color: #ff0000; /*h2にカラーをつけたみた。*/
+	}
+
+	ul {
+		list-style-type: none;
+	}
+
+	li {
+		display: inline;
+	}
+
+	.bg1{
+		background-image: url(https://www.tokyo-shellpack.net/control/img/built_img01.jpg);
+	}
+
+	.bg2{
+		background-image: url(https://ic3-a.wowma.net/mi/gr/114/wowtas.sedo.li/uploads/4914700080150.jpg);
+	}
+	.bg3{
+		background-image: url(https://images-na.ssl-images-amazon.com/images/I/71CT%2BcAItML._SX425_.jpg);
+	}
+
+	.bg4{
+		background-image: url(https://image.biccamera.com/img/00000003893016_A01.jpg?sr.dw=320&sr.dh=320&sr.jqh=60&sr.mat=1);
+	}
+
+	table{
+		width: 750px;
+		border-spacing: 0;
+		background-color: #DCDCDC;
+	}
+
+	table th{
+		border-bottom: solid 2px #fb5144;
+		padding: 10px 0;
+	}
+
+	table td{
+		border-bottom: solid 2px #ddd;
+		text-align: center;
+		padding: 10px 0;
+	}
+
+	.return{
+		text-align:right;
+		width:600px;
+		margin-left:auto;
+		margin-right:auto;
+	}
+
+	.file{
+		text-align:right;
+		width:600px;
+		margin-left:auto;
+		margin-right:auto;
+	}

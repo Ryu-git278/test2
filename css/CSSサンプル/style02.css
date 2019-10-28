@@ -1,0 +1,29 @@
+h2 {
+	font-size: 12px;
+	width: 400px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	text-indent: 10px;
+	margin-bottom: 0px;
+	background-image: url(img/bg02.jpg);
+	background-repeat: no-repeat;
+	border: 1px solid #FF6666;
+}
+p {
+	width: 400px;
+	margin-top: 0px;
+	font-size: 12px;
+	line-height: 150%;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-right-color: #FF6666;
+	border-bottom-color: #FF6666;
+	border-left-color: #FF6666;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	background-color: #FFE8E8;
+}

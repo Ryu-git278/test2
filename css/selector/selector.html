@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>CSSセレクタサンプル</title>
+<style type="text/css">
+h1 {
+	font-size: x-large;
+}
+h2 {
+	font-size: large;
+}
+pre {
+	color: #660000;
+}
+#sample1, #sample2, #sample3,#sample4 {
+	border: 3px solid #0000ff;
+	width: 300px;
+}
+#sample1-1, #sample2-1, #sample3-1,#sample4-1 {
+	border: 2px solid #00cc00;
+	width: 200px;
+}
+#sample1 p {
+	color: #ff0000;
+}
+#sample2>p {
+	color: #ff0000;
+}
+#sample3+p {
+	color: #ff0000;
+}
+#sample4~p {
+	color: #ff0000;
+}
+#sample5 img[alt] {
+	border: 2px solid #ff0000;
+}
+#sample6 img[alt="画像2"] {
+	border: 2px solid #ff0000;
+}
+#sample7 img[alt~="画像"] {
+	border: 2px solid #ff0000;
+}
+</style>
+</head>
+<body>
+<h1>●子孫セレクタ</h1>
+<pre>
+#sample1 p {
+  color: #ff0000;
+}
+</pre>
+<div id="sample1">
+  <p>ここは赤くなります</p>
+  <div id="sample1-1">
+    <p>ここは赤くなります</p>
+  </div>
+  <p>ここは赤くなります</p>
+</div>
+<p>ここは赤くなりません</p>
+<hr>
+<h1>●子供セレクタ</h1>
+<pre>
+#sample2>p {
+  color: #ff0000;
+}
+</pre>
+<div id="sample2">
+  <p>ここは赤くなります</p>
+  <div id="sample2-1">
+    <p>ここは赤くなりません</p>
+  </div>
+  <p>ここは赤くなります</p>
+</div>
+<p>ここは赤くなりません</p>
+<hr>
+<h1>●隣接セレクタ</h1>
+<pre>
+#sample3+p {
+  color: #ff0000;
+}
+</pre>
+<div id="sample3">
+  <p>ここは赤くなりません</p>
+  <div id="sample3-1">
+    <p>ここは赤くなりません</p>
+  </div>
+  <p>ここは赤くなりません</p>
+</div>
+<p>ここは赤くなります</p>
+<hr>
+<h1>●間接セレクタ</h1>
+<pre>
+#sample4~p {
+  color: #ff0000;
+}
+</pre>
+<div id="sample4">
+  <p>ここは赤くなりません</p>
+</div>
+<p>ここは赤くなります</p>
+<p>ここは赤くなります</p>
+  <div id="sample4-1">
+    <p>ここは赤くなりません</p>
+  </div>
+<p>ここは赤くなります</p>
+<hr>
+<h1>●属性セレクタ</h1>
+<h2>○属性が指定されている</h2>
+<pre>
+#sample5 img[alt] {
+  border: 2px solid #ff0000;
+}
+</pre>
+<p id="sample5"><img src="image1.gif" width="50" height="50" /><img src="image2.gif" alt="画像2" width="50" height="50" /><img src="image3.gif" alt="画像3" width="50" height="50" /></p>
+<h2>○属性が指定されていて、値が一致している</h2>
+<pre>
+#sample6 img[alt="画像2"] {
+  border: 2px solid #ff0000;
+}
+</pre>
+<p id="sample6"><img src="image1.gif" alt="画像1" width="50" height="50" /><img src="image2.gif" alt="画像2" width="50" height="50" /><img src="image3.gif" alt="画像3" width="50" height="50" /></p>
+<h2>○属性が指定されていて、値に指定された語句（文字ではない）を含んでいる</h2>
+<pre>
+#sample7 img[alt~="画像"] {
+  border: 2px solid #ff0000;
+}
+</pre>
+<p id="sample7"><img src="image1.gif" alt="画像 1" width="50" height="50" /><img src="image2.gif" alt="画像2" width="50" height="50" /><img src="image3.gif" alt="画像3" width="50" height="50" /></p>
+</body>
+</html>

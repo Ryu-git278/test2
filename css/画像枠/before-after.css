@@ -1,0 +1,37 @@
+@charset "utf-8";
+
+p {
+    background-color: aqua;
+    color: #F80C1B;
+    }
+
+.ex1:before{
+    content: "なんという事でしょう！beforeです！ ";
+    }
+
+.ex1:after{
+    content: " あのデットスペースがafterに！";
+    }
+
+.ex2:before{
+    content: "なんという事でしょう！beforeです！ ";
+    display: block;
+    }
+
+.ex2:after{
+    content: "匠は家の屋根を取り払いまるで外のようなオープンな空間がafterに！";
+    display: block;
+    }
+
+div{
+    background-color: blue;
+    color: aliceblue;
+    }
+
+div:before{
+    content: "なんという事でしょう！beforeです！ ";
+    }
+
+div:after{
+    content: "匠は家の柱を取り払いまるで外のようなオープンな空間がafterに！ ";
+    }

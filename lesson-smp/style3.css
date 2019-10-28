@@ -1,0 +1,402 @@
+@charset "utf-8";
+/*全体reset*/
+    body,p,h1,h2,h3,ul{
+        margin: 0px;
+        padding: 0px;
+        }
+
+    img{ /*画像はインライン要素なので隙間がある。*/
+        vertical-align: middle; /*imgに対する文字要素の打ち消し。隙間がなくなるmiddleなので中央揃え。*/
+        border: none; /*古いブラウザ用。現行versionでは表示されないので忘れても影響は少ない。*/
+        }
+
+    ul{
+        list-style-type: none;
+        }
+
+/*共通設定*/
+
+    .wf-sawarabigothic { /*時間があったので遊び、Googleフォントを入れてみただけ。 */
+        font-family: "Sawarabi Gothic";
+        }
+    /*Googleフォント参考：https://googlefonts.github.io/japanese/#sawarabigothic*/
+
+    /*テキストでは、
+    body{
+        font-family: お好きなもの;
+        }
+    */
+
+    .inner{ /*今回の仕様書にて、main 最大値が1000px＆中央揃え表示なので*/
+        width: 1000px;
+        margin: 0 auto;
+        }
+
+/*ヘッターここから*/
+
+    header{ /*幅指定なし。ブラウザの隅から隅まで*/
+        background-color: #ff0;
+        border-top: 10px solid #ec008c;
+        }
+
+    header .inner{ /*ロゴマークを絶対配置で配置するための基準点を設定。レラティブ。*/
+        position: relative;
+        }
+
+    header h1{ /*ロゴマーク。幅、高さ指定がないのは、画像のサイズに合わせているから。レラティブから↑-10px。左から40pxの位置。↑-10pxはヘッダーの"border-top"に合わせている！（めり込ませている。）*/
+        position: absolute;
+        top: -10px;
+        left:40px;
+        }
+
+/*ヘッターナビゲーションここから*/
+
+    nav{/*重なるロゴの配置からずらすため。今回はサイズ指定ありき。以下を無効化してみるとわかる。*/
+        margin-left: 190px;
+        }
+
+    nav ul{
+    /*    list-style-type: none; 教科書には記載あるがリセットCSSで消し済み*/
+        overflow: hidden; /*高さを出すため。クリアフィックスでも同様。*/
+        }
+
+    nav li{ /*本来。liタグの横幅はブラウザに合わせている。正し、floatさせると、浮き上がる為、画像などの要素サイズに合わせて変更される。検証：バックグラウンドカラーをつけてフロートを解除してみる！*/
+/*        background-color: aqua;*/
+        float: left;
+        }
+
+    nav a{
+        display: block; /*インライン要素のaタグをブロック要素に変えることでクリック範囲を変えている。解除してマウスオーバーしてみるとわかる！*/
+        line-height: 65px; /*行間を作って、リンクの要素を中心に合わせている。paddingを上下に着けると、今回 高さがきれいに揃わない為、うまくいかない。（コチラのほうが楽。）*/
+        padding:  0 10px;
+        }
+
+    nav a:hover{ /*ホバーしたら背景色が変わる。*/
+        background-color: #ec008c;
+        }
+
+/*【ここ変更点！！】トップ画像*/
+
+    .mainimage img{
+        width: 100%; /*画像の幅はwidth="1600"。100％にすることで、逆に1000pxにフィットさせている。正し、サイズに合わせて拡大縮小ているため、伸びてしまう。顔とかはNG*/
+        height: auto; /*上記問題に対抗するため、高さも連動して変更される。*/
+        }
+
+    .mainimage{
+        background-image: url("img/bg-jellyfish.jpg"); /*背景画像に*/
+        background-repeat: no-repeat; /*繰り返さない*/
+        /*height: 400px;*/ /*表示範囲の確認。適当、test。左上から表示範囲のみ見える！拡大縮小。うまく表示させたい！そこで↓へ*/
+        background-size: cover; /*サイズをピクセルなどで指定して表示させることが出来るが、今回は枠の中にピッタリ表示させたいのでcover（またはcontainこの場合は、指定範囲の中で全体を表示させる。）！デフォルトはauto！*/
+        height: 0px; /*高さを0に！paddingで表示させる！*/
+        padding-top:calc(1000 / 3000 * 100%); /*calc()カルク関数。カッコ内の計算が可能！px,%,+,-,*,/等計算ができる！*/ 
+        /*width: calc(50% - 20px)等ブラウザによって左右される計算も可能に！！（memo：記号の前後に半角スペース入れるの忘れない）*/
+        /*今回の計算では33.3％とかでもOK!*/
+        }
+
+/*main 内の共通設定*/
+
+    main{ /*ブラウザIEはメインタグがインライン要素。他のブラウザで見ている限り変動なし。現状ではテンプレみたいな感じ。*/
+        display: block;
+        }
+
+    main h2{
+        background-color: #ffeed7; /*背景色*/
+        border-bottom: 5px solid #ec008c; /*指定デザイン*/
+        margin: 40px 0; /*上下に隙間。*/
+        }
+
+    section{ /*各セクションでfloatするので回り込んだり、影響を受けないようにクリア-ボスする。（オーバーフローヒデゥンでもOK）*/
+        clear:both;
+        }
+
+    .box{
+        width: 480px; /*デザイン指定。画像の大きさも同様。*/
+        margin-bottom: 40px;
+        float: left; /*左にドラえもん*/
+        }
+
+    .box:nth-of-type(even){ /*偶数を表すeven*/
+        float: right; /*右にドラえもん*/
+        }
+        /*
+        偶数奇数で左右に振らなくても、全てを左にフロートさせて余白をつけるのもOK！
+        3個以上一列に表示とかする場合はその方が楽？
+        今回は2個表示で、左右ピッタリ表示なので、こちらの方が楽。
+        */
+
+    .box h3{
+        margin: 30px 0 10px;
+        }
+
+    .box p{
+        margin-bottom: 10px;
+        line-height:  1.8; /*段落と段落の間に行間がついたほうがいいかなー？的な感じでつけた。今回は殆ど意味なし。単位を付けないと倍。1.8倍。*/
+        }
+
+/*section 3の個別設定ここから*/
+    /*カンプより。画像横の回り込みテキスト対応。*/
+    #sec3 .photo{
+        float: left;
+        margin-right: 40px; /*回り込んだと、テキストとフォトに隙間が欲しいなー的な感じ。*/
+        }
+
+    #sec3 p{
+        margin-bottom: 10px; /*お好みで隙間。*/
+        line-height: 1.8; /*お好みで行間。*/
+        }
+
+/*section 4のテーブル設定ここから*/
+
+    #sec4 table{
+        width: 900px; /*デザインカンプありき。*/
+        margin: 0 auto 10px;/*左右は真ん中。テーブルと下のテキストに隙間。*/
+        border-collapse: collapse;/*線は重ねて1本に。（テーブルの線は2重線！）*/
+        }
+
+    #sec4 th,#sec4 td{
+        padding: 15px; /*文字の周りに隙間お好みで*/
+        line-height: 1.8; /*お好みで*/
+        vertical-align: top; /*セルの中で上ぞろえ。デフォルトは中央揃え。デザインカンプありき、お好みで。*/
+        border: 2px solid #fff;
+        }
+
+    #sec4 th{
+        text-align: left; /*からの左揃え*/
+        white-space: nowrap; /*セル内の改行を禁止。タイトルなど短い時はあったほうが読みやすいでしょ？お好みで*/
+        border-top: 0; /*追加：ブロック要素に変更したため、コラップスが効いていない。このため、重なるところを0にしている。*/
+        border-bottom: 0; /*追加*/
+        }
+
+    #sec4 th.top{ /*トップが消えてしまうので、クラスを追加して調整。*/
+        border-top: 2px solid #fff;
+        }
+
+    /*memo：しましま ゼブラテーブル*/
+    #sec4 tr:nth-child(odd){/*奇数を表すeven*/
+        background-color: #7accc8;
+        }
+
+    #sec4 tr:nth-child(even){/*偶数を表すeven*/
+        background-color: #8dc63f;
+        }
+
+    #sec4 p{
+        width: 900px; /*テーブルに合わせて*/
+        margin: 0 auto; /*テーブルに合わせて左右真ん中に。*/
+        line-height: 1.8; /*お好みで*/
+        }
+
+/*テーブル下に、YouTube埋め込み＆縦横比率維持＆レスポンス対応実習ここから*/
+/*YouTubeは16：9＝表示画像の高さ÷表示画像の幅×100 より＝ 縦の比率56.25%*/
+    .youtube{
+        width: 900px;
+        margin: 20px auto 0;
+/*        background-size: cover;*/
+        background-color: aqua;
+        position: relative; /*絶対配置の基準！基準にするだけなので、レラティブがベター！他でもOK！*/
+        }
+
+    .youtube:before{ /*YouTubeのdivは、その上がmainだったので、指定。もう一つdivで括ったりするのもOK。*/
+        content: ""; /*ビフォーアフターには必須。*/
+        display: block; /*ブロック要素*/
+        padding-top: 56.25%; /*16：9 ここに動画コンテンツを載せる！*/
+        }
+    
+    .youtube iframe{ /*絶対配置の座標！*/
+        position: absolute;
+        top: 0; /*上からピッタリ*/
+        left: 0; /*左ピッタリ*/
+        width: 100%; /*divに合わせて*/
+        height: 100%; /*divに合わせて*/
+        }
+
+/*ページ内ボタン（TOPへ戻る）ここから*/
+
+    .gotop{ /*幅設定はしていないので、ブラウザ合わせ。最大1000px */
+        margin-top: 40px; /*隙間/余白*/
+        text-align: right; /*右側表示*/
+        }
+
+
+/*footerここから*/
+
+    footer{
+        padding: 20px 0 30px; /*上下隙間。*/
+        background-color: #ec008c; /*背景色*/
+        color: #fff; /*フォントカラー*/
+        text-align: center; /*中央揃え*/
+        line-height: 1.5; /*お好みで*/
+        }
+
+    footer .link{
+        margin-bottom: 200px; /*デザインカンプありきでお好みで。*/
+        }
+
+    footer a{
+        color: #fff; /*リンクカラーも同じ色に。*/
+        text-decoration: none; /*リンク下線を非表示に。*/
+        }
+
+    footer a:hover{ /*マウスオーバーで、以下*/
+        color: #bdeafd; /*色変更*/
+        text-decoration: underline; /*下線表示*/
+        }
+
+/******-----
+        レスポンス対応設定ここから
+                            -----******/
+
+    /*重要！max width では、でっかい方（PC画面）から設計＆記述する！！*/
+    /*逆にmin width を設定する場合は小さいほうから設定。*/
+
+    /*
+    DWでは、@media グローバルに挿入していく！
+    memo：
+        @media print{ 印刷時画面（背景色やナビを消すなど。印刷用の画面設定）
+            }
+        orientation 画面が縦向きか、横向きか
+
+        @media screen and (max-width:960px){
+            }
+        max width 指定px以下で変化
+        min width 指定px以上で変化
+    */
+
+/*960px以下。タブレットを想定設定。*/
+@media screen and (max-width:960px){
+    body {
+        background-color:cadetblue;
+        }/*背景色 わかりやすくするため*/
+
+    /*imgには元の大きさがある。写真サイズ*/
+    /*width：100％；はブラウザや、クラスに設定されているサイズ一杯に広がる。*/
+    /*max-width: 100%;は、指定サイズ以下に合わせて変動。小さくするための最大値。*/
+    
+    img{ /*画像タグimg全てに対して設定。*/
+        max-width: 100%; /*@mediaでは最大値だったので、"以下になったら変動でした。今回は、指定サイズ以下に合わせて変動。divやsectionに合わせて大小変動させるための最大値設定。"*/
+        height:auto;
+        }
+    
+    /* 全ての画像？メインイメージ画像については、既に widthが設定されていてかつ優先順位が、未指示のまま完了！（.mainimage img{以下略）*/
+    
+    .inner{ /*最大値をブラウザ基準に合わせることで、修正する。100％！*/
+        width: 100%;    
+        }
+    
+    .box{ /*1000px：480pxが初期値＝100％：48％にて設定。*/
+        width:48%;
+        margin-left: 1%; /*フロートでピッタリくっつけていたので、隙間を設ける。お好みで設定。*/
+        margin-right: 1%; /*同上*/
+        }
+    
+    #sec3 .photo{
+        width: 48%;
+        margin-right: 2%; /*1％+1％で隙間が生まれるので、揃えるために。上記と連動させた。お好みで*/
+        }
+    
+    #sec3 p{
+        margin: 1%; /*飼育しようの文章。上記に合わせてレイアウト。お好みで。*/
+        }
+    
+    #sec4 table, #sec4 p{ /*テーブルはグローバル設定時。900px：1000px＝90％：100％で修正。*/
+        width: 90%; 
+        }
+    
+/* YouTube埋め込動画のサイズ・レスポンス対応   */
+    .youtube{
+        width: 90%;
+        }
+}
+
+/*960：タブレットを想定設定ここまで。*/
+
+/*640px以下表示。スマートフォンを想定設定。：スマホ対応はここが最低値で考えていいと思う。*/
+@media screen and (max-width:640px){
+    body {
+        background-color:burlywood;
+        }/*背景色わかりやすくするため*/
+    
+    /* スマホサイトでは、複数列（縦軸）を分けてcontentsを表示してしまうと1つ1つの段落が増えてしまい見ずらい！1列縦並びのcontentsを表示するほうが良い！ */
+
+    /* 
+    今回のレイアウトでは、
+    ロゴ、ナビのサイズ、表示変更（デザインカンプ参考）
+    フロートの解除、
+    フロートによる左側寄りを 中央配置に、
+    テーブルも1列に並び変えてみよう！
+    */
+    
+    header h1{ /*カンプでサイズを図った後、割合を出して決めている。端数は繰り上げ。きりの良い数字に。*/
+        width:20%; /*ロゴのサイズ*/
+        left: 6.25%;
+        }
+    
+    nav{ /*数字の求め方は同上*/
+        margin-left: 30%;
+        } /*左から6.25％余白で20％ロゴ。少し余白を作ってナビ表示。だいたい30％からスタート。*/
+    
+    .box{
+        width: 75%; /*タブレットは2列表示。スマホは1列表示なので少し大きくすることが可能。*/
+        float: none; /*フロート解除*/
+        margin:  0 auto 40px; /*フロートを解除した後に中央寄せになるように。またBOX下の余白は前回より踏襲して設定。*/
+        }
+
+    .box:nth-of-type(even){
+        float: none; /*偶数番目に設定していたフロートを解除。*/
+        }
+    
+    #sec3 .photo{
+        width: 75%;  /*サイズ調整*/
+        margin: 0 auto 30px;
+        float: none; 
+        }
+    
+    #sec3 p{
+        width: 75%;  /*サイズ調整*/
+        margin-left: auto;
+        margin-right: auto;
+        /*        margin:  0 auto;ではない。上下に1pxを付けた分が 継承（？）されている。*/
+        }
+    
+    #sec4 table, #sec4 p{
+        width: 75% /*サイズ調整*/
+        }
+    
+    #sec4 th, #sec4 td{
+        display: block; /*テーブルセルはインライン要素でデフォルト横並び。<p>タグ等と同じようにブロック要素に変更することで縦並びに変更が可能！テクニックとして覚える。*/
+        }
+    
+    .gotop{
+        width: 75%; /*サイズ調整:
+        右はじ？と思うかもしれないが、確認してみるとわかる！ディスプレイサイズの75％なので、概ね右寄せになっている。基本は、お任せ*/
+        margin-left: auto;
+        margin-right: auto;
+        }
+    
+    footer .link{
+        width: 75%;  /*サイズ調整*/
+        margin: 0 auto 40px;
+         /*PC用ではbottomには 200pxと大きめに取っていたので調整。お好みで！*/
+        overflow: hidden; /*遊び以下のクリック範囲を広げた。*/
+        }
+    
+    footer a{ /*遊び。リンクが押しにくいので範囲を広げてみた。"｜"がフロートしてしまったので、ビフォーアフターで表示させる必要があったもよう。*/
+        padding: 10px;
+        display: block;
+        float: left;
+        }
+    
+    /* YouTube埋め込動画のサイズ・レスポンス対応   */
+    .youtube{
+        width: 75%;
+        }
+
+}
+
+/*640px：スマホを想定設定ここまで。*/
+
+
+    /*memo*/
+    /*100vw と 100vh ＝ 100％？*/
+    /*ビューポート ウィゥズスとハイト。*/
+    /*100vw（vh）で画面のはじからははじまで。（スマホ/タブレット用のページで使用するイメージ。PCだと、スクロールバーがブラウザによって異なる為、微妙に（約20px程度）ずれるので注意。PCは％。スマホ/タブレットはvh（vw）を覚えるといい！！かも？）*/

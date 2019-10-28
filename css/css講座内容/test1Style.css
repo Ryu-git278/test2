@@ -1,0 +1,174 @@
+@charset "utf-8";
+
+/*ナビゲーションここから*/
+
+.nav{
+    margin-left: 0px;
+    padding-left: 0px;
+    list-style-type: none;
+    font-size: small;
+	text-align: center;
+	margin: 0 auto;
+	width: 640px;
+    overflow: hidden;
+/*    padding-bottom: 50px;*/
+	}
+.nav li{
+    text-align: center;
+    width: 128px;
+    float: left;
+    }
+.nav li a{
+    color: #fff;
+    text-decoration: none;
+    background-color: #040673;
+    display: block;
+    width: 128px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    }
+.nav li a:hover{
+    background-color: #3015D9;
+    }
+/*.nav li:after{
+    content: "★";
+    display: block;
+    clear: both;
+    }*/
+/*ナビゲーションここまで*/
+
+h2 {
+    color: #14F157;
+    border-left: 5px solid #14F157;
+    border-bottom: 1px dashed #14F157;
+    text-align: left;
+    font-size: medium;
+    }
+.text01 {
+	background-color: #107AEB;
+	color: #FCFEFC;
+    }
+strong.text02 {
+	background-color: #ED0D10;
+	color: #000000;
+    }
+#text01 {
+	font-size: small;
+    }
+strong#text02 {
+    font-size: 120%;
+    color: #0C17E4;
+    }
+/*なんでtd,th テーブルタグも指定されたの？*/
+body,td,th {
+    color: #1605EF;
+	width: 640px;
+    margin: 0 auto;
+    }
+body {
+    background-color: #7A7A7A;
+    }
+
+/*128px*/
+
+.content{
+    width: 640px;
+    margin: 0 auto;
+    background-color:#917F7F;
+    }
+span {
+    border-bottom: 2px solid #FB1216;
+    }
+.progeny span {
+    color: #0BCEF7;
+    font-size: large;
+    border-width: 0;
+    }
+a:link {
+    color: #F3070B;
+    }
+a:visited {
+    color: #E418F0;
+    }
+a:hover {
+    color: #353FED;
+    }
+a:active {
+    color: #09B0F7;
+    }
+.jump a:link {
+    color: #3C05F4;
+    border-width: 1px;
+    }
+.jump a:visited {
+    color: #17F0D8;
+    border-width: 1px;
+    }
+.jump a:hover {
+    color: #1D5105;
+    border-width: 1px;
+}
+.jump a:active {
+    color: #E2E56B;
+    border-width: 1px;
+    }
+a.jump:link {
+    color: #E4E85A;
+    border-width: 3px 3px;
+    border-style: dotted;
+    }
+a.jump:visited {
+    color: #1B2353;
+    border-width: 3px 3px;
+    border-style: dotted;
+    }
+a.jump:hover {
+    color: #62EB23;
+    border-width: 3px 3px;
+    border-style: dotted;
+    }
+a.jump:active {
+    color: #F45108;
+    border-width: 3px 3px;
+    border-style: dotted;
+    }
+
+.photo{
+    width: 640px;
+    position: relative;
+    border-radius: 15%;
+    }
+.news{
+    font-size: 15px;
+    width: 180px;
+    padding: 10px;
+    background-color: #DFE2E4;
+    position: absolute;
+    top: 5%;
+    left: 10%;
+    background-image: url(img/photo01.jpg);
+    border-radius: 25%;
+    color: #F3ECED;
+    }
+/*応用定義リストここから */
+.list1{
+    width: 640px;
+    margin: 0;
+    color: aliceblue;
+    }
+.list1 dt{
+    float: left;
+    line-height: 1.5;
+    border-right: 1px dashed #ccc;
+    }
+.list1 dd{
+    background-color:indigo;
+    margin-left: 0;
+    line-height: 1.5;
+    padding-left: 6em;
+    border-bottom: 1px dashed #ccc;
+    margin: 0 0 10
+    }
+/*1emは1文字分。*/
+/*応用定義リストここまで */
+

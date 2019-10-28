@@ -1,0 +1,146 @@
+<!doctype html>
+<html>
+    
+<!--テキスト対応-->
+
+<head>
+<meta charset="utf-8">
+<title>海月-職業訓練 レスポンス練習</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+<!--遊び：Googleフォント-->
+<link href="https://fonts.googleapis.com/css?family=Sawarabi+Gothic" rel="stylesheet">
+<!--Googleフォントの参考：https://googlefonts.github.io/japanese/#sawarabigothic-->
+
+<!--レスポンス対応その1：<meta name="viewport" 以下 ビューポート設定。挿入は<head>内！他はCSSに記述する。-->
+<meta name="viewport" content="width=device-width, initial-scale=1"> <!--横幅・表示拡大率-->
+    <!--ブレークポイントをいくつ設定するか。デザインで決める。apple社は11カ所！今回は2カ所。通常は1~2くらい？-->
+    <!-- 参考memo：https://www.webdlab.com/labs/responsive-web-design/-->
+    <!-- 参考keyword：モバイルフレンドリー：https://search.google.com/test/mobile-friendly?hl=ja-->
+</head>
+
+<body id="top">
+<!--Googleフォント用クラス遊び。-->
+<div class="wf-sawarabigothic">
+    
+<!--ヘッターここから-->
+<header>
+  <div class="inner">
+    <h1><img src="img/logo.png" width="126" height="166" alt="海月のロゴ"/></h1>
+
+<!--ヘッター内・ナビゲーションここから-->
+        <nav>
+            <ul>
+                <li><a href="#top"><img src="img/btn-top.png" width="51" height="25" alt="ホーム"/></a></li>
+                <li><a href="#sec1"><img src="img/btn-jllyfish1.png" width="66" height="29" alt="くらげ"/></a></li>
+                <li><a href="#sec2"><img src="img/btn-jllyfish2.png" width="184" height="29" alt="海月を見に行こう"/></a></li>
+                <li><a href="#sec3"><img src="img/btn-jllyfish3.png" width="184" height="29" alt="海月を飼育しよう"/></a></li>
+                <li><a href="#sec4"><img src="img/btn-jllyfish4.png" width="164" height="29" alt="海月を食べよう"/></a></li>
+            </ul>
+      </nav>
+    </div>    
+</header>
+    
+<!--トップ画像 今回のディスプレイサイズは1000pxが最大値。下記画像の大きさに注目して、CSSを見てみよう！-->
+    <p class="mainimage"><img src="img/mainimage.jpg" width="1600" height="275" alt="海月トップ画像"/></p>
+
+<!--メインここから-->
+<main>
+    <div class="inner">
+        <section id="sec1">
+            <h2><img src="img/title-jellyfish1.png" width="156" height="50" alt=""/></h2>
+            <div class="box">
+                <p><img src="img/photo-mizu.jpg" width="480" height="190" alt="ミズクラゲ"/></p>
+              <h3>ミズクラゲ</h3>
+              <p>世界中の海に分布しています。<br>
+              傘の直径は15～30cmで、別名をヨツメクラゲとも言います。</p>
+            </div>
+            <div class="box">
+                <p><img src="img/photo-tako.jpg" width="480" height="190" alt="タコクラゲ"/></p>
+              <h3>タコクラゲ</h3>
+              <p>関東以南に分布しています。<br>
+              傘の直径は10～20cmで、傘に水玉模様があるのが特徴です。</p>
+            </div>
+            <div class="box">
+                <p><img src="img/photo-aka.jpg" width="480" height="190" alt="アカクラゲ"/></p>
+              <h3>アカクラゲ</h3>
+              <p>北海道以南に生息している種類です。<br>
+              傘の直径は約20cmで、傘に放射状の赤い縞模様が入っているのが特徴です。</p>
+            </div>
+            <div class="box">
+                <p><img src="img/photo-oki.jpg" width="480" height="190" alt="オキクラゲ"/></p>
+              <h3>オキクラゲ</h3>
+              <p>黒潮海流域に生息しています。<br>
+              傘の直径は5～7cmで、日本には黒潮に乗ってやってきます。 </p>
+            </div>
+        </section>
+        
+        <section id="sec2">
+            <h2><img src="img/title-jellyfish2.png" width="274" height="50" alt="海月を見に行こう"/></h2>
+            <div class="box">
+                <p><img src="img/photo-sumida.jpg" width="480" height="190" alt="くらげ万華鏡トンネル"/></p>
+              <h3>くらげ万華鏡トンネル</h3>
+              <p>全長50メートルのスロープに、色鮮やかな照明に照らされた8つのクラゲ水槽を設置し、壁と天井の3面に約5,000枚の四角形や三角形の鏡を敷き詰めることで、まるでクラゲと一緒に鏡の中の世界を漂っているような浮遊体験ができる。<br>
+              すみだ水族館　<a href="http://www.sumida-aquarium.com/">http://www.sumida-aquarium.com/</a></p>
+            </div>
+            <div class="box">
+                <p><img src="img/photo-kamogawa.jpg" width="480" height="190" alt="くらげライフ"/></p>
+              <h3>オキクラゲ</h3>
+              <p>約10種類のクラゲの展示により、クラゲの魅力あふれる生態や多様性を紹介すると共に、最新のデジタル映像技術でクラゲの不思議な生活史を再現するコーナーを開設し、より楽しく、わかりやすく学ぶことができる参加体験型の展示施設。<br>
+              鴨川シーワールド　<a href="http://www.kamogawa-seaworld.jp/">http://www.kamogawa-seaworld.jp/</a></p>
+            </div>
+        </section>
+        <section id="sec3">
+            <h2><img src="img/title-jellyfish3.png" width="274" height="50" alt="海月を飼育しよう"/></h2>
+            <p class="photo"><img src="img/photo-shiiku.jpg" width="480" height="190" alt="海月水槽"/></p>
+            <p>クラゲは魚のように泳ぐ能力があまりなく、潮の流れに乗って移動しています。そのため流れのない水槽に入れてしまうと傘の開閉で動ける範囲に限られて底の方から動けなくなってしまいます。そこで丸い形をしたクラゲ専用の水槽が販売されるようになり、ろ過装置の水流によって自然な流れを実現しました。ただし、専用水槽はかなり高額なためこれからクラゲ飼育を始める方にとっては少しハードルが高いでしょう。</p>
+            <p>そういった際には水槽の奥行きとマッチする薄いアクリル板を円を描くように曲げて水槽に設置してみましょう。<br>
+            外部フィルターが作る水流をうまく利用すればクラゲに最適な水流を作ることができますし、アクリル板の外側にヒーターやフィルターの吸い込みがくるようにするとクラゲが傷つく心配はありません。<br>
+            餌に関しては行き餌を好む傾向にあるためブラインシュリンプを沸かしてスポイトでクラゲの傘に吹きかけてあげるように与えます。<br>
+            クラゲは水質悪化にも極端に敏感なため最低でも3日に一度は3分の1ほどの水量を換水するようにしてください。</p>
+        </section>
+        <section id="sec4">
+            <h2><img src="img/title-jellyfish4.png" width="254" height="50" alt="海月を食べよう"/></h2>
+            <table>
+              <tbody>
+                <tr>
+                  <th scope="row" class="top">エチゼンクラゲ</th>
+                  <td>傘が2メートルにもなく大型で、名前の由来になっている「越前」の福井県だけではなく、日本海沿岸全域で収穫されます。</td>
+                </tr>
+                <tr>
+                  <th scope="row">ビゼンクラゲ</th>
+                  <td>傘が50センチ～1メートルほどで、やはりその名の通り「備前」岡山県が名産地 です。 エチゼンクラゲよりも品質が高いと評価されて</td>
+                </tr>
+                <tr>
+                  <th scope="row">ミズクラゲ</th>
+                  <td>弱い毒性があり食べてはいけません。 </td>
+                </tr>
+                <tr>
+                  <th scope="row">タコクラゲ</th>
+                  <td>弱い毒性があり食べてはいけません。 </td>
+                </tr>
+                <tr>
+                  <th scope="row">アカクラゲ</th>
+                  <td>強い毒性があり食べてはいけません。触る事も危険です。 </td>
+                </tr>
+                <tr>
+                  <th scope="row">オキクラゲ</th>
+                  <td>強い毒性があり食べてはいけません。触る事も危険です。 </td>
+                </tr>
+              </tbody>
+            </table>
+          <p>主に、上記２種類（エチゼンクラゲ・ビゼンクラゲ）が代表的な食用クラゲです。<br>
+          乾燥させた食材が、一般に中華風和えものなどに使われています。</p>
+        </section>
+        
+        <p class="gotop"><a href="#top"><img src="img/btn-gotop.png" alt="topへ戻る" width="90" height="105" border="0"/></a></p>
+    </div>
+</main>
+<!--footerここから-->
+
+<footer>
+    <p class="link">｜<a href="#top">TOP</a>|<a href="#sec1">くらげ</a>|<a href="#sec2">くらげを見に行こう</a>|<a href="#sec3">くらげを飼育しよう</a>|<a href="#sec4">くらげを食べよう</a>｜</p>
+    <p>Copyright &copy; 職業訓練授業課題.All Rights Reserved.</p>
+</footer>
+</div>
+</body>
+</html>

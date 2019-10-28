@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Carouselの練習</title>
+
+<!--ビューポートの設定-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script> <!--ライブラリ-->
+<script type="text/javascript" src="js/jquery.carouFredSel-6.2.1.js"></script><!--プラグイン-->
+
+<script> //OPTIONS
+	$(function(){
+		$(".slide").carouFredSel({
+		circular:true, //ぐるぐる回す。
+		direction:"left", //「left」「right」「up」「down」でスライド方向の設定（デフォルトはleft）
+		scroll : {
+			duration: 300, //切替速度を100ミリ秒(0.1秒)に設定。
+			//fx:"crossfade", //切り替え画像の設定。今回はなし
+			easing: "quadratic", //切替方法。左からスライドしてくる。
+			items: 1, //バナーを1コずつ切り替え
+			},
+		auto:{
+			play:true, //自動でスライド。ボタンなどで再生停止を表示している場合など有効。
+			timeoutDutarion:2500, //スライドの停止時間
+			pauseOnHover: true, //スライダー にマウスが乗っているときは切り替えを停止。
+			},
+		items:{
+			visible:1, //画面に表示する数
+			start:0,　//開始するスライドの番号 初期値 0 他"random"等
+			height:"40%", //スライドの高さ。レスポンシブ対応させる時に画像の比率を％指定するとGOOD!今回の例では、画像 幅750px、高さ300px ＝ 300/750 *100＝40
+			},
+		prev:".btn-prev", //前へボタンの要素 クラス名など。
+		next:".btn-next", //次へボタンの要素 クラス名など。
+		pagination:{
+			//container:, //ページ切り替えボタンの要素
+			anchorBuilder:false, //ページ切り替えボタンを独自に作成したい場合はfalse
+			},
+		responsive:true, //初期値はfalse。変更することで、レスポンシブ対応に
+		});
+	});
+</script>
+	
+<!--responsive:true, この時、カルーセルの高さは変わっていない！絶対配置。px指定しているボタンも動きがおかしくなる！items:{height:, //スライドの高さ。をここで指定する！-->
+	
+<!--スクロールについての詳細設定
+・auto…自動スクロールについての詳細設定
+・prev…prevボタンの動作についての詳細設定
+・next…nextボタンの動作についての詳細設定
+・pagination…ページ表示についての詳細設定
+・swipe…スワイプ処理についての詳細設定
+・mousewheel…マウスホイールについての詳細設定
+-->
+	
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<div id="all">
+	
+	<h1>Carousel Panelの練習</h1>
+
+<!--	main タグの内容ここから-->	
+<main>
+	<div class="slide-outer"><!--授業にてレスポンシブ用に設定 -->
+		<div class="slide"><!--Carousel用のクラス-->
+			<p><img src="img/photo1.jpg" width="750" height="300" alt="とまと"/></p>
+			<p><img src="img/photo2.jpg" width="750" height="300" alt="眼鏡と本"/></p>
+			<p><img src="img/photo3.jpg" width="750" height="300" alt="バラ"/></p>
+			<p><img src="img/photo4.jpg" width="750" height="300" alt="キッチンのリンゴ"/></p>
+			<p><img src="img/photo5.jpg" width="750" height="300" alt="パンダ"/></p>
+		</div>
+
+		<div class="side-btn"><!--Carouselの前後ボタン用のクラス-->
+			<p><a href="#" class="btn-prev"><img src="img/btn-prev.jpg" alt="前へ"/></a></p>
+			<p><a href="#" class="btn-next"><img src="img/btn-next.jpg" alt="次へ"/></a></p>
+		</div>
+	</div>
+</main>
+	
+</div>
+	
+</body>
+</html>

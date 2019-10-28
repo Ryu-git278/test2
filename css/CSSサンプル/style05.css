@@ -1,0 +1,22 @@
+h2 {
+	font-size: 18px;
+	width: 100px;
+	color: #CC0066;
+	font-weight: normal;
+	font-style: italic;
+	float: left;
+	height: 100px;
+	border: 1px solid #FF9999;
+	margin-top: 0px;
+}
+p {
+	width: 300px;
+	font-size: 12px;
+	line-height: 150%;
+	color: #333333;
+	float: left;
+	border: 1px solid #FF9999;
+	margin-top: 0px;
+	margin-left: 10px;
+	padding: 5px;
+}

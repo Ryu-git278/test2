@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>ナビゲーション２</title>
+<style type="text/css">
+#nav {
+    width: 960px;
+    padding-left: 0px;
+    margin-left: 0px;
+    list-style-type: none;
+}
+#nav li {
+    width: 120px;
+    float: left;
+}
+img {
+    vertical-align: top;
+    border-style: none;
+}
+</style>
+<script type="text/javascript">
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+</script>
+</head>
+
+<body onLoad="MM_preloadImages('img/btn-home_on.png','img/btn-1_on.png','img/btn-2_on.png','img/btn-3_on.png','img/btn-4_on.png','img/btn-5_on.png','img/btn-6_on.png','img/btn-7_on.png')">
+<h1>ナビゲーション</h1>
+<ul id="nav">
+  <li><a href="#"><img src="img/btn-home.png" alt="" width="120" height="60" id="home" onMouseOver="MM_swapImage('home','','img/btn-home_on.png',1)" onMouseOut="MM_swapImgRestore()"/></a></li>
+  <li><a href="#"><img src="img/btn-1.png" alt="" width="120" height="60" id="btn1" onMouseOver="MM_swapImage('btn1','','img/btn-1_on.png',1)" onMouseOut="MM_swapImgRestore()"/></a></li>
+  <li><a href="#"><img src="img/btn-2.png" alt="" width="120" height="60" id="btn2" onMouseOver="MM_swapImage('btn2','','img/btn-2_on.png',1)" onMouseOut="MM_swapImgRestore()"/></a></li>
+  <li><a href="#"><img src="img/btn-3.png" alt="" width="120" height="60" id="btn3" onMouseOver="MM_swapImage('btn3','','img/btn-3_on.png',1)" onMouseOut="MM_swapImgRestore()"/></a></li>
+  <li><a href="#"><img src="img/btn-4.png" alt="" width="120" height="60" id="btn4" onMouseOver="MM_swapImage('btn4','','img/btn-4_on.png',1)" onMouseOut="MM_swapImgRestore()"/></a></li>
+  <li><a href="#"><img src="img/btn-5.png" alt="" width="120" height="60" id="btn5" onMouseOver="MM_swapImage('btn5','','img/btn-5_on.png',1)" onMouseOut="MM_swapImgRestore()"/></a></li>
+  <li><a href="#"><img src="img/btn-6.png" alt="" width="120" height="60" id="btn6" onMouseOver="MM_swapImage('btn6','','img/btn-6_on.png',1)" onMouseOut="MM_swapImgRestore()"/></a></li>
+  <li><a href="#"><img src="img/btn-7.png" alt="" width="120" height="60" id="btn7" onMouseOver="MM_swapImage('btn7','','img/btn-7_on.png',1)" onMouseOut="MM_swapImgRestore()"/></a></li>
+</ul>
+</body>
+</html>

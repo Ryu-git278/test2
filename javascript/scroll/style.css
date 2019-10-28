@@ -1,0 +1,56 @@
+@charset "utf-8";
+/* ◇◇◇◇◇ drawer menuここから  ◇◇◇◇◇ */
+    
+    .menu a {
+        color: black;
+        }
+    
+    .menu ul {
+        margin: 0;
+        padding: 0;
+        }
+    .menu li {
+        font-size: .8em;
+        line-height: 1.4;
+        }
+    .menu li:not(:first-child) {
+        border-top: 1px solid rgba(255,255,255,.6);
+        }
+    .menu a {
+        display: block;
+        padding: 1em 2em;
+        text-decoration: inherit;
+        transition: background .6s cubic-bezier(0.215, 0.61, 0.355, 1);
+        }
+    .menu a:hover {
+        background: black;
+        }
+    #navTgl:checked ~ .menu {
+        transform: none;
+        }
+
+/* ◇◇◇◇◇ header, footerここから  ◇◇◇◇◇ */
+    header,
+    footer {
+        box-sizing: border-box;
+        text-align: center;
+        }
+    header .logo,
+    footer .copyright {
+        margin: 0;
+        color: #553969;
+        font-family: "Ubuntu Condensed", sans-serif;
+        font-weight: 400;
+        line-height: 120px;
+        letter-spacing: .1em;
+        }
+    header {
+        position: relative;
+        margin-bottom: 40px;
+        }
+    footer {
+        background: rgba(255,255,255,.6);
+        }
+    footer small {
+        font-size: 1em;
+        }

@@ -1,0 +1,260 @@
+@charset "utf-8";
+/*全体reset*/
+    *{
+        margin: 0px;
+        padding: 0px;
+        }
+
+    img{
+        vertical-align: bottom; /*imgに対する文字要素の打ち消し。隙間がなくなる*/
+        border: none;
+        }
+
+    ul,ol{
+        list-style-type: none;
+        }
+
+    main{    
+        display: block; /*ブロックボックスを生成する*/
+        }
+
+/*all設定*/
+
+    #all{
+        font-size: 100%;
+        line-height: 1.5;
+        width: 100%;
+        }
+
+/*ヘッダーここから*/
+
+    header{
+        background-color:#bdb08f;
+        margin: 0 auto;
+        }
+
+
+    header h1{
+        width: 1000px;
+        margin: 0 auto;
+        text-align: left;
+        }
+
+/*ナビゲーションここから*/
+
+    nav{
+       background-color: #ecdf2b;
+       height: 50px;
+        }
+
+    nav ul{
+        width: 1000px;
+        margin: 0 auto;
+        padding-top: 4px;
+        list-style-type: none;
+        overflow: hidden;
+        }
+
+    nav li{
+        float: left;
+        margin-right: 1px; /*なんとなく隙間があいてそう*/
+        }
+
+    nav li.last{
+        margin-right: 0;
+        }
+
+/*メイン共通　ここから*/
+
+    main{
+        width: 1000px; /*画像に合わせてみただけ*/
+        margin: 0 auto;
+        padding-top: 20px;
+        }
+
+    h2{
+        padding-top: 40px;
+        }
+
+/*section environmentのボックスここから*/
+/*todo;画像でやればよかった！後回し！*/
+
+   .mainbox{
+/*        clear:both;*/
+        overflow: hidden;
+        }
+
+    .box{
+        background-color: #ffdff0;
+        text-align: center;
+        width: 320px;
+        height: 500px;
+        margin: 0 20px 0 0;
+        float: left;
+        }
+        
+    .box h3{
+        color: #e4549a;
+        height: 100px;
+        background-image: url("img/box1environment.gif");
+        background-repeat: no-repeat;
+        text-align:center;
+        padding: 10px 0;
+        line-height: 160px;
+        }
+
+    .box .text{
+        text-align: left;
+        padding: 10px 15px 25px;
+        }
+
+
+    .box2{
+        background-color: #ffdff0;
+        text-align: center;
+        height: 500px;
+        width: 320px;
+        margin: 0 20px 0 0;
+        float: left;
+        }
+        
+    .box2 h3{
+        color: #e4549a;
+        height: 100px;
+        background-image: url("img/box2environment.gif");
+        background-repeat: no-repeat;
+        text-align:center;
+        padding: 10px 0;
+        line-height: 160px;
+        }
+
+    .box2 .text{
+        text-align: left;
+        padding: 10px 15px 25px;
+        }
+
+    .box3{
+        background-color: #ffdff0;
+        text-align: center;
+        height: 500px;
+        width: 320px;
+        margin: 0 0 0 0;
+        float: left;
+        }
+        
+    .box3 h3{
+        color: #e4549a;
+        height: 100px;
+        background-image: url("img/box3environment.gif");
+        background-repeat: no-repeat;
+        text-align:center;
+        padding: 10px 0;
+        line-height: 160px;
+        }
+
+    .box3 .text{
+        text-align: left;
+        padding: 10px 15px 25px;
+        }
+
+
+    
+
+/*section room ここから*/
+    #room .inner{
+        background-color: #ecdf2b;
+        margin: 0 auto;
+        width: auto;
+        overflow: hidden;
+        margin-top: 40px;/*h2にかければよかった…*/
+        }
+    
+    #room .waku{
+        margin: 0 auto;
+        padding-left: 20px;
+        }
+    #room  .inner p{
+        float: left;
+        padding: 30px 10px 0;
+        }
+
+    .roomtext{
+        width: 1000px;
+        background-color: #ecdf2b;
+        margin: 0 auto;
+        padding: 20px 0;
+        text-align: center;
+        }
+
+
+/* section info　ここから*/
+    #information .inner{
+        background-color: #f2e4c0;
+        height: 360px;
+        padding-top: 0px;
+        margin-top: 30px;
+        border: 1px solid #fff;
+        box-shadow: 10px 10px 2px 0px #ccc;
+        overflow: hidden;
+        position: relative;
+        }
+
+    #information  .inner .photo{
+        float: right;
+        }
+
+    #information  .inner .text{
+        margin: 0 0 75px 20px;
+        }
+
+    #information  .inner .text h3{
+        padding-top: 20px;
+        font-size: 1em;
+        font-weight:normal; /*見出しの太字リセット*/
+        }
+
+    #information  .inner .text p{
+        padding-bottom: 10px;
+        }
+
+/*<section class="access">ここから*/
+
+/*以下ちょっと時間がないので目視！*/
+
+    #access p{ 
+        text-align: center;
+        padding-top: 20px;
+        }
+
+/*p class="pagetop" ここから*/
+
+    .pagetop{
+        width: 100%;
+        text-align: right;
+        background-image: url("img/topicon2.gif");
+        background-repeat: repeat-x;
+        
+        }
+    .pagetop a{
+        color: #fff;
+        font-style: oblique;
+        text-decoration: none;
+        padding-right: 15%;
+        }
+    .icon{
+        text-align: right;
+        padding-right: 15%;
+        }
+
+/*footerここから*/
+
+    footer{
+        background-color:#bdb08f;
+        padding: 20px 0 50px;
+        text-align: center;
+        color:#000;
+        }
+    footer a{
+        color: #000;
+        text-decoration: none;
+        }

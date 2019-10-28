@@ -1,0 +1,177 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>職業訓練 Lesson1｜ロールオーバーをJQでプラグイン！</title>
+<link href="lesson1.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.rollover.js"></script>
+
+<script>
+$(function() {
+    //$(function() { ロールオーバーをこの画像にするよ！
+    $("nav img").rollover();
+});
+</script>
+
+</head>
+<body>
+<div id="all">
+  <header>
+    <div class="inner">
+      <h1><a href="#all"><img src="img/logo.png" alt="お食事処 白米の店　cometubu 東中野店" width="420" height="109"/></a></h1>
+      <p class="text">〒164-8787 東京都中野区東中野4-2-3<br>
+        専門学校東京テクニカルカレッジ テラハウスICA<br>
+        TEL:03-××××-××××<br>
+      職業訓練授業課題</p>
+    </div>
+    </header>
+  <nav>
+    <ul>
+      <li><a href="#all"><img src="img/btn-home.png" alt="home ホーム" width="50" height="52" id="Image1"/></a></li>
+      <li><a href="#idmenu"><img src="img/btn-menu.png" alt="menu メニュー" width="180" height="52" id="Image2"/></a></li>
+      <li><a href="#idrice"><img src="img/btn-rice.png" alt="rice お米" width="180" height="52" id="Image3"/></a></li>
+      <li><a href="#idarrange"><img src="img/btn-arrange.png" alt="arrange menu アレンジメニュー" width="180" height="52" id="Image4"/></a></li>
+      <li><a href="#idside"><img src="img/btn-side.png" alt="side menu サイドメニュー" width="180" height="52" id="Image5"/></a></li>
+      <li class="last"><a href="#idcontant"><img src="img/btn-contact.png" alt="contact お問い合わせ" width="180" height="52" id="Image6"/></a></li>
+    </ul>
+    </nav>
+  <main>
+    <p><img src="img/mainimage.jpg" width="1000" height="450" alt="美味しいお米を食べよう。こだわりの新米。無農薬、白米。"/></p>
+    
+    <section class="menu">
+        <h2><img src="img/title-menu.png" alt="メニューの説明" width="274" height="66" id="idmenu"/></h2>
+      <div class="box">   
+        <h3>白米　&yen;300</h3>
+        <p><img src="img/menu-photo01.jpg" width="280" height="230" alt="炊き立てご飯の画像"/></p>
+        <p class="text">お米マイスターこだわりの白米を 炊き立てで。サイドメニューからお好みのお惣菜をお選びいただけます。プラス￥120～</p>
+      </div>
+      <div class="box">
+        <h3>白米+紀州梅　&yen;400</h3>
+        <p><img src="img/menu-photo02.jpg" width="280" height="230" alt="白米に梅干をトッピング"/></p>
+        <p class="text">お米マイスターがご飯に合う梅干を探してきました。塩だけでつけた昔ながらの梅干です。オプションにお茶漬けもおすすめ</p>
+      </div>
+      <div class="box">
+        <h3>白米+たまご　&yen;400</h3>
+        <p><img src="img/menu-photo03.jpg" width="280" height="230" alt="白米にこだわり卵をトッピング"/></p>
+        <p class="text">農場で育てたストレスフリーの鶏から毎朝収穫。鮮度抜群の卵を使ったこだわりの卵かけご飯。かつお節はカケホーダイです。</p>
+      </div>
+      <div class="box">   
+        <h3>白米　&yen;300</h3>
+        <p><img src="img/menu-photo01.jpg" width="280" height="230" alt="炊き立てご飯の画像"/></p>
+        <p class="text">お米マイスターこだわりの白米を 炊き立てで。サイドメニューからお好みのお惣菜をお選びいただけます。プラス￥120～</p>
+      </div>
+      <div class="box">   
+        <h3>白米　&yen;300</h3>
+        <p><img src="img/menu-photo01.jpg" width="280" height="230" alt="炊き立てご飯の画像"/></p>
+        <p class="text">お米マイスターこだわりの白米を 炊き立てで。サイドメニューからお好みのお惣菜をお選びいただけます。プラス￥120～</p>
+      </div>
+      <div class="box">   
+        <h3>白米　&yen;300</h3>
+        <p><img src="img/menu-photo01.jpg" width="280" height="230" alt="炊き立てご飯の画像"/></p>
+        <p class="text">お米マイスターこだわりの白米を 炊き立てで。サイドメニューからお好みのお惣菜をお選びいただけます。プラス￥120～</p>
+      </div>
+      </section>
+        <p class="pagetop">
+            <a href="#all"><img src="img/btn-pagetop.png" width="160" height="60" alt="トップへ戻る"/></a>
+        </p>
+    <section class="rice">
+      <h2><img src="img/title-rice.png" alt="当店のお米について説明" width="239" height="66" id="idrice"/></h2>
+        <div class="inner">
+          <p class="photo"><img src="img/rice-photo01.jpg" width="240" height="350" alt="当店 契約農家の田んぼのイメージ画像"/></p>
+        <div class="text">
+          <h3>米づくりは「苗半作」</h3>
+          <p>苗の出来でその年の作柄の半分は決まってしまう、という意味です。がっちりした丈夫な苗ならば、田んぼに根をどんどん張りどっしりと成長していきます。それが貧弱な苗ですと、寒さや風に弱く害虫にもやられやすいのです。<br>
+          丈夫な苗の作り方は、水をあげすぎないこと、そして風をあてるタイミングです。<br>
+          少し厳しい条件で育てるほうが、田んぼに植えてからもたくましく成長してくれます。</p>
+          <h3>美味しさへのこだわり</h3>
+          <p>収穫は、稲穂がよく熟すのを待って刈り取りをします。こうすることで米の味、歯ざわりがよくなります。<br>
+          乾燥は、新鮮な風味を損なわないように、自然に近い通風乾燥でゆっくりと時間をかけて行います。<br>
+          お米は低温で貯蔵し、発送直前に精米いたします。</p>
+        <p class="btn"><a href="#"><img src="img/btn-ricehp.png" width="320" height="40" alt="契約農家さんのホームページはコチラから"/></a></p>
+        </div>
+      </div>
+    </section>
+    <section class="arrnge">
+      <h2><img src="img/title-arrange.png" alt="お米をつかったアレンジメニューについて説明" width="458" height="66" id="idarrange"/></h2>
+      <div class="inner">
+        <p><img src="img/arrange-photo01.jpg" width="280" height="230" alt="きのこを使った炊き込みご飯"/></p>
+        <p><img src="img/arrange-photo02.jpg" width="" height="230" alt="ズッキーニを使った炊き込みご飯"/></p>
+        <p><img src="img/arrange-photo03.jpg" width="280" height="230" alt="タコを使った炊き込みご飯"/></p>
+        <p><img src="img/arrange-photo04.jpg" width="280" height="230" alt="マグロの漬け丼"/></p>
+        <p><img src="img/arrange-photo05.jpg" width="280" height="230" alt="たっぷりネギとエビチリ丼"/></p>
+        <p><img src="img/arrange-photo06.jpg" width="280" height="230" alt="素材ゴロゴロ カレー"/></p>
+      </div>
+    </section>
+        <p class="pagetop">
+            <a href="#all"><img src="img/btn-pagetop.png" width="160" height="60" alt="トップへ戻る"/></a>
+        </p>
+    <section class="side">
+      <h2><img src="img/title-side.png" alt="お米と相性の良いサイドメニューについて説明" width="378" height="66" id="idside"/></h2>
+      <table>
+        <tbody>
+          <tr>
+            <th scope="row">納豆</th>
+            <td>納豆（なっとう）は、大豆を納豆菌によって発酵させた日本の発酵食品。様々なものが存在するが、一般的に「糸引き納豆」を指す。</td>
+          </tr>
+          <tr>
+            <th scope="row">のり</th>
+            <td>海苔（のり）とは、紅藻・緑藻・シアノバクテリア（藍藻）などを含む、食用とする藻類の総称。日本では、古く「紫菜」「神仙菜」と呼ばれた。</td>
+          </tr>
+          <tr>
+            <th scope="row">佃煮</th>
+            <td>佃煮（つくだに）とは、醤油と砂糖で甘辛く煮付けた日本の食べ物。とりわけ小魚、アサリなどの貝類、昆布等の海藻類、山地ではイナゴ等の昆虫類などを煮染めたものをこう呼ぶ。</td>
+          </tr>
+          <tr>
+            <th scope="row">塩辛</th>
+            <td>塩辛（しおから）は、魚介類の身や内臓などを加熱すること無く塩漬けにし、素材自体の持つ酵素及び微生物によって発酵させ、高濃度の食塩により保存性を高めた発酵食品である。</td>
+          </tr>
+          <tr>
+            <th scope="row">明太子</th>
+            <td>明太子（めんたいこ）：たらこ-「鱈子」。タラの卵巣（魚卵）。 辛子明太子 - 唐辛子を主として漬けて味付けしたたらこ。「辛子明太子」の別名と略称。</td>
+          </tr>
+          <tr>
+            <th scope="row">子持ち昆布</th>
+            <td>ニシンが昆布に卵を産みつけたものを「子持ち昆布」と呼び、こちらは珍味としてそのまま食用としたり、寿司ダネとしても利用されている。</td>
+          </tr>
+          <tr>
+            <th scope="row">鮭の塩焼き</th>
+            <td>サケ（鮭 Oncorhynchus keta）は、サケ目サケ科サケ属の魚。狭義には種としてのO. keta の標準和名であるが、広義にはサケ類一般を指すことが多い。塩焼き</td>
+          </tr>
+          <tr>
+            <th scope="row">とんかつ</th>
+            <td>豚カツ（とんかつ）は、厚みのある豚のロースやヒレのスライス肉を、小麦粉・溶き卵・パン粉をまとわせて食用油で揚げた料理である。表記は、「とんかつ」・「とんカツ」・「トンカツ」・「豚カツ」など様々である。</td>
+          </tr>
+          <tr>
+            <th scope="row">お茶漬け</th>
+            <td>茶漬け（ちゃづけ）とは、主に米飯に茶をかけた料理のことである。茶をかける御飯の食べ方を指していることもある。お茶漬けと丁寧に呼ばれる場合もある。</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="contant">
+      <h2><img src="img/title-contact.png" alt="コンタクト 住所ついて説明" width="325" height="66" id="idcontant"/></h2>
+      <p>〒164-8787 東京都中野区東中野4-2-3<br>
+        専門学校東京テクニカルカレッジ テラハウスICA<br>
+      TEL:03-××××-××××</p>
+      <div class="map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3716.4788233989484!2d139.68324811543337!3d35.706761836178345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018f2c984bb90a5%3A0xfa7d119afb54c954!2z5bCC6ZaA5a2m5qCh5p2x5Lqs44OG44Kv44OL44Kr44Or44Kr44Os44OD44K4!5e1!3m2!1sja!2sjp!4v1570072397789!5m2!1sja!2sjp" width="900" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+      </div>
+    </section>
+    
+    <p class="pagetop">
+            <a href="#all"><img src="img/btn-pagetop.png" width="160" height="60" alt="トップへ戻る"/></a>
+    </p>
+    </main>
+  <footer>
+    <p class="logo"><a href="#all"><img src="img/foot-logo.png" width="265" height="69" alt="お食事処 白米の店　cometubu 東中野店"/></a></p>
+    
+    <p><a href="#all">home</a>|<a href="#idmenu">menu</a>|<a href="#idrice">rice</a>|<a href="#idarrange">arrange menu</a>|<a href="#idside">side menu</a>|<a href="#idcontact">contact</a></p>
+    
+    <p>Copyright &copy; 職業訓練授業課題.All Rights Reserved.</p>
+   </footer>
+</div>
+</body>
+</html>
